@@ -1,0 +1,3060 @@
+body {
+	font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+	margin:0;
+	}
+
+td {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+}
+
+th {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+}
+div, hr, h1, h2, h3, p, img {
+	padding:0;
+	margin:0;
+}
+
+ul, li, dl, dt, dd{
+ padding:0; margin:0;
+ list-style:none;}
+a{
+ outline:none;}
+
+/*-----------------------------------------------------------end global-------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------start body-------------------------------------------------------------------*/
+.mailDisc{
+	background-color:#FFDFDF}
+#tableborder {
+	border-width:1px;
+	border-collapse:collapse;
+	border-color:#D3D3D3;
+	border-top-style:solid;
+	border-top-color:#D3D3D3;
+	border-right-style:solid;
+	border-right-color:#D3D3D3;
+	border-bottom-style:solid;
+	border-bottom-color:#D3D3D3;
+	border-left-style:solid;
+	border-left-color:#D3D3D3;
+}
+.clear10 {
+	clear:both;
+	height:10px;
+	font-size:10px;
+	line-height:10px;
+}
+.clear {
+	clear:both;
+	height:6px;
+	font-size:6px;
+	line-height:6px;
+}	
+.currency_size {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #7E7E7E;
+}
+.small_red {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #C32411;
+}
+.big_red {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C32411;
+}
+.lbl { font:11px/14px "Verdana", Arial, Helvetica, sans-serif; color: #C32411;
+}
+
+.style1 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #7E7E7E;
+}
+.style2 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999999;
+}
+.style3 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.style4 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #7E7E7E;
+}
+.ass-dark {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #5D5D5D;
+}
+a:link {
+	text-decoration: none;
+	color: #C32411;
+}
+a:visited {
+	text-decoration: none;
+	color: #C32411;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #C32411;
+}
+.style8 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #C32411; font-weight: bold; }
+.body-text {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #7E7E7E;
+	padding-left:6px;
+	padding-right:6px;
+	text-align:justify;
+}
+.TdHeight {
+	font-size:2px; /*For IE */
+	line-height:2px; /*For MOZILLA */
+}
+.tableborder {
+	border-collapse:collapse;
+	border-width: 1px;
+	border-bottom-style:solid;
+	border-bottom-color:#B9B9B9;
+	border-top-style:solid;
+	border-top-color:#B9B9B9;
+	border-left-style:solid;
+	border-left-color:#B9B9B9;
+	border-right-style:solid;
+	border-right-color:#B9B9B9;	
+}		
+.linegap {
+	font-size: 18px;
+	line-height: 18px;
+	height: 18px;
+}
+.small_redPading {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #C32411;
+	padding: 0 6px 0 6px;
+	text-align:justify;
+}
+.big_redPading {
+	font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+	color: #C32411;
+	text-align:center;
+}
+#sevendays { 
+	margin:100px 0px 0 10px;
+	padding:0;
+	width:200px;
+}
+#sevendays a {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#C32411;
+	text-align:left;
+}
+.2days { 
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#C32411;
+	margin:40px 0px 0 75px;
+	padding:0;
+	text-align:left;
+	width:200px;
+}
+.serenadesText {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #C32411; font-weight: bold; }
+
+.copyright{
+	font:normal 12px/20px Verdana, Arial, Helvetica, sans-serif;
+	color:#fff; float:left; padding:0 0 0 200px}
+.valAnchor {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height:20px;
+	color: #FFFFFF;
+	font-weight:bold;
+	padding:0 10px 0 0;
+	float:right; width:300px;
+}
+
+.valAnchor a:link  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height:20px;
+	color: #FFFFFF;
+	font-weight:bold;
+	padding:0 5px;
+}
+.valAnchor a:hover  {
+	color: #FFFFFF;
+	text-decoration:underline;
+}
+.valAnchor a:active   {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+a.valAnchor:visited   {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+
+/* ----------------------- Valentine's Day Page Modification ------------------*/
+
+a.whiteAnchor:link { 
+ font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+ color: #FFFFFF;
+ padding:0 0 0 8px;
+}
+a.whiteAnchor:hover {
+ color: #FFFFFF;
+ text-decoration:underline;
+ padding:0 0 0 8px;
+}
+a.whiteAnchor:active {
+ color: #FFFFFF;
+ text-decoration:underline;
+ padding:0 0 0 8px;
+}
+a.whiteAnchor:visited {
+ color: #FFFFFF;
+ text-decoration:underline;
+ padding:0 0 0 8px;
+}
+
+.Rowprice { 
+ font:12px/20px Verdana, Arial, Helvetica, sans-serif;
+ color: #999999;
+}
+
+.cusTesti {
+	 font:bold 11px/12px Verdana, Arial, Helvetica, sans-serif;
+	 color: #FFFFFF;
+	}
+
+
+#valProd {width:185px;margin: 0 auto;}
+#valProd div {clear:both; text-align:center; font: 11px/12px Verdana, Arial, Helvetica, sans-serif; color:#999999; margin:0; padding:0; }
+#valProd img {margin: 0 auto; clear:both;}
+#valProd p {font: 11px/12px Verdana, Arial, Helvetica, sans-serif; color:#999999; text-align:center; margin:0; padding:0;}
+#valProd a {font: 11px/12px Verdana, Arial, Helvetica, sans-serif; color:#C32411; text-align:center;}
+#valProd .Valredprice {font: 11px/12px Verdana, Arial, Helvetica, sans-serif; color:#C32411; text-align:center;}
+.rakhi-body-text {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #E69A0D;
+	padding-left:4px;
+	padding-right:6px;
+	text-align:justify;
+}
+
+.rakhi_tableborder {
+	border-collapse:collapse;
+	border-width: 1px;
+	border-bottom-style:solid;
+	border-bottom-color:#FFDFDF;
+	border-top-style:solid;
+	border-top-color:#FFDFDF;
+	border-left-style:solid;
+	border-left-color:#FFDFDF;
+	border-right-style:solid;
+	border-right-color:#FFDFDF;	
+}
+
+
+/*Mothersday*/
+.MDayPara {	font:11px/14px "Verdana", Tahome; color: #7E7E7E; text-align:justify; padding:0 2px 0 0;}
+#gallery { width:665px; font:12px/15px "Tahoma" verdana,arial,sans-serif; padding:0;}
+#gallery div.off {color:#fff; width:133px; height:23px; margin:0px; line-height:23px; text-align:center; float:left; background:url(../Pictures/TabProd-Link.jpg) 0 0 repeat-x; border:0px solid #ddd; border-bottom-color:#000; cursor:pointer; position:relative; z-index:20;}
+#gallery div.on { color:#B0050E; width:133px; padding:0; margin:0; text-align:center; float:left; background:url(../Pictures/TabProd-Active.jpg) repeat-x left bottom; border:0px; cursor:pointer; border-bottom:0; height:23px; line-height:22px; position:relative; z-index:100;}
+div.hide {display:none; width:0; overflow:hidden;}
+div.show {clear:left; background:#fff; width:657px; margin-top:0; top:-1px; border:1px solid #B0050E; padding:3px 6px 0 0; position:relative; z-index:50; font:11px verdana, arial, sans-serif; line-height:18px; height:175px;}
+div.MDspl { width:213px; float:left; padding:0;}
+	div.MDspl img {margin:0; border:0; border:none; padding:0;}
+div.MDserenades { width:218px; float:left; padding:0;}
+	div.MDserenades img {margin:0 0 0 5px; border:0; padding:0; }
+	div.MDserenades .serenprodrow { font:11px/14px "Tahoma", Verdana, Arial, Helvetica, sans-serif; width:207px; color:#B0050E; text-align:center; padding:10px 0 0 0; }
+	div.MDserenades .serenpricerow { font:11px/14px "Tahoma", Verdana, Arial, Helvetica, sans-serif; width:140px; color:#6A6A6A; text-align:left; float:left; padding:0 0 0 18px; }
+	div.MDserenades .serenAddCartrow { font:11px/14px "Tahoma", Verdana, Arial, Helvetica, sans-serif; width:60px; color:#6A6A6A; text-align:center; float:left; }
+div.moreseren { width:207px; text-align:right; clear:both; font:11px/18px Tahoma; color:#B0050E; padding:10px 0 0 0;}
+	div.moreseren a { color:#990000; text-decoration:none;}
+	div.moreseren a:hover { color:#333; text-decoration:underline;}
+div.SerenadesThumb_footer { clear:both;}
+div.divleft	{ float:left;}
+div.prod { width:148px; float:left; padding:0;}
+	div.prod img {margin:0 0 0 26px; border: solid 1px #B0050E; padding:0;}
+	div.prod .prodrow { font:11px/14px "Tahoma", Verdana, Arial, Helvetica, sans-serif; width:145px; height:30px; color:#B0050E; text-align:center; padding:10px 0 0 0;}
+	div.prod .pricerow { font:11px/14px "Tahoma", Verdana, Arial, Helvetica, sans-serif; width:148px; color:#6A6A6A; text-align:center;  }
+div.more { text-align:right; padding:8px 18px 0 0; clear:both; font:11px/15px Tahoma; color:#B0050E;}
+	div.more a { color:#990000; text-decoration:none;}
+	div.more a:hover { color:#333; text-decoration:underline;}
+#DesignerCollection { font:bold 12px/27px Tahoma; color:#fff; width:133px; padding:0; margin:0; text-align:center; float:left; background:url(../Pictures/DesignerColleBg.jpg) repeat-x left bottom; border:0px; cursor:pointer; border-bottom:0; height:23px; line-height:22px; position:relative; z-index:100; cursor:text;}
+#DesignerCollection_show {clear:left; background:#fff; width:657px; height:300px; margin-top:0; top:-1px; border:1px solid #B20000; padding:3px; position:relative; z-index:50; font:11px verdana, arial, sans-serif; line-height:18px;}
+table.MDTborder { border-collapse:collapse; border-top:solid 1px #B20000; border-right:solid 1px #B20000; border-bottom:solid 1px #B20000; border-left:solid 1px #B20000;}
+div.prodD { width:164px; float:left; padding:0;}
+	div.prodD img {margin:0 0 0 26px; border: solid 1px #B0050E; padding:0;}
+	div.prodD .prodrow { font:11px/14px "Tahoma", Verdana, Arial, Helvetica, sans-serif; width:152px; height:30px; color:#B0050E; text-align:center; padding:10px 0 0 0;}
+	div.prodD .pricerow { font:11px/14px "Tahoma", Verdana, Arial, Helvetica, sans-serif; width:148px; color:#6A6A6A; text-align:center;  }
+.MDanchor { margin:0 3px 0 5px;}
+	.MDanchor a { font: 11px/12px Tahoma; color:#B20000; text-decoration:none;}
+	.MDanchor a:hover { text-decoration:none; color:#333333;}
+
+
+
+.giftsformom { width:663px;}
+	.giftsformom . { width:218px; float:left; margin:0 auto; border-collapse:collapse;}
+	.giftsformom div { width:218px; float:left; margin:0 auto; border-collapse:collapse;}
+		.giftsformom h1 { text-align:center; font:bold 16px/22px Tahoma; color:#b20000; padding:0; margin:0;}
+		.giftsformom h2 { text-align:center; font:bold 12px/22px Tahoma; color:#b20000; padding:0; margin:0;}
+		.giftsformom p { width:200px; text-align:justify; font:11px/12px Tahoma; color:#b20000; padding:0; margin:0 auto;}
+		.giftsformom a { color:#b20000; text-decoration:none;}
+		.giftsformom a:hover { color:#333; text-decoration:underline;}
+		.giftsformom img { padding:0 0 0 9px;}
+		.giftsformom .divHr { width:663px;}
+		.giftsformom hr { margin:10px 0 10px 0; border-color:#b20000; size:1px;}
+		.giftsformom .Mline { width:3px; height:205px; border-bottom:0; border-left:0; border-right:solid 1px #b20000; border-top:0;}
+		
+		
+.tableborderLite {
+	border-collapse:collapse; border: solid 1px #cfcfcf;
+}
+
+
+.bigText {font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #B20000; font-weight: bold; }
+
+
+/*Rakhi-Cosmetics*/
+
+div.lakme-left{
+	background:url(../Pictures/lakme-left.jpg) 0 no-repeat;
+	width:154px; height:128px;
+	}
+	div.lakme-left p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#4F4405; text-align:center; padding:24px 19px 0 10px; margin:0;
+		}
+	div.lakme-left a{
+		color:#4F4405; text-decoration:none;
+		}
+	div.lakme-left a:hover{
+		text-decoration:none;
+		}
+	div.lakme-left span{
+		font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#4F4405;
+		}
+div.Garnier-left{
+	background:url(../Pictures/Garnier-left.jpg) 0 no-repeat;
+	width:157px; height:118px;
+	}
+	div.Garnier-left p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#4F4405; text-align:center; padding:12px 19px 0 10px; margin:0;
+		}
+	div.Garnier-left a{
+		color:#4F4405; text-decoration:none;
+		}
+	div.Garnier-left a:hover{
+		text-decoration:none;
+		}
+	div.Garnier-left span{
+		font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#4F4405;
+		}
+div.loreal-left{
+	background:url(../Pictures/loreal-left.jpg) 0 no-repeat;
+	width:138px; height:134px;
+	}
+	div.loreal-left p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#4F4405; text-align:center; padding:12px 19px 0 10px; margin:0;
+		}
+	div.loreal-left a{
+		color:#4F4405; text-decoration:none;
+		}
+	div.loreal-left a:hover{
+		text-decoration:none;
+		}
+	div.loreal-left span{
+		font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#4F4405;
+		}
+div.Ponds-left{
+	background:url(../Pictures/Ponds-left.jpg) 0 no-repeat;
+	width:136px; height:119px;
+	}
+	div.Ponds-left p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#4F4405; text-align:center; padding:22px 19px 0 10px; margin:0;
+		}
+	div.Ponds-left a{
+		color:#4F4405; text-decoration:none;
+		}
+	div.Ponds-left a:hover{
+		text-decoration:none;
+		}
+	div.Ponds-left span{
+		font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#4F4405;
+		}
+div.Shahnaz-left{
+	background:url(../Pictures/Shahnaz-left.jpg) 0 no-repeat;
+	width:129px; height:132px;
+	}
+	div.Shahnaz-left p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#4F4405; text-align:center; padding:12px 19px 0 15px; margin:0;
+		}
+	div.Shahnaz-left a{
+		color:#4F4405; text-decoration:none;
+		}
+	div.Shahnaz-left a:hover{
+		text-decoration:none;
+		}
+	div.Shahnaz-left span{
+		font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#4F4405;
+		}
+div.hima-left{
+	background:url(../Pictures/hima-left.jpg) 0 no-repeat;
+	width:135px; height:132px;
+	}
+	div.hima-left p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#4F4405; text-align:center; padding:12px 19px 0 15px; margin:0;
+		}
+	div.hima-left a{
+		color:#4F4405; text-decoration:none;
+		}
+	div.hima-left a:hover{
+		text-decoration:none;
+		}
+	div.hima-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#4F4405;
+	}
+div.Amway-left{
+	background:url(../Pictures/Amway-left.jpg) 0 no-repeat;
+	width:136px; height:125px;
+	}
+	div.Amway-left p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#4F4405; text-align:center; padding:20px 19px 0 15px; margin:0;
+		}
+	div.Amway-left a{
+		color:#4F4405; text-decoration:none;
+		}
+	div.Amway-left a:hover{
+		text-decoration:none;
+		}
+	div.Amway-left span{
+		font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#4F4405;
+		}
+/*End rakhi cosmetics*/
+
+p.Rahki_bro {
+	margin:0; padding:55px 0 0 110px;
+	font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+	color:#753113;
+	}
+p.Rahki_bro span {
+	font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+	}
+div.Rahki_bro a {
+	text-decoration:none; color:#753113;
+	}
+
+div.rakhibro-perfumes {
+	background:url(../Pictures/rakhibro-perfumes.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-perfumes span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-perfumes a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-MW {
+	background:url(../Pictures/rakhibro-MW.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-MW span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-MW a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-Wat {
+	background:url(../Pictures/rakhibro-Wat.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-Wat span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-Wat a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-GV {
+	background:url(../Pictures/rakhibro-GV.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-GV span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-GV a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-MGH {
+	background:url(../Pictures/rakhibro-MGH.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-MGH span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-MGH a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-MPC {
+	background:url(../Pictures/rakhibro-MPC.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-MPC span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-MPC a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-MA {
+	background:url(../Pictures/rakhibro-MA.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-MA span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-MA a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-MP {
+	background:url(../Pictures/rakhibro-MP.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-MP span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-MP a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-SP {
+	background:url(../Pictures/rakhibro-SP.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-SP span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-SP a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-CB {
+	background:url(../Pictures/rakhibro-CB.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-CB span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-CB a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-MiniP {
+	background:url(../Pictures/rakhibro-MiniP.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-MiniP span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-MiniP a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-Elec {
+	background:url(../Pictures/rakhibro-Elec.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-Elec span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-Elec a {
+		text-decoration:none; color:#753113;
+		}
+div.rakhibro-penset {
+	background:url(../Pictures/rakhibro-penset.jpg) 0 0 no-repeat;
+	width:220px; height:175px;
+	margin:0; padding:0;
+	}
+	div.rakhibro-penset span {
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+	div.rakhibro-penset a {
+		text-decoration:none; color:#753113;
+		}	
+
+.cosmetic-hima {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #094A4C;
+}
+.cosmetic-lakme {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #781A1A;
+}
+/*RakhiG4SIS*/
+
+div.rakhiSaree {
+	background:url(../Pictures/g4sis-saree.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiSaree p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiSaree a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiSaree a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiWAT {
+	background:url(../Pictures/g4sis-WAT.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiWAT p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiWAT a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiWAT a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiSP {
+	background:url(../Pictures/g4sis-SP.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiSP p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiSP a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiSP a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiPER {
+	background:url(../Pictures/g4sis-PER.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiPER p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiPER a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiPER a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiMOB {
+	background:url(../Pictures/g4sis-MOB.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiMOB p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiMOB a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiMOB a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiMiniP {
+	background:url(../Pictures/g4sis-MiniP.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiMiniP p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiMiniP a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiMiniP a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiJEW {
+	background:url(../Pictures/g4sis-JEW.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiJEW p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiJEW a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiJEW a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiGV {
+	background:url(../Pictures/g4sis-GV.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiGV p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiGV a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiGV a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiElec {
+	background:url(../Pictures/g4sis-Elec.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiElec p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiElec a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiElec a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiCrock {
+	background:url(../Pictures/g4sis-Crock.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiCrock p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiCrock a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiCrock a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiCOS {
+	background:url(../Pictures/g4sis-COS.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiCOS p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiCOS a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiCOS a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiGH {
+	background:url(../Pictures/g4sis-GH.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FCD782;
+	}
+	div.rakhiGH p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:70px 50px 0 6px; margin:0;
+		}
+		div.rakhiGH a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiGH a:hover {
+			text-decoration:none; color:#333;
+			}
+/*RakhiG4SIS END*/
+
+/*Start Rakhi G4KIDS*/
+div.rakhiBarbie {
+	background:url(../Pictures/g4kid-Barbie.jpg) 0 0 no-repeat;
+	width:219px; height:165px; border-right:1px solid #FE952E;
+	border-bottom:1px solid #FE952E;
+	}
+	div.rakhiBarbie p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:65px 60px 0 40px; margin:0;
+		}
+		div.rakhiBarbie span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhiBarbie a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiBarbie a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiSofttoy {
+	background:url(../Pictures/g4kid-softtoy.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhiSofttoy p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:65px 60px 0 40px; margin:0;
+		}
+		div.rakhiSofttoy span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhiSofttoy a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiSofttoy a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiChoco {
+	background:url(../Pictures/g4kid-choco.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhiChoco p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:65px 60px 0 40px; margin:0;
+		}
+		div.rakhiChoco span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhiChoco a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiChoco a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhikidGV {
+	background:url(../Pictures/g4kid-GV.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhikidGV p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:65px 60px 0 40px; margin:0;
+		}
+		div.rakhikidGV span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhikidGV a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhikidGV a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiKidH {
+	background:url(../Pictures/g4kid-KidH.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhiKidH p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:65px 60px 0 40px; margin:0;
+		}
+		div.rakhiKidH span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhiKidH a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiKidH a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiSlam {
+	background:url(../Pictures/g4kid-slam.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhiSlam p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:65px 60px 0 35px; margin:0;
+		}
+		div.rakhiSlam span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhiSlam a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiSlam a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiHotW {
+	background:url(../Pictures/g4kid-HotW.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhiHotW p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:65px 60px 0 35px; margin:0;
+		}
+		div.rakhiHotW span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhiHotW a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiHotW a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiSchool {
+	background:url(../Pictures/g4kid-School.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhiSchool p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:60px 65px 0 30px; margin:0;
+		}
+		div.rakhiSchool span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhiSchool a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiSchool a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhiFunskool {
+	background:url(../Pictures/g4kid-Funskool.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhiFunskool p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:65px 60px 0 30px; margin:0;
+		}
+		div.rakhiFunskool span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhiFunskool a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhiFunskool a:hover {
+			text-decoration:none; color:#333;
+			}
+/*Rakhi G4KIDS End*/
+
+/*on 02.07 Start Rakhis-main*/
+div.rakhi-4bro {
+	background:url(../Pictures/rakhi-4bro.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-4bro p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:80px 30px 0 90px; margin:0;
+		}
+		div.rakhi-4bro span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-4bro a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-4bro a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-Exclusive {
+	background:url(../Pictures/rakhi-Exclusive.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-Exclusive p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 20px 0 85px; margin:0;
+		}
+		div.rakhi-Exclusive span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-Exclusive a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-Exclusive a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-BB {
+	background:url(../Pictures/rakhi-BB.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-BB p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 30px 0 80px; margin:0;
+		}
+		div.rakhi-BB span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-BB a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-BB a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-Kids {
+	background:url(../Pictures/rakhi-Kids.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-Kids p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:77px 20px 0 90px; margin:0;
+		}
+		div.rakhi-Kids span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-Kids a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-Kids a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-thre {
+	background:url(../Pictures/rakhi-thre.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-thre p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 20px 0 75px; margin:0;
+		}
+		div.rakhi-thre span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-thre a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-thre a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-Zar {
+	background:url(../Pictures/rakhi-Zar.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-Zar p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:77px 20px 0 80px; margin:0;
+		}
+		div.rakhi-Zar span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-Zar a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-Zar a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-RL {
+	background:url(../Pictures/rakhi-RL.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-RL p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 20px 0 80px; margin:0;
+		}
+		div.rakhi-RL span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-RL a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-RL a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-Gold {
+	background:url(../Pictures/rakhi-Gold.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-Gold p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:72px 4px 0 88px; margin:0;
+		}
+		div.rakhi-Gold span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-Gold a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-Gold a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-Silver {
+	background:url(../Pictures/rakhi-Silver.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-Silver p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 15px 0 90px; margin:0;
+		}
+		div.rakhi-Silver span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-Silver a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-Silver a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-Pearl {
+	background:url(../Pictures/rakhi-Pearl.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-Pearl p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:78px 20px 0 75px; margin:0;
+		}
+		div.rakhi-Pearl span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-Pearl a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-Pearl a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-dollar3 {
+	background:url(../Pictures/rakhi-$3.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-dollar3 p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 20px 0 70px; margin:0;
+		}
+		div.rakhi-dollar3 span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-dollar3 a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-dollar3 a:hover {
+			text-decoration:none; color:#333;
+			}
+div.precious-rakhi {
+	background:url(../Pictures/precious-rakhi.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.precious-rakhi p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 10px 0 110px; margin:0;
+		}
+		div.precious-rakhi span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.precious-rakhi a {
+			color:#b20000; text-decoration:none;
+			}
+		div.precious-rakhi a:hover {
+			text-decoration:none; color:#333;
+			}
+div.rakhi-shagungifts {
+	background:url(../Pictures/rakhi-shagungifts.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.rakhi-shagungifts p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 10px 0 95px; margin:0;
+		}
+		div.rakhi-shagungifts span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.rakhi-shagungifts a {
+			color:#b20000; text-decoration:none;
+			}
+		div.rakhi-shagungifts a:hover {
+			text-decoration:none; color:#333;
+			}
+/*on 02.07 Rakhis-main End*/
+
+
+/*Start G4INFANT 03.07*/
+
+div.g4infant-ST {
+	background:url(../Pictures/g4infant-ST.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.g4infant-ST p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 20px 0 35px; margin:0;
+		}
+		div.g4infant-ST span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.g4infant-ST a {
+			color:#b20000; text-decoration:none;
+			}
+		div.g4infant-ST a:hover {
+			text-decoration:none; color:#333;
+			}
+div.g4infant-Jonson{
+	background:url(../Pictures/g4infant-Jonson.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.g4infant-Jonson p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 20px 0 35px; margin:0;
+		}
+		div.g4infant-Jonson span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.g4infant-Jonson a {
+			color:#b20000; text-decoration:none;
+			}
+		div.g4infant-Jonson a:hover {
+			text-decoration:none; color:#333;
+			}
+div.g4infant-FP{
+	background:url(../Pictures/g4infant-FP.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.g4infant-FP p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 20px 0 35px; margin:0;
+		}
+		div.g4infant-FP span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.g4infant-FP a {
+			color:#b20000; text-decoration:none;
+			}
+		div.g4infant-FP a:hover {
+			text-decoration:none; color:#333;
+			}
+div.g4infant-GH{
+	background:url(../Pictures/g4infant-GH.jpg) 0 0 no-repeat;
+	width:218px; height:165px; border-right:1px solid #FE952E; border-bottom:1px solid #FE952E;
+	border-left:1px solid #FE952E;
+	}
+	div.g4infant-GH p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#b20000; text-align:left; padding:75px 20px 0 22px; margin:0;
+		}
+		div.g4infant-GH span{
+		font:bold 14px/16px Verdana, Arial, Helvetica, sans-serif;
+		}
+		div.g4infant-GH a {
+			color:#b20000; text-decoration:none;
+			}
+		div.g4infant-GH a:hover {
+			text-decoration:none; color:#333;
+			}
+/*G4INFANT 03.07 END*/
+
+
+/*rakhi MensWear start*/
+div.shirt-right{
+	 background: url(../Pictures/shirt-right.jpg)0 0 no-repeat;
+	width:154px; height:170px;
+	}
+	div.shirt-right p {
+		font:normal 12px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#7E5B31; text-align:left; padding:75px 20px 0 22px; margin:0;
+		}
+		div.shirt-right a {
+			color:#7E5B31; text-decoration:none;
+			}
+		div.shirt-right a:hover {
+			text-decoration:none; color:#333;
+			}
+div.menswear-right{
+	 background: url(../Pictures/menswear-right.jpg)0 0 no-repeat;
+	width:154px; height:170px;
+	}
+	div.menswear-right p {
+		font:normal 12px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#7E5B31; text-align:left; padding:75px 20px 0 15px; margin:0;
+		}
+		div.menswear-right a {
+			color:#7E5B31; text-decoration:none;
+			}
+		div.menswear-right a:hover {
+			text-decoration:none; color:#333;
+			}
+div.tie-right{
+	 background: url(../Pictures/tie-right.jpg)0 0 no-repeat;
+	width:154px; height:170px;
+	}
+	div.tie-right p {
+		font:normal 12px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#7E5B31; text-align:left; padding:65px 15px 0 35px; margin:0;
+		}
+		div.tie-right a {
+			color:#7E5B31; text-decoration:none;
+			}
+		div.tie-right a:hover {
+			text-decoration:none; color:#333;
+			}
+div.jeans-right{
+	 background: url(../Pictures/jeans-right.jpg)0 0 no-repeat;
+	width:154px; height:170px;
+	}
+	div.jeans-right p {
+		font:normal 12px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#7E5B31; text-align:left; padding:75px 20px 0 15px; margin:0;
+		}
+		div.jeans-right a {
+			color:#7E5B31; text-decoration:none;
+			}
+		div.jeans-right a:hover {
+			text-decoration:none; color:#333;
+			}
+/*End Menswear*/
+
+/*Start Rakhi Pair Watch*/
+
+div.rakhisonata-bott{
+	 background:url(../Pictures/rakhisonata-bott.jpg) 0 no-repeat;
+	width:218px; height:134px;border-bottom:1px solid #F7DFA8;
+	border-right:1px solid #F7DFA8;
+	}
+	div.rakhisonata-bott p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#7E5B31; text-align:left; padding:20px 10px 0 20px; margin:0;
+		text-align:right; 
+		}
+		div.rakhisonata-bott a {
+			color:#7E5B31; text-decoration:none;
+			}
+		div.rakhisonata-bott a:hover {
+			text-decoration:none; color:#7E5B31;
+			}
+div.rakhititan-bott{
+	 background:url(../Pictures/rakhititan-bott.jpg) 0 no-repeat;
+	width:218px; height:134px;border-bottom:1px solid #F7DFA8;
+	border-right:1px solid #F7DFA8;
+	}
+	div.rakhititan-bott p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#7E5B31; text-align:left; padding:25px 10px 0 20px; margin:0;
+		text-align:right; 
+		}
+		div.rakhititan-bott a {
+			color:#7E5B31; text-decoration:none;
+			}
+		div.rakhititan-bott a:hover {
+			text-decoration:none; color:#7E5B31;
+			}
+div.rakhitimex-bott{
+	 background:url(../Pictures/rakhitimex-bott.jpg) 0 no-repeat;
+	width:218px; height:134px;border-bottom:1px solid #F7DFA8;
+	border-right:1px solid #F7DFA8;
+	}
+	div.rakhitimex-bott p {
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#7E5B31; text-align:left; padding:25px 10px 0 20px; margin:0;
+		text-align:right; 
+		}
+		div.rakhitimex-bott a {
+			color:#7E5B31; text-decoration:none;
+			}
+		div.rakhitimex-bott a:hover {
+			text-decoration:none; color:#7E5B31;
+			}
+/*Rakhi Pair Watch End*/
+/*Start Rakhi Thali*/
+div.Rakhithali-bott{
+	background:url(../Pictures/Rakhithali-bott.jpg) 0 no-repeat;
+	width:220px; height:124px;
+	}
+	div.Rakhithali-bott p{width:130px; font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:right; padding:15px 10px 22px 40px; margin:0; float:right;
+	}
+	div.Rakhithali-bott a{color:#7E5B31; text-decoration:none;
+	}
+	div.Rakhithali-bott span{font-weight:bolder; color:#7E5B31;
+	}
+div.BBthali-bott{
+	background:url(../Pictures/BBthali-bott.jpg) 0 no-repeat;
+	width:220px; height:123px;
+	}
+	div.BBthali-bott p{width:140px; font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:right; padding:15px 10px 22px 40px; margin:0; float:right;
+	}
+	div.BBthali-bott a{color:#7E5B31; text-decoration:none;
+	}
+	div.BBthali-bott span{font-weight:bolder; color:#7E5B31;
+	}
+div.Bhaiyathali-bott{
+	background:url(../Pictures/Bhaiyathali-bott.jpg) 0 no-repeat;
+	width:220px; height:123px;
+	}
+	div.Bhaiyathali-bott p{width:140px; font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:right; padding:15px 10px 22px 40px; margin:0; float:right;
+	}
+	div.Bhaiyathali-bott a{color:#7E5B31; text-decoration:none;
+	}
+	div.Bhaiyathali-bott span{font-weight:bolder; color:#7E5B31;
+	}
+div.Chocothali-bott{
+	background:url(../Pictures/Chocothali-bott_diwali.jpg) 0 no-repeat;
+	width:220px; height:123px;
+	}
+	div.Chocothali-bott p{width:140px; font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:right; padding:15px 10px 22px 40px; margin:0; float:right;
+	}
+	div.Chocothali-bott a{color:#7E5B31; text-decoration:none;
+	}
+	div.Chocothali-bott span{font-weight:bolder; color:#7E5B31;
+	}
+div.Dryfrutthali-bott{
+	background:url(../Pictures/Dryfrutthali-bott.jpg) 0 no-repeat;
+	width:220px; height:126px;
+	}
+	div.Dryfrutthali-bott p{width:140px; font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:right; padding:15px 10px 22px 40px; margin:0; float:right;
+	}
+	div.Dryfrutthali-bott a{color:#7E5B31; text-decoration:none;
+	}
+	div.Dryfrutthali-bott span{font-weight:bolder; color:#7E5B31;
+	}
+div.mithaithali-bott{
+	background:url(../Pictures/mithaithali-bott.jpg) 0 no-repeat;
+	width:220px; height:127px;
+	}
+	div.mithaithali-bott p{width:140px; font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:right; padding:15px 10px 22px 40px; margin:0; float:right;
+	}
+	div.mithaithali-bott a{color:#7E5B31; text-decoration:none;
+	}
+	div.mithaithali-bott span{font-weight:bolder; color:#7E5B31;
+	}
+div.kidsthali-bott{
+	background:url(../Pictures/kidsthali-bott.jpg) 0 no-repeat;
+	width:220px; height:127px;
+	}
+	div.kidsthali-bott p{width:140px; font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:right; padding:15px 10px 22px 40px; margin:0; float:right;
+	}
+	div.kidsthali-bott a{color:#7E5B31; text-decoration:none;
+	}
+	div.kidsthali-bott span{font-weight:bolder; color:#7E5B31;
+	}
+div.pujathali-bott{
+	background:url(../Pictures/pujathali-bott.jpg) 0 no-repeat;
+	width:220px; height:127px;
+	}
+	div.pujathali-bott p{width:140px; font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:right; padding:15px 10px 22px 40px; margin:0; float:right;
+	}
+	div.pujathali-bott a{color:#7E5B31; text-decoration:none;
+	}
+	div.pujathali-bott span{font-weight:bolder; color:#7E5B31;
+	}
+/*Start Rakhi Thali End*/
+/*Start Rakhi Hampers*/
+
+div.rakhichoco-hamp-left{
+	background:url(../Pictures/rakhichoco-hamp-left.jpg) 0 no-repeat;
+	width:139px; height:138px;
+	}
+	div.rakhichoco-hamp-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:left; padding:15px 10px 22px 10px; margin:0;
+	}
+	div.rakhichoco-hamp-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhichoco-hamp-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+div.rakhidry-hamp-left{
+	background:url(../Pictures/rakhidry-hamp-left.jpg) 0 no-repeat;
+	width:164px; height:137px;
+	}
+	div.rakhidry-hamp-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:left; padding:15px 10px 22px 10px; margin:0;
+	}
+	div.rakhidry-hamp-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhidry-hamp-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+
+div.rakhisis-hamper-left{
+	background:url(../Pictures/rakhisis-hamper-left.jpg) 0 no-repeat;
+	width:145px; height:137px;
+	}
+	div.rakhisis-hamper-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:left; padding:15px 10px 22px 10px; margin:0;
+	}
+	div.rakhisis-hamper-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhisis-hamper-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+div.rakhimithai-hamper-left{
+	background:url(../Pictures/rakhimithai-hamper-left.jpg) 0 no-repeat;
+	width:142px; height:136px;
+	}
+	div.rakhimithai-hamper-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:left; padding:15px 10px 22px 10px; margin:0;
+	}
+	div.rakhimithai-hamper-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhimithai-hamper-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+div.rakhigift-hamper-left{
+	background:url(../Pictures/rakhigift-hamper-left.jpg) 0 no-repeat;
+	width:144px; height:136px;
+	}
+	div.rakhigift-hamper-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:left; padding:15px 10px 22px 10px; margin:0;
+	}
+	div.rakhigift-hamper-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhigift-hamper-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+div.rakhibro-hamper-left{
+	background:url(../Pictures/rakhibro-hamper-left.jpg) 0 no-repeat;
+	width:154px; height:137px;
+	}
+	div.rakhibro-hamper-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:left; padding:15px 10px 22px 10px; margin:0;
+	}
+	div.rakhibro-hamper-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhibro-hamper-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+div.RakhiBB-hamper-left{
+	background:url(../Pictures/RakhiBB-hamper-left.jpg) 0 no-repeat;
+	width:138px; height:137px;
+	}
+	div.RakhiBB-hamper-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:left; padding:15px 10px 22px 10px; margin:0;
+	}
+	div.RakhiBB-hamper-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.RakhiBB-hamper-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+div.rakhiFC-hamper-left{
+	background:url(../Pictures/rakhiF&C-hamper-left.jpg) 0 no-repeat;
+	width:138px; height:136px;
+	}
+	div.rakhiFC-hamper-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:left; padding:15px 10px 22px 10px; margin:0;
+	}
+	div.rakhiFC-hamper-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhiFC-hamper-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+/*Rakhi Hampers End*/
+
+/*Start Personalised Rakhi*/
+	
+div.rakhi-card-left{
+	background:url(../Pictures/rakhi-card-left.jpg) 0 no-repeat;
+	width:263px; height:142px;
+	}
+	div.rakhi-card-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:center; padding:15px 10px 22px 45px; margin:0;
+	}
+	div.rakhi-card-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhi-card-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+div.rakhi-HM-Choco-left{
+	background:url(../Pictures/rakhi-HM-Choco-left.jpg) 0 no-repeat;
+	width:260px; height:140px;
+	}
+	div.rakhi-HM-Choco-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:center; padding:20px 10px 22px 60px; margin:0;
+	}
+	div.rakhi-HM-Choco-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhi-HM-Choco-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+div.rakhi-choco-rose-left{
+	background:url(../Pictures/rakhi-choco-rose-left.jpg) 0 no-repeat;
+	width:266px; height:141px;
+	}
+	div.rakhi-choco-rose-left p{font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#7E5B31; text-align:center; padding:20px 10px 22px 90px; margin:0;
+	}
+	div.rakhi-choco-rose-left a{color:#7E5B31; text-decoration:none;
+	}
+	div.rakhi-choco-rose-left span{font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif; color:#7E5B31;
+	}
+/*Personalised Rakhi End*/
+
+/*Rakhi Pair Watch*/
+
+div.rakhiwatchbg{
+	background:url(../Pictures/rakhiwatch-bg.gif) 0 no-repeat;
+	width:660px; height:189px;
+	}
+	div.rakhiwatchbg div.titan{
+		background:url(../Pictures/Rakhi-pair-titan.png) 0 5px no-repeat;
+		width:220px; height:184px; margin:5px 0 0 0; behavior: url("js/iepngfix.htc");
+		float:left;
+		}
+		div.rakhiwatchbg div.titan p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#CC0000; margin:0; padding:65px 0 0 130px; text-align:right;
+		}
+		div.rakhiwatchbg div.titan a{
+		color:#CC0000; text-decoration:none;
+		}
+	div.rakhiwatchbg ul.titanpair {
+		width:432px; list-style:none; margin:0; padding:0; float:right;
+		}
+		div.rakhiwatchbg ul.titanpair li {
+			margin:4px 0 0 0; padding:0; width:144px; float:left;
+			}
+			div.rakhiwatchbg ul.titanpair li p.watchesname {
+				margin:0; font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+				height:20px; color:#b20000; width:144px; text-align:center;  padding:10px 0 0 0;
+				}
+				div.rakhiwatchbg ul.titanpair li p.watchesname a {
+				color:#b20000; text-decoration:none;
+				}
+			div.rakhiwatchbg ul.titanpair li img.watches {
+				margin:3px 0 0 15px; padding:0; border:solid 1px #ccc;
+				}
+			div.rakhiwatchbg ul.titanpair li p.watchesprice {
+				margin:0; padding:0; font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+				height:20px; color:#999; width:144px; text-align:center;
+				}
+		div.rakhiwatchbg div.moretitan{
+			width:200px; float:right; text-align:right; padding:0 15px 0 0;
+			font:bold 11px/15px Verdana, Arial, Helvetica, sans-serif; color:#b20000;
+			}
+			div.rakhiwatchbg div.moretitan a{
+				color:#b20000; text-decoration:none;
+				}
+				
+				
+				
+div.rakhiwatchbg{
+	background:url(../Pictures/rakhiwatch-bg.gif) 0 no-repeat;
+	width:660px; height:189px;
+	}
+	div.rakhiwatchbg div.timex{
+		background:url(../Pictures/Rakhi-pair-timex.png) 0 5px no-repeat; 
+		width:220px; height:184px; margin:5px 0 0 0; behavior: url("js/iepngfix.htc");
+		float:left;
+		}
+		div.rakhiwatchbg div.timex p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#CC0000; margin:0; padding:65px 0 0 130px; text-align:center;
+		}
+		div.rakhiwatchbg div.timex a{
+		color:#CC0000; text-decoration:none;
+		}
+	div.rakhiwatchbg ul.timexpair {
+		width:432px; list-style:none; margin:0; padding:0; float:right;
+		}
+		div.rakhiwatchbg ul.timexpair li {
+			margin:4px 0 0 0; padding:0; width:144px; float:left;
+			}
+			div.rakhiwatchbg ul.timexpair li p.watchesname {
+				margin:0; font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+				height:20px; color:#b20000; width:144px; text-align:center;  padding:10px 0 0 0;
+				}
+				div.rakhiwatchbg ul.timexpair li p.watchesname a {
+				color:#b20000; text-decoration:none;
+				}
+			div.rakhiwatchbg ul.timexpair li img.watches {
+				margin:3px 0 0 15px; padding:0; border:solid 1px #ccc;
+				}
+			div.rakhiwatchbg ul.timexpair li p.watchesprice {
+				margin:0; padding:0; font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+				height:20px; color:#999; width:144px; text-align:center;
+				}
+		div.rakhiwatchbg div.moretimex{
+			width:200px; float:right; text-align:right; padding:0 15px 0 0;
+			font:bold 11px/15px Verdana, Arial, Helvetica, sans-serif; color:#b20000;
+			}
+			div.rakhiwatchbg div.moretimex a{
+				color:#b20000; text-decoration:none;
+				}
+
+
+
+div.rakhiwatchbg{
+	background:url(../Pictures/rakhiwatch-bg.gif) 0 no-repeat;
+	width:660px; height:189px;
+	}
+	div.rakhiwatchbg div.sonata{
+		background:url(../Pictures/Rakhi-pair-sonata.png) 0 5px no-repeat;
+		width:229px; height:182px; margin:5px 0 0 0; behavior: url("js/iepngfix.htc");
+		float:left;
+		}
+		div.rakhiwatchbg div.sonata p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#CC0000; margin:0; padding:65px 0 0 122px; text-align:right;
+		}
+		div.rakhiwatchbg div.sonata a{
+		color:#CC0000; text-decoration:none;
+		}
+	div.rakhiwatchbg ul.sonatapair {
+		width:424px; list-style:none; margin:0; padding:0; float:right;
+		}
+		div.rakhiwatchbg ul.sonatapair li {
+			margin:4px 0 0 0; padding:0; width:141px; float:left;
+			}
+			div.rakhiwatchbg ul.sonatapair li p.watchesname {
+				margin:0; font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+				height:20px; color:#b20000; width:141px; text-align:center;  padding:10px 0 0 0;
+				}
+				div.rakhiwatchbg ul.sonatapair li p.watchesname a {
+				color:#b20000; text-decoration:none;
+				}
+			div.rakhiwatchbg ul.sonatapair li img.watches {
+				margin:3px 0 0 15px; padding:0; border:solid 1px #ccc;
+				}
+			div.rakhiwatchbg ul.sonatapair li p.watchesprice {
+				margin:0; padding:0; font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+				height:20px; color:#999; width:141px; text-align:center;
+				}
+		div.rakhiwatchbg div.moresonata{
+			width:200px; float:right; text-align:right; padding:0 15px 0 0;
+			font:bold 11px/15px Verdana, Arial, Helvetica, sans-serif; color:#b20000;
+			}
+			div.rakhiwatchbg div.moresonata a{
+				color:#b20000; text-decoration:none;
+				}
+/*Rakhi Pair Watch*/
+
+/*Rakhi Greetings Card*/
+
+div.rakhihandmade{
+	width:660px; height:352px;
+	top:0; left:0; padding:0 0 10px 0;
+	}
+	div.rakhihandmade img.rakhihandmadetop{
+	width:660px; height:48px; background:url(../Pictures/rakhi-handmadetop.jpg) 0 0 no-repeat;
+	}
+	div.rakhihandmade div.rakhihandmadebott{
+	width:660px; height:70px; background:url(../Pictures/rakhi-handmadebott.jpg) 0 0 no-repeat;
+	padding:30px 0 0 0;
+	}
+		div.rakhihandmade div.rakhihandmadebott p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#FBF3B5; text-align:center; padding:0 0 0 50px;
+		}
+		div.rakhihandmade div.rakhihandmadebott span{
+		font:bold 14px/18px Verdana, Arial, Helvetica, sans-serif;
+		color:#FBF3B5;
+		}
+		div.rakhihandmade div.rakhihandmadebott a{
+		color:#FBF3B5; text-decoration:none;
+		}
+		div.rakhihandmade div.rakhihandmadebott ul.handmadecard {
+		width:660px; list-style:none; margin:0; padding:0; float:right;
+		}
+		div.rakhihandmade div.rakhihandmadebott ul.handmadecard li {
+			margin:4px 0 0 0; padding:0; width:105px; float:left;
+			}
+			div.rakhihandmade div.rakhihandmadebott ul.handmadecard li img.card {
+				margin:3px 0 0 2px; padding:0; border:solid 1px #ccc;
+				}
+		
+/*div.rakhihandmade div.prodbg{
+	width:660; height:203; background:url(../Pictures/rakhi-handmade-prodBG.gif) 0 0 no-repeat;
+	position:relative;
+	}*/
+div.rakhihandmade div.prodbg{
+	width:660; border:1px solid #F88888;
+	position:relative;
+	}
+	div.rakhihandmade div.prodbg div.morecards{
+			float:right; text-align:right; padding:0 15px 0 0;
+			display:block; font:bold 11px/15px Verdana, Arial, Helvetica, sans-serif; color:#b20000;
+			}
+			div.rakhihandmade div.prodbg div.morecards a{
+				color:#b20000; text-decoration:none;
+				}
+	
+div.rakhiprinted{
+	width:660px; height:352px;
+	top:0; left:0; padding:0;
+	}
+	div.rakhiprinted img.rakhiprintedtop{
+	width:660px; height:46px; background:url(../Pictures/rakhiprinted-top.jpg) 0 0 no-repeat;
+	}
+	div.rakhiprinted div.rakhihandmadebott{
+	width:660px; height:70px; background:url(../Pictures/rakhiprinted-bott.jpg) 0 0 no-repeat;
+	padding:30px 0 0 0;
+	}
+		div.rakhiprinted div.rakhihandmadebott p{
+		font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+		color:#FBF3B5; text-align:center; padding:0 0 0 50px;
+		}
+		div.rakhiprinted div.rakhihandmadebott span{
+		font:bold 14px/18px Verdana, Arial, Helvetica, sans-serif;
+		color:#FBF3B5;
+		}
+		div.rakhiprinted div.rakhihandmadebott a{
+		color:#FBF3B5; text-decoration:none;
+		}
+		div.rakhiprinted div.rakhihandmadebott ul.printedcard {
+		width:660px; list-style:none; margin:0; padding:0; float:right;
+		}
+		div.rakhiprinted div.rakhihandmadebott ul.printedcard li {
+			margin:4px 0 0 0; padding:0; width:105px; float:left;
+			}
+			div.rakhiprinted div.rakhihandmadebott ul.printedcard li img.card {
+				margin:3px 0 0 2px; padding:0; border:solid 1px #ccc;
+				}
+		
+div.rakhiprinted div.prodbg{
+	width:660; border:1px solid #F88888;
+	position:relative; top:15; left:0;
+	}
+		div.rakhiprinted div.prodbg div.morecards{
+			float:right; text-align:right; margin:0 15px 0 0;
+			display:block;
+			font:bold 11px/15px Verdana, Arial, Helvetica, sans-serif; color:#b20000;
+			}
+			div.rakhiprinted div.prodbg div.morecards a{
+				color:#b20000; text-decoration:none;
+				}
+/*End Rakhi Greetings Card*/
+
+/*Ajax div show class starts*/
+.divAjax{
+	border:1px solid #CC3300; width:80px; display:none;
+	font-family:Verdana;
+	font-size:12px;
+	color:#000;
+	padding:10px; background-color:#e4e4e4;}
+/*Ajax div show class ends*/
+/* Section to show index history starts */
+.rakhihistory{
+  font:normal 12px/15px Verdana, Arial, Helvetica, sans-serif;
+  color:#C32411; padding:5px 0 5px 5px; 
+  text-align:justify;
+  }
+/* Section to show index history starts */  
+
+/* Section to show watermark */
+div.imageControl{
+	position:relative;}
+div.imageControl div.watermark{
+	background:url(../Pictures/watermark.png) no-repeat 0 0; 
+	width:275px; height:275px; position:absolute; 
+	left:0; top:0; z-index:100;}
+div.smWatermarks{
+	position:relative;}
+div.smWatermarks div.smWaterImg{
+	/*background:url(../Pictures/sm_watermark.png) no-repeat 0 0;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px; color: #C32411;
+	position:absolute; left:2px; top:0; _left:-80px;
+	width:160px; height:160px; z-index:100; display:block;}
+div.smWatermarks div.smWaterImg a{
+	width:160px; height:160px; 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px; color: #C32411;
+	display:block;}
+	
+/* Section to show watermark */
+/*------------------------------------perfumes samples start---------------------------*/
+.perfumes{
+	padding-bottom:9px;}
+.perfumes a{
+	text-indent:-2000px;
+	width:148px; height:160px; display:block;}
+.azzaro{
+	background:url(../Pictures/azzaro.jpg) no-repeat 0 0;}
+.benetton{
+	background:url(../Pictures/benetton.jpg) no-repeat 0 0;}
+.burberry{
+	background:url(../Pictures/burberry.jpg) no-repeat 0 0;}
+.bvlgari{
+	background:url(../Pictures/bvlgari.jpg) no-repeat 0 0;}
+.calvin{
+	background:url(../Pictures/calvin.jpg) no-repeat 0 0;}
+.carolina{
+	background:url(../Pictures/carolina.jpg) no-repeat 0 0;}
+.cartier{
+	background:url(../Pictures/cartier.jpg) no-repeat 0 0;}
+.chanel{
+	background:url(../Pictures/chanel.jpg) no-repeat 0 0;}
+.chopard{
+	background:url(../Pictures/chopard.jpg) no-repeat 0 0;}
+.christian{
+	background:url(../Pictures/christian.jpg) no-repeat 0 0;}
+.dandg{
+	background:url(../Pictures/d-&-g.jpg) no-repeat 0 0;}
+.david{
+	background:url(../Pictures/david-off.jpg) no-repeat 0 0;}
+.elizabeth{
+	background:url(../Pictures/elizabeth-arden.jpg) no-repeat 0 0;}
+.taylor{
+	background:url(../Pictures/elizabeth-taylor.jpg) no-repeat 0 0;}
+.ferrari{
+	background:url(../Pictures/ferrari.jpg) no-repeat 0 0;}
+.girgio{
+	background:url(../Pictures/girgio-army.jpg) no-repeat 0 0;}
+.givenchy{
+	background:url(../Pictures/givenchy.jpg) no-repeat 0 0;}
+.guerlian{
+	background:url(../Pictures/guerlian.jpg) no-repeat 0 0;}
+.hugo{
+	background:url(../Pictures/hugo.jpg) no-repeat 0 0;}
+.boss{
+	background:url(../Pictures/hugo-boss.jpg) no-repeat 0 0;}
+.issey{
+	background:url(../Pictures/issey-miyake.jpg) no-repeat 0 0;}
+.delpozo{
+	background:url(../Pictures/j-del-pozo.jpg) no-repeat 0 0;}
+.lo{
+	background:url(../Pictures/j-lo.jpg) no-repeat 0 0;}
+.kenneth{
+	background:url(../Pictures/kenneth-cole.jpg) no-repeat 0 0;}
+.kenzo{
+	background:url(../Pictures/kenzo.jpg) no-repeat 0 0;}
+.lacoste{
+	background:url(../Pictures/lacoste.jpg) no-repeat 0 0;}
+.miniatures{
+	background:url(../Pictures/miniatures.jpg) no-repeat 0 0;}
+.mont{
+	background:url(../Pictures/mont-blanc.jpg) no-repeat 0 0;}
+.nina{
+	background:url(../Pictures/nina-ricci.jpg) no-repeat 0 0;}
+.perfumesHer{
+	background:url(../Pictures/perfumes-for-her.jpg) no-repeat 0 0;}
+.perfumesHim{
+	background:url(../Pictures/perfumes-for-him.jpg) no-repeat 0 0;}
+.ralph{
+	background:url(../Pictures/ralph-lauren.jpg) no-repeat 0 0;}
+.salvatore{
+	background:url(../Pictures/salvatore.jpg) no-repeat 0 0;}
+.swiss{
+	background:url(../Pictures/swiss-army.jpg) no-repeat 0 0;}
+.tommy{
+	background:url(../Pictures/tommy-hilfiger.jpg) no-repeat 0 0;}
+.versace{
+	background:url(../Pictures/versace.jpg) no-repeat 0 0;}
+.yves{
+	background:url(../Pictures/yves.jpg) no-repeat 0 0;}
+.addi{
+	background:url(../Pictures/addidas_per.jpg) no-repeat 0 0;}
+.animale{
+	background:url(../Pictures/animale.jpg) no-repeat 0 0;}
+.disel{
+	background:url(../Pictures/disel.jpg) no-repeat 0 0;}
+.escada{
+	background:url(../Pictures/escada.jpg) no-repeat 0 0;}
+.ellis{
+	background:url(../Pictures/ellis.jpg) no-repeat 0 0;}
+.estee{
+	background:url(../Pictures/estee.jpg) no-repeat 0 0;}
+.fred{
+	background:url(../Pictures/fred.jpg) no-repeat 0 0;}
+.geparlys{
+	background:url(../Pictures/geparlys.jpg) no-repeat 0 0;}
+.gucci{
+	background:url(../Pictures/gucci.jpg) no-repeat 0 0;}
+.instyle{
+	background:url(../Pictures/instyle.jpg) no-repeat 0 0;}
+.liz{
+	background:url(../Pictures/lizC.jpg) no-repeat 0 0;}
+.sabatini{
+	background:url(../Pictures/sabatini.jpg) no-repeat 0 0;}
+.sebastain{
+	background:url(../Pictures/sebastain.jpg) no-repeat 0 0;}
+.tuscany{
+	background:url(../Pictures/tuscany.jpg) no-repeat 0 0;} 
+/*------------------------------------perfumes samples end---------------------------*/
+/************************ Durga Puja starts ********************************/
+.pujacat{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFCC; padding:22px 0 0 0;}
+.pujacat a{
+	color:#FFFFCC; text-decoration:none;}
+/************************ Durga Puja Ends ********************************/
+
+/************************ vouchers styles starts ********************************/
+
+.voucher{
+	padding-bottom:17px;}
+.voucher a{
+	text-indent:-2000px;
+	width:160px; height:210px; display:block; outline:0;}
+.pantaloons {
+	background-image:url(../Pictures/gv_pantaloons.jpg);
+	background-repeat:no-repeat;}
+.willsLifeStyles {
+	background-image:url(../Pictures/gv_wills.jpg);
+	background-repeat:no-repeat;}
+.dominos {
+	background-image:url(../Pictures/gv_dominos.jpg);
+	background-repeat:no-repeat;}
+.adidas {
+	background-image:url(../Pictures/gv_adidas.jpg);
+	background-repeat:no-repeat;}
+.bigBazar {
+	background-image:url(../Pictures/gv_bigBazar.jpg);
+	background-repeat:no-repeat;}
+.titanVoch {
+	background-image:url(../Pictures/gv_titan.jpg);
+	background-repeat:no-repeat;}
+.taj {
+	background-image:url(../Pictures/gv_taj.jpg);
+	background-repeat:no-repeat;}
+.shopperStop {
+	background-image:url(../Pictures/gv_shprStp.jpg);
+	background-repeat:no-repeat;}
+.reebok {
+	background-image:url(../Pictures/gv_rbk.jpg);
+	background-repeat:no-repeat;}
+.kaya {
+	background-image:url(../Pictures/gv_kaya.jpg);
+	background-repeat:no-repeat;}
+.gili {
+	background-image:url(../Pictures/gv_gili.jpg);
+	background-repeat:no-repeat;}
+.mobileStores {
+	background-image:url(../Pictures/gv_mobileStr.jpg);
+	background-repeat:no-repeat;}
+.cafeDay {
+	background-image:url(../Pictures/gv_cafe.jpg);
+	background-repeat:no-repeat;}
+.jhonplayer{
+	background:url(../Pictures/jhonplayer-gv.jpg) no-repeat 0 0;}
+.baskinrob{
+	background:url(../Pictures/baskinRobbin-gv.jpg) no-repeat 0 0;}	
+	
+/************************ vouchers styles ends ********************************/
+
+
+/************************ Diwali Starts ********************************/
+/*-----------Start Diwali Gift Section-------------*/
+.diwalihamper a{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#B93A01; float:left; padding:8px 5px 0 10px;
+	}
+	.diwalihamper a span{
+	font:bold 13px/15px Verdana, Arial, Helvetica, sans-serif;
+	color:#B93A01;
+	}
+.diwalihamper a:hover{
+	text-decoration:none; color:#CF9509;}
+
+.diwalithali a{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#B93A01; float:right; padding:3px 0 0 105px;
+	}
+	.diwalithali a span{
+	font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#B93A01;
+	}
+.diwalithali a:hover{
+	text-decoration:none; color:#B93A01;}
+
+/*-----------End Diwali Gift Section-------------*/	
+/*-----------Start Diwali Relation Section-------------*/
+.diwalihim a{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#B93A01; float:left; padding:11px 0 0 15px;
+	}
+	.diwalihim a span{
+	font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#B93A01;
+	}
+	diwalihim a:hover{
+		text-decoration:none; color:#B93A01;
+		}
+/*-----------End Diwali Relation Section-------------*/
+/*-----------Start Gifts 4 Her-------------*/
+.diwaliher{
+	width:662px;
+	border:solid 1px #FFCAB2; float:left;
+	}
+	.diwaliher ul{
+		width:662px;
+		}
+		.diwaliher ul li{
+			background:url(../Pictures/diwaliher-bg.gif) 0 0 no-repeat;
+			width:214px; height:165px; border:solid 1px #FFCAB2; float:left;
+			margin:0 7px 20px 0;
+			}
+			/*-----------Cosmetics-------------*/
+			.diwaliher ul li a.heading{
+				background:url(../Pictures/cosmeher-heading.jpg) 0 0 no-repeat;
+				width:98px; height:30px; margin:22px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.cosme{
+					background:url(../Pictures/cosmeher-img.jpg) 0 0 no-repeat;
+					margin:10px 10px 0 0; float:right; width:98px; height:81px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------Cosmetics-------------*/
+				
+				/*-----------Electronics-------------*/
+			.diwaliher ul li a.elect{
+				background:url(../Pictures/elecher-heading.jpg) 0 0 no-repeat;
+				width:109px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.elec{
+					background:url(../Pictures/elecher-img.jpg) 0 0 no-repeat;
+					margin:15px 10px 0 0; float:right; width:102px; height:67px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------Electronics-------------*/	
+				
+				/*-----------Bag-------------*/
+			.diwaliher ul li a.bag{
+				background:url(../Pictures/bagher-heading.jpg) 0 0 no-repeat;
+				width:153px; height:30px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.fancy{
+					background:url(../Pictures/bagher-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 20px; float:right; width:96px; height:85px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------Bag-------------*/
+				/*-----------GiftHamper-------------*/
+			.diwaliher ul li a.ghamp{
+				background:url(../Pictures/hamperher-heading.jpg) 0 0 no-repeat;
+				width:128px; height:29px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.hamp{
+					background:url(../Pictures/hamperher-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 20px; float:right; width:105px; height:84px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------GiftHamper-------------*/	
+				/*-----------GV-------------*/
+			.diwaliher ul li a.gv{
+				background:url(../Pictures/gvher-heading.jpg) 0 0 no-repeat;
+				width:133px; height:29px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.voucher{
+					background:url(../Pictures/hamperher-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 20px; float:right; width:89px; height:86px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------GV-------------*/
+				
+				/*-----------Jewellery-------------*/
+			.diwaliher ul li a.jewel{
+				background:url(../Pictures/jewelher-heading.jpg) 0 0 no-repeat;
+				width:113px; height:31px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.jewellery{
+					background:url(../Pictures/jewelher-img.jpg) 0 0 no-repeat;
+					margin:-9px 0 0 5px; float:right; width:59px; height:89px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Jewellery-------------*/	
+				
+				/*-----------Kitchenware-------------*/
+			.diwaliher ul li a.kitch{
+				background:url(../Pictures/kitchher-heading.jpg) 0 0 no-repeat;
+				width:123px; height:32px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.kitchen{
+					background:url(../Pictures/kitchher-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 5px; float:right; width:124px; height:82px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Kitchenware-------------*/
+				/*-----------Miniatures-------------*/
+			.diwaliher ul li a.miniature{
+				background:url(../Pictures/miniher-heading.jpg) 0 0 no-repeat;
+				width:104px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.mini{
+					background:url(../Pictures/miniher-img.gif) 0 0 no-repeat;
+					margin:0 0 0 5px; float:right; width:75px; height:92px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Miniatures-------------*/
+				/*-----------Moblie-------------*/
+			.diwaliher ul li a.mobile{
+				background:url(../Pictures/mobher-heading.jpg) 0 0 no-repeat;
+				width:132px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.mob{
+					background:url(../Pictures/mobher-img.jpg) 0 0 no-repeat;
+					margin:-7px 0 0 5px; float:right; width:67px; height:94px;
+					}
+			.diwaliher ul li p.text{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:25px 0 0 5px;
+				}
+				.diwaliher ul li p.text span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Moblie-------------*/
+				/*-----------Perfumes-------------*/
+			.diwaliher ul li a.perfume{
+				background:url(../Pictures/perfumher-heading.jpg) 0 0 no-repeat;
+				width:91px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.perfumes{
+					background:url(../Pictures/perfumher-img.jpg) 0 0 no-repeat;
+					margin:-7px 0 0 5px; float:right; width:100px; height:95px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Perfumes-------------*/
+				/*-----------Sarees-------------*/
+			.diwaliher ul li a.Saree{
+				background:url(../Pictures/sareeher-heading.jpg) 0 0 no-repeat;
+				width:62px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.Sarees{
+					background:url(../Pictures/sareeher-img.jpg) 0 0 no-repeat;
+					margin:-9px 0 0 15px; float:right; width:97px; height:98px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Sarees-------------*/
+				/*-----------Showpieces-------------*/
+			.diwaliher ul li a.showpiec{
+				background:url(../Pictures/SPher-heading.jpg) 0 0 no-repeat;
+				width:109px; height:28px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.showpieces{
+					background:url(../Pictures/SPher-img.gif) 0 0 no-repeat;
+					margin:-10px 15px 0 0; float:right; width:69px; height:108px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Sarees-------------*/
+				/*-----------Silver-------------*/
+			.diwaliher ul li a.silver{
+				background:url(../Pictures/silverher-heading.jpg) 0 0 no-repeat;
+				width:110px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.silvergifts{
+					background:url(../Pictures/silverher-img.gif) 0 0 no-repeat;
+					margin:-9px 15px 0 5px; float:right; width:82px; height:96px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Silver-------------*/
+				/*-----------Watch-------------*/
+			.diwaliher ul li a.watch{
+				background:url(../Pictures/wather-heading.jpg) 0 0 no-repeat;
+				width:84px; height:28px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliher ul li img.watches{
+					background:url(../Pictures/wather-img.gif) 0 0 no-repeat;
+					margin:-15px 15px 0 5px; float:right; width:86px; height:120px;
+					}
+			.diwaliher ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliher ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Watch-------------*/
+.diwaliher ul li.rightliImge{
+	margin:0 0 20px 0;}
+	
+/*-----------Start Gifts 4 Him-------------*/
+.diwaliforhim{
+	width:662px;
+	border:solid 1px #FFCAB2; float:left;
+	}
+	.diwaliforhim ul{
+		width:662px;
+		}
+		.diwaliforhim ul li{
+			background:url(../Pictures/diwalihim-bg.gif) 0 0 no-repeat;
+			width:214px; height:165px; border:solid 1px #FFCAB2; float:left;
+			margin:0 7px 20px 0;
+			}
+			/*-----------Cufflink & Bracelets-------------*/
+			.diwaliforhim ul li a.heading{
+				background:url(../Pictures/cuffbrace-heading.jpg) 0 0 no-repeat;
+				width:176px; height:27px; margin:22px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.cosme{
+					background:url(../Pictures/cuffbrace-img.jpg) 0 0 no-repeat;
+					margin:10px 10px 0 0; float:right; width:112px; height:74px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------Cufflink & Bracelets-------------*/
+				
+				/*-----------Electronics-------------*/
+			.diwaliforhim ul li a.elect{
+				background:url(../Pictures/elecher-heading.jpg) 0 0 no-repeat;
+				width:109px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.elec{
+					background:url(../Pictures/elecher-img.jpg) 0 0 no-repeat;
+					margin:15px 10px 0 0; float:right; width:102px; height:67px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------Electronics-------------*/	
+				
+				/*-----------GV-------------*/
+			.diwaliforhim ul li a.mengv{
+				background:url(../Pictures/gvhim-heading.jpg) 0 0 no-repeat;
+				width:132px; height:28px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.voucher{
+					background:url(../Pictures/gvhim-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 20px; float:right; width:96px; height:85px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------GV-------------*/
+				
+				/*-----------Mens Accessories-------------*/
+			.diwaliforhim ul li a.accessories{
+				background:url(../Pictures/menaccse-heading.jpg) 0 0 no-repeat;
+				width:162px; height:28px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.acce{
+					background:url(../Pictures/menaccse-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 20px; float:right; width:102px; height:77px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------Mens Accessories-------------*/
+				
+				/*-----------Mens Gift Hampers-------------*/
+			.diwaliforhim ul li a.menhamp{
+				background:url(../Pictures/hamperhim-heading.jpg) 0 0 no-repeat;
+				width:128px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.menhamper{
+					background:url(../Pictures/hamperhim-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 20px; float:right; width:87px; height:87px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------Mens Gift Hampers-------------*/
+					
+				/*-----------Mens Personal Care-------------*/
+			.diwaliforhim ul li a.care{
+				background:url(../Pictures/cosmehim-heading.jpg) 0 0 no-repeat;
+				width:138px; height:29px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.menscare{
+					background:url(../Pictures/cosmehim-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 20px; float:right; width:89px; height:82px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				/*-----------Mens Personal Care-------------*/
+				
+				/*-----------Mens Wear-------------*/
+			.diwaliforhim ul li a.menswear{
+				background:url(../Pictures/mensweae-heading.jpg) 0 0 no-repeat;
+				width:109px; height:26px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.menswears{
+					background:url(../Pictures/menswear-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 0; float:right; width:85px; height:88px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Mens Wear-------------*/	
+				
+				/*-----------Miniatures-------------*/
+			.diwaliforhim ul li a.minihim{
+				background:url(../Pictures/minihim-heading.jpg) 0 0 no-repeat;
+				width:104px; height:26px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.miniatures{
+					background:url(../Pictures/minihim-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 5px; float:right; width:87px; height:89px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Miniatures-------------*/
+				
+				/*-----------Mobile Phones-------------*/
+			.diwaliforhim ul li a.mob{
+				background:url(../Pictures/mobhim-heading.jpg) 0 0 no-repeat;
+				width:138px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.mobile{
+					background:url(../Pictures/mobhim-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 5px; float:right; width:70px; height:87px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:10px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Mobile Phones-------------*/
+				
+				/*-----------Pensets-------------*/
+			.diwaliforhim ul li a.pen{
+				background:url(../Pictures/pen-heading.jpg) 0 0 no-repeat;
+				width:75px; height:24px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.penset{
+					background:url(../Pictures/pen-img.jpg) 0 0 no-repeat;
+					margin:3px 0 0 5px; float:right; width:104px; height:70px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Pensets-------------*/
+				
+				/*-----------Perfumes-------------*/
+			.diwaliforhim ul li a.perfume{
+				background:url(../Pictures/perfumehim-heading.jpg) 0 0 no-repeat;
+				width:85px; height:25px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.perfumes{
+					background:url(../Pictures/perfumehim-img.jpg) 0 0 no-repeat;
+					margin:2px 0 0 5px; float:right; width:68px; height:88px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Perfumes-------------*/
+				
+				/*-----------Showpieces-------------*/
+			.diwaliforhim ul li a.show{
+				background:url(../Pictures/SPhim-heading.jpg) 0 0 no-repeat;
+				width:108px; height:27px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.showpiece{
+					background:url(../Pictures/SPhim-img.jpg) 0 0 no-repeat;
+					margin:0 0 0 15px; float:right; width:57px; height:88px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Showpieces-------------*/
+				
+				/*-----------Watch-------------*/
+			.diwaliforhim ul li a.watch{
+				background:url(../Pictures/wathim-heading.jpg) 0 0 no-repeat;
+				width:79px; height:26px; margin:25px 0 0 12px; display:block;
+				text-indent:-10000px;
+				}
+			.diwaliforhim ul li img.watches{
+					background:url(../Pictures/wathim-img.jpg) 0 0 no-repeat;
+					margin:-20px 22px 0 0; float:right; width:75px; height:110px;
+					}
+			.diwaliforhim ul li p.content{
+				font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 5px;
+				}
+				.diwaliforhim ul li p.content span{
+				font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+				color:#D24607; margin:15px 0 0 0;
+				}
+				/*-----------Watch-------------*/
+/*-----------End Gifts 4 Him-------------*/			
+.diwaliforhim ul li.rightliImge{
+	margin:0 0 20px 0;}
+/************************ Diwali Ends ********************************/	
+
+/*----------best sellers start---------------------*/
+
+.bestseller{
+	background:url(http://www.giftstoindia24x7.com/images/bestSeller_heading.gif) no-repeat 12px 11px #B20000;
+	height:42px; width:271px; float:left; text-indent:-2000px;}
+.bestItemBG{
+	background:url(../images/bestItem_BG.gif) repeat-y 0 0 #fff;}
+.bestBottomItemBG{
+	background:url(../images/bottom_bestSellerbg.gif) no-repeat 0 100%; 
+	width:271px; padding:0 0 6px 0;}
+.bestBottomItemBG ul{
+	padding:19px 11px 0 11px;}
+.bestBottomItemBG ul li{
+	float:none; margin:0 0 16px 0; padding:0 0 15px 0; _margin:0 0 12px 0; 
+	width:249px; overflow:hidden; border-bottom:dashed 1px #B9B9B9;}
+.bestBottomItemBG ul li a.bestimag img{
+	width:73px; height:74px; margin:0 4px 0 0; float:left;}
+.bestBottomItemBG ul li p{
+	color:#7E7E7E;}
+/*.bestBottomItemBG ul li div{
+	color:#7E7E7E;}*/
+.bestBottomItemBG ul li p a.txtbutton{
+	color:#B20000; display:block;}
+.bestBottomItemBG ul li a.more{
+	width:38px; height:16px; display:block; float:left;
+	background:url(http://www.giftstoindia24x7.com/images/moreBtn_bg.gif) no-repeat 0 0; padding:1px 0 0 15px;
+	color:#FFFFFF; font-weight:bold; margin:5px 6px 0 0;}
+.bestBottomItemBG ul li a.cartBtn{
+	width:79px; height:16px; display:block; float:left;
+	background:url(http://www.giftstoindia24x7.com/images/addtoCart.gif) no-repeat 0 0; padding:1px 0 0 18px;
+	color:#FFFFFF; font-weight:bold; margin:5px 0 0 0;}	
+.bestBottomItemBG ul.products li span.cartLoad img{
+	width:16px; height:16px; margin:0 0 0 35px;}
+.noBorder{
+	border-bottom:none !important;}
+	
+/*----------best sellers end---------------------*/
+/*------------------------------------christmas chocolate start---------------------------*/	
+div.christmaschoco{
+	width:663px; margin:15px 0 0 0;}
+div.christmaschoco dl{
+	float:left; margin:0 25px 20px 5px;
+	width:299px; height:225px;}
+div.christmaschoco dl dt a{
+	height:38px; text-indent:-10000px; display:block;
+	}
+div.christmaschoco dl dd a.choco{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#E10C0C; padding:15px 0 0 85px; width:170px;
+	text-decoration:none; display:block; text-align:left;}
+div.christmaschoco dl dd a.choco:hover{
+	text-decoration:underline; color:#333;}
+.hmadechoco{
+	background:url(../Pictures/christ-chocolate-handmade.gif) no-repeat 0 0;}			
+.chocookies{
+	background:url(../Pictures/christ-chocolate-cookies.gif) no-repeat 0 0;}
+.chocohamp{
+	background:url(../Pictures/christ-chocolate-hamper.gif) no-repeat 0 0;}	
+/*------------------------------------christmas chocolate end---------------------------*/	
+/*------------------------------------christmas hamper start---------------------------*/	
+div.christmashamper{
+	width:663px; margin:15px 0 0 0;}
+div.christmashamper dl{
+	margin:0 13px 10px 8px; width:635px;
+	height:186px;}
+div.christmashamper dl dt a{
+	height:65px; text-indent:-10000px; display:block;
+	}	
+div.christmashamper dl dd a.hamp{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#E10C0C; padding:20px 160px 0 20px; width:353px;
+	text-decoration:none; display:block; text-align:left;}
+div.christmashamper dl dd a.hamp:hover{
+	text-decoration:underline; color:#333;}
+.flowersncake{
+	background:url(../Pictures/christ-flower-cake.gif) no-repeat 0 0;}
+.christghamper{
+	background:url(../Pictures/christ-gift-hamper.gif) no-repeat 0 0;}
+.christgift{
+	background:url(../Pictures/christ-hamper.gif) no-repeat 0 0;}
+/*------------------------------------christmas hamper ends---------------------------*/	
+/*------------------------------------christmas her starts---------------------------*/	
+div.christmasforher{
+	width:663px; margin:15px 0 0 0;}
+div.christmasforher dl{
+	margin:0 3px 15px 0; width:217px;
+	height:178px; float:left;}
+div.christmasforher dl dt a{
+	height:35px; text-indent:-10000px; display:block;
+	width:170px;}	
+div.christmasforher dl dd a.her{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#E10C0C; padding:9px 3px 0 70px; width:130px;
+	text-decoration:none; display:block; text-align:left;}
+div.christmasforher dl dd a.her:hover{
+	text-decoration:underline; color:#333;}
+.hergifts{
+	background:url(../Pictures/christ-her_gifts.gif) no-repeat 0 0;}
+.hercosmetic{
+	background:url(../Pictures/christ-her_cosmetics.gif) no-repeat 0 0;}
+.hercrockery{
+	background:url(../Pictures/christ-her_crockery.gif) no-repeat 0 0;}
+.herelectronics{
+	background:url(../Pictures/christ-her_electronics.gif) no-repeat 0 0;}
+.herfancybag{
+	background:url(../Pictures/christ-her_bag.gif) no-repeat 0 0;}
+.herhamper{
+	background:url(../Pictures/christ-her_hamper.gif) no-repeat 0 0;}
+.hervoucher{
+	background:url(../Pictures/christ-her_voucher.gif) no-repeat 0 0;}
+.herhomedecor{
+	background:url(../Pictures/christ-her_homedecor.gif) no-repeat 0 0;}
+.herjewellery{
+	background:url(../Pictures/christ-her_jewellery.gif) no-repeat 0 0;}
+.herminiature{
+	background:url(../Pictures/christ-her_miniature.gif) no-repeat 0 0;}
+.hermobile{
+	background:url(../Pictures/christ-her_mobile.gif) no-repeat 0 0;}
+.herperfume{
+	background:url(../Pictures/christ-her_perfume.gif) no-repeat 0 0;}
+.hersaree{
+	background:url(../Pictures/christ-her_saree.gif) no-repeat 0 0;}
+.hershowpice{
+	background:url(../Pictures/christ-her_showpiece.gif) no-repeat 0 0;}
+.hertoys{
+	background:url(../Pictures/christ-her_softtoy.gif) no-repeat 0 0;}	
+.herwatch{
+	background:url(../Pictures/christ-her_watch.gif) no-repeat 0 0;}	
+/*------------------------------------christmas her starts---------------------------*/
+/*------------------------------------christmas him starts---------------------------*/	
+div.christmasforhim{
+	width:663px; margin:15px 0 0 0;}
+div.christmasforhim dl{
+	margin:0 3px 10px 0; width:217px;
+	height:178px; float:left;}
+div.christmasforhim dl dt a{
+	height:50px; text-indent:-10000px; display:block;
+	width:170px;}	
+div.christmasforhim dl dd a.him{
+	font:normal 11px/13px Verdana, Arial, Helvetica, sans-serif;
+	color:#E10C0C; padding:2px 3px 0 70px; width:130px;
+	text-decoration:none; display:block; text-align:left;}
+div.christmasforhim dl dd a.him:hover{
+	text-decoration:underline; color:#333;}
+.himcuflink{
+	background:url(../Pictures/christ-him_cufflink.gif) no-repeat 0 0;}
+.himelectronic{
+	background:url(../Pictures/christ-him_electronics.gif) no-repeat 0 0;}
+.himhamper{
+	background:url(../Pictures/christ-him_hamper.gif) no-repeat 0 0;}
+.himvoucher{
+	background:url(../Pictures/christ-him_voucher.gif) no-repeat 0 0;}
+.himaccses{
+	background:url(../Pictures/christ-him_accessaries.gif) no-repeat 0 0;}	
+.himmenhamp{
+	background:url(../Pictures/christ-him_menshamper.gif) no-repeat 0 0;}
+.himmenswear{
+	background:url(../Pictures/christ-him_menswear.gif) no-repeat 0 0;}
+.himpersonal{
+	background:url(../Pictures/christ-him_pcare.gif) no-repeat 0 0;}
+.himminiature{
+	background:url(../Pictures/christ-him_miniature.gif) no-repeat 0 0;}
+.himmobile{
+	background:url(../Pictures/christ-him_mobile.gif) no-repeat 0 0;}
+.himperfume{
+	background:url(../Pictures/christ-him_perfume.gif) no-repeat 0 0;}
+.himshowpiece{
+	background:url(../Pictures/christ-him_showpiece.gif) no-repeat 0 0;}
+.himwatch{
+	background:url(../Pictures/christ-him_watch.gif) no-repeat 0 0;}		
+/*------------------------------------christmas him ends---------------------------*/
+/*------------------------------------christmas parent start---------------------------*/	
+.parentapparel{
+	background:url(../Pictures/christ-parent_aparel.gif) no-repeat 0 0;}
+.parentbag{
+	background:url(../Pictures/christ-parent_bag.gif) no-repeat 0 0;}
+.parenthamper{
+	background:url(../Pictures/christ-parent_hamper.gif) no-repeat 0 0;}
+.parentfncake{
+	background:url(../Pictures/christ-parent_fncake.gif) no-repeat 0 0;}
+.parentfruit{
+	background:url(../Pictures/christ-parent_fruit.gif) no-repeat 0 0;}
+.parentvoucher{
+	background:url(../Pictures/christ-parent_voucher.gif) no-repeat 0 0;}
+.parenthdecore{
+	background:url(../Pictures/christ-parent_hdecore.gif) no-repeat 0 0;}
+.parentperfume{
+	background:url(../Pictures/christ-parent_perfume.gif) no-repeat 0 0;}
+.parentcare{
+	background:url(../Pictures/christ-parent_pcare.gif) no-repeat 0 0;}
+.parentshowpiece{
+	background:url(../Pictures/christ-parent_showpieces.gif) no-repeat 0 0;}
+.parentwatch{
+	background:url(../Pictures/christ-parent_watch.gif) no-repeat 0 0;}			
+/*------------------------------------christmas parent end---------------------------*/	
+/*------------------------------------christmas kids start---------------------------*/	
+.kidscare{
+	background:url(../Pictures/christ-kid_care.gif) no-repeat 0 0;}
+.kidsprod{
+	background:url(../Pictures/christ-kid_prod.gif) no-repeat 0 0;}
+.kidsdol{
+	background:url(../Pictures/christ-kid_doll.gif) no-repeat 0 0;}
+.kidschoco{
+	background:url(../Pictures/christ-kid_chocolate.gif) no-repeat 0 0;}
+.kidfunskol{
+	background:url(../Pictures/christ-kid_funskol.gif) no-repeat 0 0;}
+.kidsvoucher{
+	background:url(../Pictures/christ-kid_voucher.gif) no-repeat 0 0;}
+.kidshamp{
+	background:url(../Pictures/christ-kid_hamper.gif) no-repeat 0 0;}
+.kidsschool{
+	background:url(../Pictures/christ-kid_skolitem.gif) no-repeat 0 0;}
+.kidsslam{
+	background:url(../Pictures/christ-kid_slambook.gif) no-repeat 0 0;}
+.kidstoy{
+	background:url(../Pictures/christ-kid_softtoy.gif) no-repeat 0 0;}
+.kidhotwhel{
+	background:url(../Pictures/christ-kid_hotwhels.gif) no-repeat 0 0;}
+/*------------------------------------christmas kids end---------------------------*/	
+/*------------------------------------christmas menswear start---------------------------*/	
+div.menswear{
+	width:663px; margin:15px 0 0 0;}
+div.menswear dl{
+	margin:0 13px 10px 8px; width:628px; 
+	height:195px; float:left;}	
+div.menswear dl dt a{
+	height:55px; text-indent:-10000px; display:block;}
+div.menswear dl dd a.mens{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#8A0303; padding:0 180px 0 185px; 
+	text-decoration:none; display:block; text-align:left;}
+div.christmashamper dl dd a.mens:hover{
+	text-decoration:underline; color:#333;}
+			
+.mensjeans{
+	background:url(../Pictures/christ-him_jeans.gif) no-repeat 0 0;}
+.menstrouser{
+	background:url(../Pictures/christ-him_trouser.gif) no-repeat 0 0;}
+.mensshirts{
+	background:url(../Pictures/christ-him_shirts.gif) no-repeat 0 0;}
+.menstie{
+	background:url(../Pictures/christ-him_tie.gif) no-repeat 0 0;}
+
+/*------------------------------------christmas menswear end---------------------------*/
+
+/*-------------christmas crockery start-----------*/
+ul, li{
+	padding:0; margin:0; list-style:none;}
+a{
+	outline:none;}
+div.christmaschoco ul.crockery{
+	width:626px; margin:0 0 0 15px;}
+ul.crockery li{
+	margin:0 20px 27px 0; float:left;}
+ul.crockery li a{
+	height:214px; text-indent:-90000px;
+	display:block; width:303px;}
+.nomargin1{
+	margin:0 0 27px 0 !important;}
+/*.dinnerSet{
+	background:url(../Pictures/dinnerSet1.jpg) no-repeat 0 0;}*/
+.cookware{
+	background:url(../Pictures/nonStick1.jpg) no-repeat 0 0;}
+.glassware{
+	background:url(../Pictures/glassware1.jpg) no-repeat 0 0;}
+.teaset{
+	background:url(../Pictures/teaSet1.jpg) no-repeat 0 0;}
+
+/*-------------christmas crockery end-----------*/
+/*-------------christmas giftVoucher start-----------*/
+
+div.christmaschoco ul.voucher1{
+	width:655px; padding:0 0 0 4px;}
+ul.voucher1 li{
+	float:left; margin:0 10px 27px 0; width:210px;}
+ul.voucher1 li a{
+	height:165px; display:block; text-indent:-90000px;}
+.adidas1{
+	background:url(../Pictures/adidas1.jpg) no-repeat 0 0;}
+.bigbazaar1{
+	background:url(../Pictures/bigbazaar1.jpg) no-repeat 0 0;}
+.cafecoffee1{
+	background:url(../Pictures/cafeCoffeeday1.jpg) no-repeat 0 0;}
+.dominos1{
+	background:url(../Pictures/dominos1.jpg) no-repeat 0 0;}
+.gili1{
+	background:url(../Pictures/gili1.jpg) no-repeat 0 0;}
+.kaya1{
+	background:url(../Pictures/kaya1.jpg) no-repeat 0 0;}
+.pantaloon1{
+	background:url(../Pictures/pantaloons1.jpg) no-repeat 0 0;}
+.reebok1{
+	background:url(../Pictures/reebok1.jpg) no-repeat 0 0;}
+.shopperStop1{
+	background:url(../Pictures/shop1.jpg) no-repeat 0 0;}
+.taj1{
+	background:url(../Pictures/taj1.jpg) no-repeat 0 0;}
+.mobileStore1{
+	background:url(../Pictures/mobileStore1.jpg) no-repeat 0 0;}
+.titan1{
+	background:url(../Pictures/titan1.jpg) no-repeat 0 0;}
+.wills1{
+	background:url(../Pictures/wills1.jpg) no-repeat 0 0;}
+
+/*-------------christmas giftVoucher end-----------*/
+/*---------------christmas jewellery start------------*/
+
+div.christmaschoco ul.jewellery1{
+	width:579px; margin:0 auto;}
+ul.jewellery1 li{
+	margin:0 0 27px 0;}
+ul.jewellery1 li a{
+	width:579px; height:202px; display:block; text-indent:-9000px;}
+.pearl1{
+	background:url(../Pictures/pearlJewellery1.jpg) no-repeat 0 0;}
+.goldPlated1{
+	background:url(../Pictures/goldPlated1.jpg) no-repeat 0 0;}
+.fashion1{
+	background:url(../Pictures/fashionJewellery1.jpg) no-repeat 0 0;}
+
+/*---------------christmas jewellery end------------*/
+/*------------------------------------christmas watch start---------------------------*/
+div.watchLad{
+	background:url(../Pictures/christwatch-bg.gif) no-repeat 0 0;
+	width:650px; height:181px; margin:0 0 5px 0;}
+div.watchLad div.letControl{
+	width:283px; height:166px; margin:8px 0 0 1px; float:left;}
+div.watchLad div.letControl h3{
+	text-indent:-2000px; height:35px; display:block;}
+div.watchLad div.letControl h3 a{
+	display:block; height:35px;}
+div.watchLad div.letControl p{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#323030; width:144px; padding:17px 0 0 0;
+	margin:0 0 0 140px; text-align:left;}
+div.watchLad div.letControl p a{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#323030; text-decoration:none;}
+div.watchLad div.letControl p a:hover{
+	text-decoration:underline;}
+div.watchLad ul{
+	float:left; margin:21px 0 0 0; padding:0 0 0 60px; width:300px;
+	list-style:none;}
+div.watchLad ul li{
+	float:left; width:117px; padding:0 30px 0 0; margin:0;
+	text-align:center; color:#000;
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;}
+div.watchLad ul li img{
+	border:1px solid #6E6E6E; width:110px; height:115px;
+	margin:0 0 5px 0;}
+.titan{
+	background:url(../Pictures/christ-titanlogo-ladies.gif) no-repeat 0 0;}
+.timex{
+	background:url(../Pictures/christ-timexlogo-ladies.gif) no-repeat 0 0;}
+.sonata{
+	background:url(../Pictures/christ-sonatalogo-ladies.gif) no-repeat 0 0;}
+.citizen{
+	background:url(../Pictures/christ-citizenlogo-ladies.gif) no-repeat 0 0;}
+.fastrack{
+	background:url(../Pictures/christ-fastracklogo-ladies.gif) no-repeat 0 0;}
+.angora{
+	background:url(../Pictures/christ-angoralogo-ladies.gif) no-repeat 0 0;}
+.titangents{
+	background:url(../Pictures/christ-titan-gents.gif) no-repeat 0 0;}
+.timexgents{
+	background:url(../Pictures/christ-timex-gents.gif) no-repeat 0 0;}
+.sonatagents{
+	background:url(../Pictures/christ-sonata-gents.gif) no-repeat 0 0;}
+.ftrackgents{
+	background:url(../Pictures/christ-ftrack-gents.gif) no-repeat 0 0;}
+.citizengents{
+	background:url(../Pictures/christ-citizen-gents.gif) no-repeat 0 0;}
+.angoragents{
+	background:url(../Pictures/christ-angora-gents.gif) no-repeat 0 0;}
+.pairtitan{
+	background:url(../Pictures/christ-titan-pair.gif) no-repeat 0 0;}	
+.pairtimex{
+	background:url(../Pictures/christ-timex-pair.gif) no-repeat 0 0;}
+.pairsona{
+	background:url(../Pictures/christ-sonata-pair.gif) no-repeat 0 0;}
+
+/*------------------------------------christmas watch end---------------------------*/
+/*------------------------------------christmas parentwear start---------------------------*/
+
+div.parentwear{
+	width:663px; margin:15px 0 0 0;}
+div.parentwear dl{
+	float:left; margin:0 5px 20px 5px;
+	width:313px; height:239px;}
+div.parentwear dl dt a{
+	height:38px; text-indent:-10000px; display:block; width:250px;}
+div.parentwear dl dd a.parent{
+	font:normal 11px/14px Verdana, Arial, Helvetica, sans-serif;
+	color:#E10C0C; padding:15px 0 0 90px; width:170px;
+	text-decoration:none; display:block; text-align:left;}
+div.parentwear dl dd a.parent:hover{
+	text-decoration:underline; color:#333;}
+.prnttrous{
+	background:url(../Pictures/christ-parent-trouser.gif) no-repeat 0 0;}
+.prntsaree{
+	background:url(../Pictures/christ-parent-saree.gif) no-repeat 0 0;}
+.prntshirt{
+	background:url(../Pictures/christ-parent-shirt.gif) no-repeat 0 0;}
+.prnttie{
+	background:url(../Pictures/christ-parent-tie.gif) no-repeat 0 0;}
+/*------------------------------------christmas parentwear end---------------------------*/
+
+
+.greyBg{
+	background-color:#DEDEDE; padding:5px 0;
+	font:bold 13px/15px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color:#B20000}
+.lftPadd{
+	font:normal 13px/15px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color:#B20000; padding:0 0 15px 100px}
+
+
+
+

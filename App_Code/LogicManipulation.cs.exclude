@@ -1,0 +1,1143 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Configuration;
+using System.IO;
+using System.Collections;
+using System.Text;
+
+/// <summary>
+/// Summary description for LogicManipulation
+/// </summary>
+public class LogicManipulation
+{
+    #region Surajit
+
+    string strDomain = Convert.ToString(ConfigurationManager.AppSettings["Domain"]);
+
+    public string CheckImageExists(int prodId, int imageType)
+    {
+        string imagefullpath = string.Empty;
+        bool bolImgFound = false;
+        string strDomain = Convert.ToString(ConfigurationManager.AppSettings["Domain"]);
+        try
+        {
+            if (prodId != 0)
+            {
+
+                if (File.Exists(HttpContext.Current.Server.MapPath("Pictures/primary_main_" + Convert.ToString(prodId) + ".jpg")))
+                {
+                    bolImgFound = true;
+                    imagefullpath = strDomain + "Pictures/primary_main_" + Convert.ToString(prodId) + ".jpg";
+                }
+                else if (File.Exists(HttpContext.Current.Server.MapPath("Pictures/primary_main_" + Convert.ToString(prodId) + ".gif")))
+                {
+                    bolImgFound = true;
+                    imagefullpath = strDomain + "Pictures/primary_main_" + Convert.ToString(prodId) + ".gif";
+                }
+                else
+                {
+                    bolImgFound = false;
+                    imagefullpath = strDomain + "Pictures/Sorry.jpg";
+                }
+            }
+            else
+            {
+                imagefullpath = strDomain + "Pictures/Sorry.jpg";
+            }
+
+        }
+        catch (Exception)
+        {
+            imagefullpath = strDomain + "Pictures/Sorry.jpg";
+        }
+
+        return imagefullpath;
+    }
+    public string CheckStyleFactorImage(int optionId)
+    {
+        string imagefullpath = string.Empty;
+        bool bolImgFound = false;
+        string strDomain = Convert.ToString(ConfigurationManager.AppSettings["Domain"]);
+        try
+        {
+            if (optionId != 0)
+            {
+
+                if (File.Exists(HttpContext.Current.Server.MapPath("Pictures/styleoption_" + Convert.ToString(optionId) + ".jpg")))
+                {
+                    bolImgFound = true;
+                    imagefullpath = strDomain + "Pictures/styleoption_" + Convert.ToString(optionId) + ".jpg";
+                }
+                else if (File.Exists(HttpContext.Current.Server.MapPath("Pictures/styleoption_" + Convert.ToString(optionId) + ".gif")))
+                {
+                    bolImgFound = true;
+                    imagefullpath = strDomain + "Pictures/styleoption_" + Convert.ToString(optionId) + ".gif";
+                }
+                else
+                {
+                    bolImgFound = false;
+                    imagefullpath = strDomain + "Pictures/Sorry.jpg";
+                }
+            }
+            else
+            {
+                imagefullpath = strDomain + "Pictures/Sorry.jpg";
+            }
+
+        }
+        catch (Exception)
+        {
+            imagefullpath = strDomain + "Pictures/Sorry.jpg";
+        }
+
+        return imagefullpath;
+    }
+    public ArrayList CheckImageExists(int prodId)
+    {
+        ArrayList arrImage = new ArrayList();
+        string imagefullpath = "";
+        try
+        {
+            //additional_85_2.jpg
+            for (int i = 1; i <= 4; i++)
+            {
+
+                if (File.Exists(HttpContext.Current.Server.MapPath("Pictures/additional_" + Convert.ToString(prodId) + "_" + i + ".jpg")))
+                {
+                    imagefullpath = "Pictures/additional_" + Convert.ToString(prodId) + "_" + i + ".jpg";
+                    arrImage.Add(imagefullpath);
+                }
+                else if (File.Exists(HttpContext.Current.Server.MapPath("Pictures/additional_" + Convert.ToString(prodId) + "_" + i + ".gif")))
+                {
+                    imagefullpath = "Pictures/additional_" + Convert.ToString(prodId) + "_" + i + ".gif";
+                    arrImage.Add(imagefullpath);
+                }
+                else if (File.Exists(HttpContext.Current.Server.MapPath("Pictures/additional_" + Convert.ToString(prodId) + "_" + i + ".jpeg")))
+                {
+                    imagefullpath = "Pictures/additional_" + Convert.ToString(prodId) + "_" + i + ".jpeg";
+                    arrImage.Add(imagefullpath);
+                }
+            }
+        }
+        catch (Exception)
+        {
+            imagefullpath = "Pictures/Sorry.jpg";
+        }
+        return arrImage;
+    }
+    public string GetPagination(int totalitem, int itemLimit, int catid, int intSelectedPageNo, ref int intFromItemNo, ref int intToItemNo)
+    {
+        string strDomain = Convert.ToString(ConfigurationManager.AppSettings["Domain"]);
+        string catgUrlName = new DataManipulationClass().getCategoryIdOrUrl(Convert.ToInt16(catid));
+        if ((Convert.ToString(intSelectedPageNo) == "") || (Convert.ToString(intSelectedPageNo) == null) || (intSelectedPageNo == 0))
+        {
+            intSelectedPageNo = 1;
+        }
+
+
+        intFromItemNo = ((intSelectedPageNo - 1) * itemLimit) + 1;
+        intToItemNo = intSelectedPageNo * itemLimit;
+
+        if (totalitem < intFromItemNo)
+        {
+            intSelectedPageNo = intSelectedPageNo - 1;
+            intToItemNo = intFromItemNo;
+            intFromItemNo = intToItemNo - 5;
+        }
+        HttpContext.Current.Session["PageNo"] = intSelectedPageNo;
+
+        StringBuilder strPagination = new StringBuilder(); ;
+        if (totalitem > itemLimit)
+        {
+            int noOfPages = 0;
+            if ((totalitem % itemLimit) != 0)
+            {
+                noOfPages = Convert.ToInt16(totalitem / itemLimit) + 1;
+            }
+            else
+            {
+                noOfPages = Convert.ToInt16(totalitem / itemLimit);
+            }
+
+            strPagination.Append("<ul class=\"pagin\"><li>Browse Pages :</li>");
+            if (intSelectedPageNo - 1 > 0)
+            {
+                strPagination.Append("<li><a href=\"" + strDomain + catgUrlName + Convert.ToString(intSelectedPageNo - 1) + ".aspx\"><img src=\"" + strDomain + "images/prev_arrow2.gif\" alt=\"Previous\" title=\"Previous\"  /></a></li>");
+            }
+            for (int i = 0; i < noOfPages; i++)
+            {
+                if ((i + 1) == intSelectedPageNo)
+                {
+                    strPagination.Append("<li class=\"selectPage\">" + Convert.ToString(i + 1) + "</li>");
+
+                }
+                else
+                {
+                    strPagination.Append("<li><a href=\"" + strDomain + catgUrlName + Convert.ToString(i + 1) + ".aspx\">" + Convert.ToString(i + 1) + "</a></li>");
+
+                }
+            }
+            if (intSelectedPageNo < noOfPages)
+            {
+                strPagination.Append("<li><a href=\"" + strDomain + catgUrlName + Convert.ToString(intSelectedPageNo + 1) + ".aspx\"><img src=\"" + strDomain + "images/next_arrow2.gif\" alt=\"Next\" border=\"0\" title=\"Next\"  /></a></li></ul>");
+            }
+        }
+
+
+        return Convert.ToString(strPagination);
+    }
+    public bool IsNumeric(object value)
+    {
+        try
+        {
+            double d = System.Double.Parse(value.ToString(), System.Globalization.NumberStyles.Any);
+            return true;
+        }
+        catch (FormatException)
+        {
+            return false;
+        }
+    }
+    public string showCartDetails(ref string strError)
+    {
+        StringBuilder sb = new StringBuilder();
+        GCommon<CartInfo> objCartDetails = new GCommon<CartInfo>();
+        CartInfo objCartinfo = new CartInfo();
+        if (HttpContext.Current.Session["CartDetails"] != null)
+        {
+            objCartDetails = (GCommon<CartInfo>)HttpContext.Current.Session["CartDetails"];
+        }
+        else
+        {
+            if (HttpContext.Current.Request.Cookies["UserInfo"] != null)
+            {
+
+                if (HttpContext.Current.Request.Cookies["UserInfo"]["userId"] != null)
+                {
+
+                    string[] cookies = HttpContext.Current.Request.Cookies.AllKeys;
+                    foreach (string cookie in cookies)
+                    {
+                        HttpContext.Current.Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+                    }
+                    HttpContext.Current.Session.Abandon();
+                    HttpContext.Current.Session.Clear();
+                }
+            }
+            HttpContext.Current.Response.Redirect(strDomain + "login.aspx");
+        }
+
+        IEnumerator<CartInfo> ie = objCartDetails.GetEnumerator();
+        if (objCartDetails.Count != 0)
+        {
+            sb.Append("<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+            sb.Append("<tr>");
+            sb.Append("<td align=\"left\" valign=\"top\" class=\"padd2\">");
+            sb.Append("<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+            sb.Append("<tr>");
+            sb.Append("<td align=\"left\" valign=\"top\" style=\"height: 33px\">");
+            sb.Append("<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+            sb.Append("<tr>");
+            sb.Append("<td width=\"9%\"  align=\"center\" valign=\"top\" class=\"cartBg\" style=\"height: 18px\">&nbsp;</td>");
+            sb.Append("<td width=\"25%\" align=\"center\" valign=\"top\" class=\"cartBg\" style=\"height: 18px\">Product Name </td>");
+            sb.Append("<td width=\"13%\" align=\"center\" valign=\"top\" class=\"cartBg\" style=\"height: 18px\">Price</td>");
+            sb.Append("<td width=\"10%\" align=\"center\" valign=\"top\" class=\"cartBg\" style=\"height: 18px\">Discount</td>");
+            sb.Append("<td width=\"10%\" align=\"center\" valign=\"top\" class=\"cartBg\" style=\"height: 18px\">Weight</td>");
+            sb.Append("<td width=\"8%\" align=\"center\" valign=\"top\" class=\"cartBg\" style=\"height: 18px\">Qty</td>");
+            sb.Append("<td width=\"19%\" align=\"center\" valign=\"top\" class=\"cartBg\" style=\"height: 18px\">Total Price </td>");
+            sb.Append("<td width=\"6%\" align=\"center\" valign=\"top\" class=\"cartBg\" style=\"height: 18px\">&nbsp;</td>");
+            sb.Append("</tr>");
+            sb.Append("</table>");
+            sb.Append("</td>");
+            sb.Append("</tr>");
+            sb.Append("<tr>");
+            sb.Append("<td align=\"left\" valign=\"top\" style=\"height: 15px\">");
+            sb.Append("<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+            int cnt = 0;
+            double subTotal = 0;
+            double totalWeight = 0;
+            double shipping = 0;
+            double totalPrice = 0;
+            while (ie.MoveNext())
+            {
+
+                cnt = cnt + 1;
+                subTotal = subTotal + ie.Current.ProductPrice * ie.Current.Quantity;
+                totalWeight = totalWeight + ie.Current.Weight * ie.Current.Quantity;
+                if (ie.Current.ProductId != ie.Current.SecondaryProductId)
+                {
+                    sb.Append("<tr>");
+                    sb.Append("<td width=\"9%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"><img src=\"" + Convert.ToString(ie.Current.ProductImagePath) + "\" alt=\"" + Convert.ToString(ie.Current.ProductName) + "\" title=\"" + Convert.ToString(ie.Current.ProductName) + "\" width=\"26\" height=\"44\" /></td>");
+                    sb.Append("<td width=\"25%\" align=\"center\" valign=\"middle\" class=\"cartPadd\">" + Convert.ToString(ie.Current.ProductName) + "</td>");
+                    sb.Append("<td width=\"13%\" align=\"center\" valign=\"middle\" class=\"cartPadd\">$ " + Convert.ToString(ie.Current.ProductPrice) + "</td>");
+                    sb.Append("<td width=\"10%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"> " + Convert.ToString(ie.Current.DiscountAmount) + "</td>");
+                    sb.Append("<td width=\"10%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"> " + Convert.ToString(ie.Current.Weight * ie.Current.Quantity) + " kg.</td>");
+                    sb.Append("<td width=\"8%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"><input id=\"txtCountId" + Convert.ToString(cnt) + "\" type=\"text\" value=" + Convert.ToString(ie.Current.Quantity) + " name=\"txtCountName" + Convert.ToString(ie.Current.ProductId) + "," + Convert.ToString(ie.Current.SecondaryProductId) + "\" class=\"qtyBox\" onkeypress=\"javascript:return IsNumeric(event);\" onblur=\"javascript:checkVal(this);\" maxlength=\"4\" /></td>");
+                    sb.Append("<td width=\"19%\" align=\"center\" valign=\"middle\" class=\"cartPadd\">$ " + Convert.ToString(ie.Current.ProductPrice * ie.Current.Quantity) + "</td>");
+                    sb.Append("<td width=\"6%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"><img src=\"" + strDomain + "images/trash_btn.gif\" style=\"cursor:pointer\" onclick=\"javascript:removeFromCart(" + Convert.ToString(ie.Current.ProductId) + "," + Convert.ToString(ie.Current.SecondaryProductId) + ")\"  alt=\"Remove\" width=\"25\" height=\"25\" border=\"0\" title=\"Remove\"  /></td>");
+                    sb.Append("</tr>");
+                }
+                else
+                {
+                    sb.Append("<tr>");
+                    sb.Append("<td width=\"9%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"><img src=\"" + Convert.ToString(ie.Current.ProductImagePath) + "\" alt=\"" + Convert.ToString(ie.Current.ProductName) + "\" title=\"" + Convert.ToString(ie.Current.ProductName) + "\" width=\"26\" height=\"44\" /></td>");
+                    sb.Append("<td width=\"25%\" align=\"center\" valign=\"middle\" class=\"cartPadd\">" + Convert.ToString(ie.Current.ProductName) + "</td>");
+                    sb.Append("<td width=\"13%\" align=\"center\" valign=\"middle\" class=\"cartPadd\">$ " + Convert.ToString(ie.Current.ProductPrice) + "</td>");
+                    sb.Append("<td width=\"10%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"> " + Convert.ToString(ie.Current.DiscountAmount) + "</td>");
+                    sb.Append("<td width=\"10%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"> " + Convert.ToString(ie.Current.Weight * ie.Current.Quantity) + " kg.</td>");
+                    sb.Append("<td width=\"8%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"><input id=\"txtCountId" + Convert.ToString(cnt) + "\" type=\"text\" value=" + Convert.ToString(ie.Current.Quantity) + " name=\"txtCountName" + Convert.ToString(ie.Current.ProductId) + "," + Convert.ToString(ie.Current.ProductId) + "\" class=\"qtyBox\" onkeypress=\"javascript:return IsNumeric(event);\" onblur=\"javascript:checkVal(this);\" maxlength=\"4\" /></td>");
+                    sb.Append("<td width=\"19%\" align=\"center\" valign=\"middle\" class=\"cartPadd\">$ " + Convert.ToString(ie.Current.ProductPrice * ie.Current.Quantity) + "</td>");
+                    sb.Append("<td width=\"6%\" align=\"center\" valign=\"middle\" class=\"cartPadd\"><img src=\"" + strDomain + "images/trash_btn.gif\" style=\"cursor:pointer\" onclick=\"javascript:removeFromCart(" + Convert.ToString(ie.Current.ProductId) + "," + Convert.ToString(ie.Current.ProductId) + ")\"  alt=\"Remove\" width=\"25\" height=\"25\" border=\"0\" title=\"Remove\"  /></td>");
+                    sb.Append("</tr>");
+                }
+
+            }
+            totalPrice = subTotal + shipping;
+            sb.Append("<tr>");
+            sb.Append("<td colspan=\"7\" align=\"left\" valign=\"top\">");
+            sb.Append("<div class=\"padd3\">");
+            sb.Append("<p><label>Check Shipping Cost</label>");
+            int countryId = 0;
+            if (Convert.ToString(HttpContext.Current.Session["ShippingCountryId"]) != "")
+            {
+                countryId = Convert.ToInt16(HttpContext.Current.Session["ShippingCountryId"]);
+            }
+
+            sb.Append(this.PopulateCountryDropdown(countryId));
+            sb.Append("</p>");
+            if (countryId != 0)
+            {
+                sb.Append("<span id=\"spnCartTotal\" style=\"display:block\" runat=\"server\">");
+                countryId = Convert.ToInt16(HttpContext.Current.Session["ShippingCountryId"]);
+            }
+            else
+            {
+                sb.Append("<span id=\"spnCartTotal\" style=\"display:none\" runat=\"server\">");
+            }
+
+            sb.Append(UpdateShippingSession(countryId, Convert.ToString(subTotal) + "|" + Convert.ToString(totalWeight)));
+            sb.Append("</span>");
+            sb.Append("</div>");
+            sb.Append("</td>");
+            sb.Append("</tr>");
+            sb.Append("<tr>");
+            sb.Append("<td colspan=\"7\" align=\"center\" valign=\"top\">");
+            sb.Append("<img src=\"" + strDomain + "images/update_shopping_btn.gif\" style=\"cursor:pointer;\" onclick=\"javascript:updateCart()\"  alt=\"Update Shopping\" border=\"0\" title=\"Update Shopping\" class=\"processBtn\"/>");
+            sb.Append("<img src=\"" + strDomain + "images/cont_shopping_btn.gif\" style=\"cursor:pointer;\"  alt=\"Continue Shopping\" title=\"Continue Shopping\" class=\"processBtn\" onclick=\"javascript:window.location.href='" + strDomain + "'\" />");
+            if (countryId != 0)
+            {
+                sb.Append("<span id=\"spnCheckout\" style=\"visibility:visible\" runat=\"server\">");
+            }
+            else
+            {
+                sb.Append("<span id=\"spnCheckout\" style=\"visibility:hidden\" runat=\"server\">");
+            }
+            sb.Append("<img src=\"" + strDomain + "images/checkout_btn.gif\" style=\"cursor:pointer;\" alt=\"Checkout\" title=\"Checkout\" class=\"processBtn\" />");
+            sb.Append("</span><input id=\"hdnTotal\" type=\"hidden\" value=\"" + Convert.ToString(subTotal) + "|" + Convert.ToString(totalWeight) + "\" /></td>");
+            sb.Append("</tr>");
+            sb.Append("</table>");
+            sb.Append("</td>");
+            sb.Append("</tr>");
+            sb.Append("<tr>");
+            sb.Append("<td align=\"left\" valign=\"top\">&nbsp;</td>");
+            sb.Append("</tr>");
+            sb.Append("</table></td>");
+            sb.Append("</tr>");
+            sb.Append("</table>");
+        }
+        else
+        {
+            sb.Append("<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+            sb.Append("<tr>");
+            sb.Append("<td align=\"center\">Cart is empty .<a href=\"" + strDomain + "\" >Continue shopping .</a></td>");
+            sb.Append("</tr>");
+            sb.Append("</table>");
+        }
+
+        return Convert.ToString(sb);
+    }
+    private string PopulateCountryDropdown(int selectedCountryId)
+    {
+        StringBuilder sbl = new StringBuilder();
+        string strError = string.Empty;
+        string strQuary = "SELECT dbo.Country_Master.Id,dbo.Country_Master.Name, " +
+                            "dbo.Country_Master.shippingRate,dbo.Country_Master.recordStatus  " +
+                            "FROM Country_Master WHERE RecordStatus=1";
+        DataManipulationClass objDmc = new DataManipulationClass();
+        DataTable dtb = objDmc.FillDataTable(strQuary, ref strError);
+        sbl.Append("<select id=\"ddlCountry\">");
+        if (selectedCountryId == 0)
+        {
+            sbl.Append("<option value=\"\" selected=\"selected\">List of Countries</option>");
+        }
+        else
+        {
+            sbl.Append("<option value=\"\">List of Countries</option>");
+        }
+        foreach (DataRow drw in dtb.Rows)
+        {
+
+            if (Convert.ToString(selectedCountryId) == Convert.ToString(drw["Id"]))
+            {
+                sbl.Append("<option value=" + Convert.ToString(drw["Id"]) + " selected=\"selected\">" + Convert.ToString(drw["Name"]) + "</option>");
+            }
+            else
+            {
+                sbl.Append("<option value=" + Convert.ToString(drw["Id"]) + ">" + Convert.ToString(drw["Name"]) + "</option>");
+            }
+        }
+        sbl.Append("</select>");
+        sbl.Append("<img src=\"" + strDomain + "images/go_btn.gif\" alt=\"GO\" alt=\"Update Shopping\" title=\"GO\" class=\"goBtn\" onclick=\"javascript:CalculateShipping(document.getElementById('ddlCountry').value,document.getElementById('hdnTotal').value)\" style=\"cursor:pointer;\" />");
+        //sbl.Append("<input type=\"image\" src=\"" + strDomain + "images/go_btn.gif\" alt=\"GO\" title=\"GO\" class=\"goBtn\" onclick=CalculateShipping(document.getElementById().value) />");
+
+        return Convert.ToString(sbl);
+
+    }
+    public GCommon<CartInfo> AddToSession(int intPassedProdId, int intPassedSecondProdId, int intQuantity, ref string strError)
+    {
+        try
+        {
+            //Dictionary<int, int> objSession = new Dictionary<int, int>();
+            //bool existingProd = false;
+            //if (HttpContext.Current.Session["CartDetails"] != null)
+            //{
+            //    objSession = (Dictionary<int, int>)HttpContext.Current.Session["CartDetails"];
+            //}
+            //foreach (KeyValuePair<int, int> kvp in objSession)
+            //{
+            //    if (kvp.Key == intPassedProdId)
+            //    {
+            //        existingProd = true;
+
+            //        intQuantity = intQuantity + kvp.Value;
+            //        objSession.Remove(kvp.Key);
+            //        objSession.Add(kvp.Key, intQuantity);
+            //        break;
+            //    }
+            //}
+            //if (existingProd == false)
+            //{
+            //    objSession.Add(intPassedProdId, intQuantity);
+            //}
+
+
+            LogicManipulation objlogic = new LogicManipulation();
+            GCommon<CartInfo> onjCartCollection = new GCommon<CartInfo>();
+            if (HttpContext.Current.Session["CartDetails"] != null)
+            {
+                onjCartCollection = (GCommon<CartInfo>)HttpContext.Current.Session["CartDetails"];
+            }
+
+            IEnumerator<CartInfo> ie = onjCartCollection.GetEnumerator();
+            bool existingProd = false;
+            while (ie.MoveNext())
+            {
+                if ((ie.Current.SecondaryProductId == intPassedSecondProdId) && (intPassedProdId == ie.Current.ProductId))
+                {
+                    existingProd = true;
+                    onjCartCollection.Remove(ie.Current);
+
+                    CartInfo objCart = new CartInfo();
+                    objCart.ProductId = intPassedProdId;
+                    if (intPassedSecondProdId == intPassedProdId)
+                    {
+                        objCart.SecondaryProductId = intPassedProdId;
+                        intQuantity = intQuantity + ie.Current.Quantity;
+                        objCart.ProductImagePath = ie.Current.ProductImagePath;
+                    }
+                    else
+                    {
+                        objCart.SecondaryProductId = intPassedSecondProdId;
+                        intQuantity = intQuantity + ie.Current.Quantity;
+                        objCart.ProductImagePath = ie.Current.ProductImagePath;
+                    }
+                    objCart.ProductName = ie.Current.ProductName;
+                    objCart.Quantity = intQuantity;
+                    objCart.ProductPrice = ie.Current.ProductPrice;
+                    objCart.Weight = ie.Current.Weight;
+                    objCart.status = ie.Current.status;
+                    onjCartCollection.Add(objCart);
+                    break;
+                }
+            }
+            if (existingProd == false)
+            {
+                CartInfo objCart = new CartInfo();
+                ProductInfo objProdinfo = new ProductInfo();
+                objCart.ProductId = intPassedProdId;
+                if (intPassedSecondProdId == intPassedProdId)
+                {
+                    objCart.SecondaryProductId = intPassedProdId;
+                    objProdinfo = new DataManipulationClass().GetProductInfo(intPassedProdId, ref strError);
+                    objCart.ProductName = objProdinfo.CartName;
+                    objCart.ProductImagePath = objProdinfo.MainImageName;
+                }
+                else
+                {
+                    objCart.SecondaryProductId = intPassedSecondProdId;
+                    objProdinfo = new DataManipulationClass().GetProductInfo(intPassedSecondProdId, ref strError);
+                    ProductInfo objPrimaryProdInfo = new DataManipulationClass().GetProductInfo(intPassedProdId, ref strError);
+                    objCart.ProductName = objProdinfo.CartName + " for " + objPrimaryProdInfo.ProductName;
+                    objCart.ProductImagePath = objProdinfo.MainImageName;
+                    objCart.ProductImagePath = objlogic.CheckImageExists(0, 1);
+                }
+                objCart.Quantity = intQuantity;
+                objCart.Weight = Convert.ToDouble(objProdinfo.ProductWeight);
+                objCart.ProductPrice = objProdinfo.ProductPrice;
+                objCart.status = objProdinfo.RecordStatus;
+                onjCartCollection.Add(objCart);
+            }
+
+            HttpContext.Current.Session["CartDetails"] = onjCartCollection;
+            return onjCartCollection;
+        }
+        catch (Exception exp)
+        {
+            strError = exp.Message;
+            return null;
+        }
+
+    }
+    public GCommon<CartInfo> RemoveFromSession(string intPassedProdId, ref string strError)
+    {
+        try
+        {
+            //Dictionary<int, int> objSession = new Dictionary<int, int>();
+            //if (HttpContext.Current.Session["CartDetails"] != null)
+            //{
+            //    objSession = (Dictionary<int, int>)HttpContext.Current.Session["CartDetails"];
+            //}
+            //foreach (KeyValuePair<int, int> kvp in objSession)
+            //{
+            //    if (kvp.Key == intPassedProdId)
+            //    {
+            //        objSession.Remove(kvp.Key);
+            //        break;
+            //    }
+            //}
+
+            LogicManipulation objlogic = new LogicManipulation();
+            GCommon<CartInfo> onjCartCollection = new GCommon<CartInfo>();
+            if (HttpContext.Current.Session["CartDetails"] != null)
+            {
+                onjCartCollection = (GCommon<CartInfo>)HttpContext.Current.Session["CartDetails"];
+            }
+            else
+            {
+                if (HttpContext.Current.Request.Cookies["UserInfo"] != null)
+                {
+
+                    if (HttpContext.Current.Request.Cookies["UserInfo"]["userId"] != null)
+                    {
+
+                        string[] cookies = HttpContext.Current.Request.Cookies.AllKeys;
+                        foreach (string cookie in cookies)
+                        {
+                            HttpContext.Current.Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+                        }
+                        HttpContext.Current.Session.Abandon();
+                        HttpContext.Current.Session.Clear();
+                    }
+                }
+                HttpContext.Current.Response.Redirect(strDomain + "login.aspx");
+            }
+            IEnumerator<CartInfo> ie = onjCartCollection.GetEnumerator();
+            while (ie.MoveNext())
+            {
+                if (Convert.ToString(ie.Current.ProductId) + "," + Convert.ToString(ie.Current.SecondaryProductId) == intPassedProdId)
+                {
+                    onjCartCollection.Remove(ie.Current);
+                    break;
+                }
+            }
+
+            HttpContext.Current.Session["CartDetails"] = onjCartCollection;
+            return onjCartCollection;
+        }
+        catch (Exception exp)
+        {
+            strError = exp.Message;
+            return null;
+        }
+    }
+    public GCommon<CartInfo> UpdateSession(string intPassedIds, int intQuantity, ref string strError)
+    {
+        try
+        {
+            //Dictionary<int, int> objSession = new Dictionary<int, int>();
+            //if (HttpContext.Current.Session["CartDetails"] != null)
+            //{
+            //    objSession = (Dictionary<int, int>)HttpContext.Current.Session["CartDetails"];
+            //}
+            //foreach (KeyValuePair<int, int> kvp in objSession)
+            //{
+            //    if (kvp.Key == intPassedProdId)
+            //    {
+            //        objSession.Remove(kvp.Key);
+            //        objSession.Add(kvp.Key, intQuantity);
+            //        break;
+            //    }
+            //}
+
+            LogicManipulation objlogic = new LogicManipulation();
+            GCommon<CartInfo> onjCartCollection = new GCommon<CartInfo>();
+            if (HttpContext.Current.Session["CartDetails"] != null)
+            {
+                onjCartCollection = (GCommon<CartInfo>)HttpContext.Current.Session["CartDetails"];
+            }
+            else
+            {
+                if (HttpContext.Current.Request.Cookies["UserInfo"] != null)
+                {
+
+                    if (HttpContext.Current.Request.Cookies["UserInfo"]["userId"] != null)
+                    {
+
+                        string[] cookies = HttpContext.Current.Request.Cookies.AllKeys;
+                        foreach (string cookie in cookies)
+                        {
+                            HttpContext.Current.Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+                        }
+                        HttpContext.Current.Session.Abandon();
+                        HttpContext.Current.Session.Clear();
+                    }
+                }
+                HttpContext.Current.Response.Redirect(strDomain + "login.aspx");
+            }
+            //ProductInfo objProdinfo = new DataManipulationClass().GetProductInfo(intPassedProdId, ref strError);
+            IEnumerator<CartInfo> ie = onjCartCollection.GetEnumerator();
+            bool existingProd = false;
+            while (ie.MoveNext())
+            {
+                if (intPassedIds == Convert.ToString(ie.Current.ProductId) + "," + Convert.ToString(ie.Current.SecondaryProductId))
+                {
+                    existingProd = true;
+
+                    onjCartCollection.Remove(ie.Current);
+
+                    CartInfo objCart = new CartInfo();
+                    objCart.ProductId = ie.Current.SecondaryProductId;
+                    objCart.SecondaryProductId = ie.Current.SecondaryProductId;
+                    objCart.Quantity = intQuantity;
+                    objCart.ProductName = ie.Current.ProductName;
+                    objCart.Weight = ie.Current.Weight;
+                    //objCart.ProductImagePath = objlogic.CheckImageExists((ie.Current.SecondaryProductId), 1);
+                    objCart.ProductImagePath = ie.Current.ProductImagePath;
+                    objCart.ProductPrice = ie.Current.ProductPrice;
+                    objCart.status = ie.Current.status;
+                    onjCartCollection.Add(objCart);
+                    break;
+                }
+            }
+            //if (existingProd == false)
+            //{
+            //    CartInfo objCart = new CartInfo();
+
+            //    objCart.ProductId = objProdinfo.ProductId;
+            //    objCart.Quantity = intQuantity;
+            //    objCart.ProductName = objProdinfo.ProductName;
+            //    objCart.ProductImagePath = objlogic.CheckImageExists((objProdinfo.ProductId), 1);
+            //    objCart.ProductPrice = objProdinfo.ProductPrice;
+            //    objCart.RowTotal = intQuantity * objProdinfo.ProductPrice;
+            //    objCart.status = objProdinfo.RecordStatus;
+            //    onjCartCollection.Add(objCart);
+            //}
+            HttpContext.Current.Session["CartDetails"] = onjCartCollection;
+            return onjCartCollection;
+        }
+        catch (Exception exp)
+        {
+            strError = exp.Message;
+            return null;
+        }
+    }
+    public string UpdateShippingSession(int intCountryId, string passedTotal)
+    {
+        string[] arrToalWeight = passedTotal.Split(new char[] { '|' });
+
+        string strErrorMsg = string.Empty;
+        DataManipulationClass objDml = new DataManipulationClass();
+        CountryInfo objCountryInfo = objDml.GetCountryInfo(intCountryId, ref strErrorMsg);
+
+        double dblSubTotal = Convert.ToDouble(arrToalWeight[0]);
+        double dblTotalWeight = Convert.ToDouble(arrToalWeight[1]);
+        double shippingRate = 0;
+        if (Convert.ToString(objCountryInfo.CountryShippingRate) != "")
+        {
+            shippingRate = objCountryInfo.CountryShippingRate;
+        }
+        else
+        {
+            shippingRate = 0;
+        }
+
+        double totalShippingCharge = shippingRate * dblTotalWeight;
+        double totalPrice = dblSubTotal + totalShippingCharge;
+        string shipping = string.Empty;
+        if (totalShippingCharge == 0)
+        {
+            shipping = "Free";
+        }
+        else
+        {
+            shipping = Convert.ToString(totalShippingCharge);
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.Append("<ul class=\"total\">");
+        sb.Append("<li><span class=\"totalDet\">Sub Total :</span><span class=\"totalPrice\">$ " + Convert.ToString(dblSubTotal) + "</span><br class=\"clear\" />");
+        sb.Append("</li>");
+        sb.Append("<li><span class=\"totalDet\">Shipping : </span><span class=\"totalPrice\">$ " + shipping + "</span><br class=\"clear\" />");
+        sb.Append("</li>");
+        sb.Append("<li><span class=\"totalDet\">Discount Code :</span><span class=\"totalPrice\"><input type=\"text\" name=\"textfield2\" class=\"qtyBox\" />");
+        //sb.Append("<input type=\"image\" src=\"" + strDomain + "images/update_btn.gif\" title=\"Update\" class=\"updateBtn\" /></span><br class=\"clear\" />");
+        sb.Append("<img src=\"" + strDomain + "images/update_btn.gif\" title=\"Update\" class=\"updateBtn\" style=\"cursor:pointer;\" /></span><br class=\"clear\" />");
+        sb.Append("</li>");
+        sb.Append("<li><span class=\"totalDet\">Savings :</span><span class=\"totalPrice\">Rs.0.00 / $ 0.00</span><br class=\"clear\" />");
+        sb.Append("</li>");
+        sb.Append("<li><span class=\"totalDet\">Total Price :  </span><span class=\"totalPrice\">$ " + totalPrice + "</span></li>");
+        sb.Append("</ul>");
+        HttpContext.Current.Session["ShippingCountryId"] = intCountryId;
+        return Convert.ToString(sb);
+    }
+    public string GetMeasurementFormContent(int measType, int productId, int secondary_proId, int divNo, int loginMesurementId)
+    {
+        string strError = string.Empty;
+        DataManipulationClass objDmc = new DataManipulationClass();
+        ProductInfo objPinfo = objDmc.GetProductInfo(secondary_proId, ref strError);
+        StringBuilder sb = new StringBuilder();
+        //sb.Append("<div id=\"dvMeasurementForm" + Convert.ToString(divNo) + "\" title=\"dvMeasurementForm" + Convert.ToString(secondary_proId) + "\">");
+        sb.Append("<div id=\"dvMeasurementForm" + Convert.ToString(divNo) + "\">");
+        sb.Append("<input id=\"hdnSecondary" + Convert.ToString(divNo) + "\" type=\"hidden\" name=\"hdnSecondary" + Convert.ToString(divNo) + "\"  value='" + Convert.ToString(secondary_proId) + "' />");
+        sb.Append("<h4 class=\"bullet1\">Measurement form for " + objPinfo.ProductName + "</h4> ");
+        sb.Append("<div class=\"marg5\"> ");
+        sb.Append("<div id=\"dvMeasurement" + Convert.ToString(divNo) + "\" runat=\"server\"> ");
+        sb.Append(getMeasurementDetails(secondary_proId, measType, loginMesurementId, divNo));
+        sb.Append("</div> ");
+        sb.Append("<div id=\"dvStyleFactor" + Convert.ToString(divNo) + "\" runat=\"server\"> ");
+        sb.Append(new DataManipulationClass().styleFactorDetails(secondary_proId, loginMesurementId, divNo));
+        sb.Append("</div> ");
+        sb.Append("<br class=\"clear\" /> ");
+        sb.Append("<asp:ImageButton ID=\"btmGotoCart\" CssClass=\"marg6\" ImageUrl=\"http://vivaahsarees.com/images/submit_btn.gif\" ");
+        sb.Append("ToolTip=\"Submit\" OnClientClick=\"return valid();\" AlternateText=\"Submit\" runat=\"server\" /> ");
+        sb.Append("</div> ");
+        sb.Append("<input id=\"hdtext_MeasurementForm" + Convert.ToString(divNo) + "\" type=\"hidden\" runat=\"server\" />");
+        sb.Append("</div> ");
+        return Convert.ToString(sb);
+    }
+    public string getMeasurementNameList()
+    {
+        int intUserId = 0;
+        if (HttpContext.Current.Request.Cookies["UserInfo"] != null)
+        {
+            if (HttpContext.Current.Request.Cookies["UserInfo"]["userId"] != null)
+            {
+                intUserId = Convert.ToInt32(HttpContext.Current.Request.Cookies["UserInfo"]["userId"]);
+            }
+            else
+            {
+                HttpContext.Current.Response.Redirect(strDomain + "login.aspx");
+            }
+        }
+        else
+        {
+            HttpContext.Current.Response.Redirect(strDomain + "login.aspx");
+        }
+
+        StringBuilder sb1 = new StringBuilder();
+        string strError = "";
+        GCommon<MeasurementMaster> objmeasurement = new DataManipulationClass().GetMeasurementNameCollection(intUserId);
+
+
+        //sbl.Append("<span class=\"measrmnt\"><span class=\"lblTxt\"><strong>Measurement Name</strong></span> ");
+        //sbl.Append("<span id=\"sptextbox_MeasurementForm\" runat=\"server\" style=\"display: none\"> ");
+        //sbl.Append("<input id=\"txtmeasurementName_MeasurementForm\" name=\"txtmeasurementName_MeasurementForm\" type=\"text\" />");
+        //sbl.Append("</span> ");
+        //sbl.Append("<div id=\"spddl_MeasurementForm\" runat=\"server\"> ");
+        //sbl.Append(new LogicManipulation().getMeasurementNameList());
+        //sbl.Append("</div> ");
+
+
+
+
+        if (objmeasurement.Count > 0)
+        {
+            System.Collections.Generic.IEnumerator<MeasurementMaster> ie = objmeasurement.GetEnumerator();
+
+
+            sb1.Append("<span class=\"measrmnt\"><span class=\"lblTxt\"><strong> Measurement Name</strong></span> ");
+            sb1.Append("<span id=\"sptextbox_MeasurementForm\" runat=\"server\" style=\"display: none\" class=\"measurBox\"> ");
+            sb1.Append("<input id=\"txtmeasurementName_MeasurementForm\" name=\"txtmeasurementName_MeasurementForm\" type=\"text\" />");
+            sb1.Append("</span> ");
+            sb1.Append("<div id=\"spddl_MeasurementForm\" style=\"display: block\" runat=\"server\" class=\"measurBox\"> ");
+            sb1.Append(" <select id=\"ddlname_MeasurementForm\" onchange= \"javascript:loadMeasurement(this.value);\"> ");
+            sb1.Append("<option value=\"0\" selected=\"true\">[--Please Select--]</option> ");
+            while (ie.MoveNext())
+            {
+                sb1.Append("<option value=\"" + Convert.ToString(ie.Current.measurementId) + "\">" + Convert.ToString(ie.Current.name) + "</option> ");
+            }
+            sb1.Append("</select> ");
+            sb1.Append("</div> ");
+            sb1.Append("<span class=\"msg\" title=\"header=[Measurement names are used to identify the person for whom these measurements are for. For eg: Amit-Dec'08 or Tina-Jan'09. The next time you login, you can select from the list of measurement names.] body=[]\"> ");
+            sb1.Append("<img src=\"http://vivaahsarees.com/images/help.gif\" alt=\"\" /> ");
+            sb1.Append("</span></span><span runat=\"server\" id=\"spadd_MeasurementForm\"><a onclick=\"opentextbox('sptextbox_MeasurementForm','txtmeasurementName_MeasurementForm','spddl_MeasurementForm','spCancel_MeasurementForm','spadd_MeasurementForm','hdtext_MeasurementForm');\" ");
+            sb1.Append("style=\"cursor:pointer\"  class=\"addMeasr\">Add a new measurement name </a></span><span id=\"spCancel_MeasurementForm\" ");
+            sb1.Append("style=\"display: none\"><a style=\"cursor: pointer\" class=\"addMeasr\" onclick=\"openddl('sptextbox_MeasurementForm','txtmeasurementName_MeasurementForm','spddl_MeasurementForm','spCancel_MeasurementForm','spadd_MeasurementForm','hdtext_MeasurementForm');\"> ");
+            sb1.Append("Cancel</a> </span> ");
+            sb1.Append("<br class=\"clear\" /> ");
+
+        }
+        else
+        {
+
+            sb1.Append("<span class=\"measrmnt\"><span class=\"lblTxt\"><strong> Measurement Name</strong></span>");
+            sb1.Append("<span id=\"sptextbox_MeasurementForm\" runat=\"server\" style=\"display: block\" class=\"measurBox\"> ");
+            sb1.Append("<input id=\"txtmeasurementName_MeasurementForm\" name=\"txtmeasurementName_MeasurementForm\" type=\"text\" />");
+            sb1.Append("</span> ");
+            sb1.Append("<div id=\"spddl_MeasurementForm\" style=\"display: none\" runat=\"server\" class=\"measurBox\"></div> ");
+            sb1.Append("<span class=\"msg\" title=\"header=[Measurement names are used to identify the person for whom these measurements are for. For eg: Amit-Dec'08 or Tina-Jan'09. The next time you login, you can select from the list of measurement names.] body=[]\"> ");
+            sb1.Append("<img src=\"http://vivaahsarees.com/images/help.gif\" alt=\"\" /> ");
+            sb1.Append("</span></span>");
+            sb1.Append("<br class=\"clear\" /> ");
+
+
+        }
+        return Convert.ToString(sb1);
+
+    }
+    public string getProductSubDetails(int secondaryProdId)
+    {
+        string strError = string.Empty;
+        //int secondaryProdId = Convert.ToInt16(Request.Params["secondaryId"]);
+        MeasurementInfo objMeasurement = new MeasurementInfo();
+        objMeasurement = new DataManipulationClass().GetMeasurementInfo(secondaryProdId, ref strError);
+
+        ProductInfo objProdInfo = new DataManipulationClass().GetProductInfo(objMeasurement.secondaryProductId, ref strError); ;
+        string secondaryProductName = objProdInfo.ProductName;
+        StringBuilder strGift = new StringBuilder();
+        if (objMeasurement.masterSample == 1 || objMeasurement.dummaySample == 1 || objMeasurement.userMeasurement == 1)
+        {
+            strGift.Append("<label class=\"slectOpt\">" + secondaryProductName + " measurement options</label><br class=\"clear\" />");
+            strGift.Append("<br class=\"clear\" />");
+        }
+        if (objMeasurement.masterSample == 1)
+        {
+            strGift.Append("<label class=\"marg3\"><input id=\"radioMasterSample" + objMeasurement.secondaryProductId + "\" name=\"RadioButton" + objMeasurement.secondaryProductId + "\" type=\"radio\" value=\"" + objMeasurement.secondaryProductId + ",radioMasterSample\" checked=\"CHECKED\" onclick=\"SetValueToHdnField(this.value);\" />Mailing master sample " + secondaryProductName + " for taking measurements</label><br class=\"clear\" />");
+            strGift.Append("<br class=\"clear\" />");
+        }
+        if (objMeasurement.dummaySample == 1)
+        {
+            strGift.Append("<label class=\"marg3\"><input id=\"radioDummaySample" + objMeasurement.secondaryProductId + "\" name=\"RadioButton" + objMeasurement.secondaryProductId + "\" type=\"radio\" value=\"" + objMeasurement.secondaryProductId + ",radioDummaySample\" onclick=\"SetValueToHdnField(this.value);\" />Make a dummy sample for approval</label><br class=\"clear\" />");
+            strGift.Append("<br class=\"clear\" />");
+        }
+        if (objMeasurement.masterSample == 1)
+        {
+            strGift.Append("<label class=\"marg3\"><input id=\"radioUserMeasurement" + objMeasurement.secondaryProductId + "\" name=\"RadioButton" + objMeasurement.secondaryProductId + "\" type=\"radio\" value=\"" + objMeasurement.secondaryProductId + ",radioUserMeasurement\" onclick=\"SetValueToHdnField(this.value);\" />User measurement</label><br class=\"clear\" />");
+            strGift.Append("<br class=\"clear\" />");
+        }
+        return strGift.ToString();
+    }
+
+    #endregion
+
+    #region Subhro
+    public string GetbreadCrum(int catgId, ref string pageTitle)
+    {
+        string strExtention = Convert.ToString(System.Configuration.ConfigurationManager.AppSettings["ExtentionToShow"]);
+
+        DataManipulationClass objdata = new DataManipulationClass();
+        string strUrlPath = objdata.getCategoryIdOrUrl(catgId);
+        string strReturnString = string.Empty;
+
+
+        string[] strPath = strUrlPath.Split(new char[] { '/' });
+        string strlink = "";
+        StringBuilder sbcollection = new StringBuilder();
+        //<%--<li><a href="#">Home</a> &raquo;</li>
+        //    <li class="normalTxt">Sarees Collection</li>--%>
+        if (strPath.Length == 2)
+        {
+            strReturnString = "<li><a href=\"" + strDomain + "\">Home</a> &raquo</li><li class=\"normalTxt\">" + strPath[strPath.Length - 2] + "</li>";
+        }
+        else
+        {
+            for (int i = 0; i < strPath.Length - 2; i++)
+            {
+
+                strlink += strPath[i] + "/";
+
+                sbcollection.Append("<li><a href=\" " + strDomain + strlink + "1" + strExtention + "\">" + strPath[i] + "</a>&raquo</li>");
+            }
+            //lblBreadcrum.Text = "<li><a href=\"" + strDomain + "\">Home</a> &raquo</li>" + sbcollection + "<li class=\"normalTxt\">" + strPath[strPath.Length - 2] + "</li>";
+            strReturnString = "<li><a href=\"" + strDomain + "\">Home</a> &raquo</li>" + sbcollection + "<li class=\"normalTxt\">" + strPath[strPath.Length - 2] + "</li>";
+
+
+        }
+        pageTitle = strPath[strPath.Length - 2];
+        return strReturnString;
+    }
+
+    public string GetbreadCrum(int catgId, string productName, ref string pageTitle)
+    {
+        string strExtention = Convert.ToString(System.Configuration.ConfigurationManager.AppSettings["ExtentionToShow"]);
+
+        DataManipulationClass objdata = new DataManipulationClass();
+        string strUrlPath = objdata.getCategoryIdOrUrl(catgId);
+        string returnString = string.Empty;
+        string[] strPath = strUrlPath.Split(new char[] { '/' });
+        string strlink = "";
+        StringBuilder sbcollection = new StringBuilder();
+        for (int i = 0; i < strPath.Length - 1; i++)
+        {
+            strlink += strPath[i] + "/";
+            sbcollection.Append("<li><a href=\" " + strDomain + strlink + "1" + strExtention + "\">" + strPath[i] + "</a>&raquo</li>");
+        }
+        returnString = "<li><a href=\"" + strDomain + "\">Home</a> &raquo</li>" + sbcollection + "<li class=\"normalTxt\">" + productName + "</li>";
+        pageTitle = productName;
+        return returnString;
+        //}
+    }
+
+    public string GetbreadCrum_for_OtherPages(int catgId, int productId, ref string pageTitle)
+    {
+        string strExtention = Convert.ToString(System.Configuration.ConfigurationManager.AppSettings["ExtentionToShow"]);
+        string strError = "";
+        DataManipulationClass objdata = new DataManipulationClass();
+        string strUrlPath = objdata.getCategoryIdOrUrl(catgId);
+
+        string strURlName = "";
+        string ProdName = "";
+        objdata.get_urlName_ProdName(productId, ref strURlName, ref  ProdName, ref strError);
+        //string ProdName = objdata.geturlName(productId, ref strError);
+        string returnString = string.Empty;
+        string[] strPath = strUrlPath.Split(new char[] { '/' });
+        string strlink = "";
+        StringBuilder sbcollection = new StringBuilder();
+        for (int i = 0; i < strPath.Length - 1; i++)
+        {
+            strlink += strPath[i] + "/";
+            sbcollection.Append("<li><a href=\" " + strDomain + strlink + "1" + strExtention + "\">" + strPath[i] + "</a>&raquo</li>");
+        }
+        //pageTitle = productName;
+        returnString = "<li><a href=\"" + strDomain + "\">Home</a> &raquo</li>" + sbcollection + "<li class=\"normalTxt\"><a href=\" " + strDomain + strlink + strURlName + strExtention + "\">" + ProdName + "</a>&raquo</li><li class=\"normalTxt\">" + pageTitle + "</li>";
+        return returnString;
+        //}
+    }
+
+    public string replaceHtmltoText(string strHTML)
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append(System.Text.RegularExpressions.Regex.Replace(strHTML, "<[^>]*>", "").Trim());
+        sb.Replace("&nbsp;", "");
+        return sb.ToString();
+    }
+
+    public string GetbreadCrum_for_OtherPages(int catgId, int productId, int secondary_proId, ref string pageTitle)
+    {
+        string strExtention = Convert.ToString(System.Configuration.ConfigurationManager.AppSettings["ExtentionToShow"]);
+        string strError = "";
+        DataManipulationClass objdata = new DataManipulationClass();
+        string strUrlPath = objdata.getCategoryIdOrUrl(catgId);
+
+        string strURlName = "";
+        string str_secondary_urlname = "";
+        string strsecondary_ProdName = "";
+        string ProdName = "";
+        objdata.get_urlName_ProdName(productId, ref strURlName, ref  ProdName, ref strError);
+        objdata.get_urlName_ProdName(secondary_proId, ref str_secondary_urlname, ref  strsecondary_ProdName, ref strError);
+        string returnString = string.Empty;
+        //string ProdName = objdata.geturlName(productId, ref strError);
+        if (strError == "")
+        {
+
+            string[] strPath = strUrlPath.Split(new char[] { '/' });
+            string strlink = "";
+            StringBuilder sbcollection = new StringBuilder();
+            for (int i = 0; i < strPath.Length - 1; i++)
+            {
+                strlink += strPath[i] + "/";
+                sbcollection.Append("<li><a href=\" " + strDomain + strlink + "1" + strExtention + "\">" + strPath[i] + "</a>&raquo</li>");
+            }
+            //pageTitle = productName;
+            returnString = "<li><a href=\"" + strDomain + "\">Home</a> &raquo</li>" + sbcollection + "<li class=\"normalTxt\"><a href=\" " + strDomain + strlink + strURlName + strExtention + "\">" + ProdName + "</a>&raquo</li><li><a href=\" " + strDomain + strlink + strURlName + strExtention + "\">" + strsecondary_ProdName + "</a>&raquo</li><li class=\"normalTxt\">" + pageTitle + "</li>";
+
+        }
+        return returnString;
+        //}
+    }
+    #endregion
+
+    #region Manas
+    public string Units(int type)
+    {
+        if (type == 0)
+        {
+            type = 1;
+        }
+        StringBuilder str = new StringBuilder();
+        if (type == 1)
+        {
+            str.Append("<label class=\"width1\">Inch<br class=\"clear\" /><input type=\"radio\" id=\"radiounit\" name=\"radiounit\" checked=\"checked\" value=\"1\" onClick=\"javascript:onTypeChange(this);\" /></label>");
+            str.Append("<label class=\"width1\">Cms<br class=\"clear\" /><input type=\"radio\" id=\"radiounit\" name=\"radiounit\" value=\"2\" onClick=\"javascript:onTypeChange(this);\" /></label>");
+
+        }
+        else if (type == 2)
+        {
+            str.Append("<label class=\"width1\">Inch<br class=\"clear\" /><input type=\"radio\" id=\"radiounit\" name=\"radiounit\" value=\"1\" onClick=\"javascript:onTypeChange(this);\" /></label>");
+            str.Append("<label class=\"width1\">Cms<br class=\"clear\" /><input type=\"radio\" id=\"radiounit\" name=\"radiounit\" checked=\"checked\" value=\"2\" onClick=\"javascript:onTypeChange(this);\" /></label>");
+        }
+        str.Append("<input id=\"hdnTypes\" type=\"hidden\" name=\"hdnTypes\" value=" + Convert.ToString(type) + " />");
+        return str.ToString();
+    }
+    public string getMeasurementDetails(int secondaryProductId, int type, int loginMesurementId, int dvNo)
+    {
+        string ids = string.Empty;
+        if (type == 0)
+        {
+            type = 1;
+        }
+        GCommon<MeasurementMaster> objMeasurements = new DataManipulationClass().getMeasurements(secondaryProductId);
+        System.Collections.Generic.IEnumerator<MeasurementMaster> ie = objMeasurements.GetEnumerator();
+        StringBuilder strMeasurement = new StringBuilder();
+        int asc = 65;
+        while (ie.MoveNext())
+        {
+            string measurementvalue = string.Empty;
+            LoginMeasurementDetails objLoginMeasurement = new LoginMeasurementDetails();
+            objLoginMeasurement = new DataManipulationClass().getLoginMeasurementDetail(loginMesurementId, ie.Current.measurementId, secondaryProductId);
+
+            measurementvalue = objLoginMeasurement.measurementValue;
+
+            ids += ie.Current.measurementId + "~";
+            strMeasurement.Append("<label class=\"width2\">" + (char)asc + ") " + ie.Current.name + "</label>");
+            strMeasurement.Append("<select class=\"selQty2\" name=\"" + Convert.ToString(dvNo) + "ddlMeasurement" + Convert.ToString(ie.Current.measurementId) + "\" id=\"" + Convert.ToString(dvNo) + "ddlMeasurement" + Convert.ToString(ie.Current.measurementId) + "\">");
+
+            if (type == 1)
+            {
+                strMeasurement.Append("<option value=\"0\">Select In Inches</option>");
+            }
+            else if (type == 2)
+            {
+                strMeasurement.Append("<option value=\"0\">Select In Cm</option>");
+            }
+            for (int i = ie.Current.inchStart; i < ie.Current.inchStop; i += ie.Current.inchIncrease)
+            {
+                int temp = i + ie.Current.inchIncrease;
+                if (measurementvalue == Convert.ToString(i) + "-" + Convert.ToString(temp))
+                {
+                    strMeasurement.Append("<option selected=\"true\" value=\"" + i + "-" + temp + "\">" + i + "-" + temp + "</option>");
+
+                }
+                else
+                {
+                    strMeasurement.Append("<option value=\"" + i + "-" + temp + "\">" + i + "-" + temp + "</option>");
+                }
+            }
+
+            strMeasurement.Append("</select><br class=\"clear\" />");
+            asc++;
+        }
+        strMeasurement.Append("<input id=\"hdnMeasurements" + Convert.ToString(dvNo) + "\" type=\"hidden\" name=\"hdnMeasurements" + Convert.ToString(dvNo) + "\" value=\"" + ids + "\" />");
+        return strMeasurement.ToString();
+    }
+    //public string strRange(int start, int end, int increase, string type, string selectedValue)
+    //{
+    //    StringBuilder str = new StringBuilder();
+    //    if (type == "radioInch")
+    //    {
+    //        str.Append("<option value=\"0\">Select In Inches</option>");
+    //    }
+    //    else if (type == "radioCm")
+    //    {
+    //        str.Append("<option value=\"0\">Select In Cm</option>");
+    //    }
+    //    else
+    //    {
+    //        str.Append("<option value=\"0\">Select In Inches</option>");
+    //    }
+    //    for (int i = start; i < end; i += increase)
+    //    {
+    //        int temp = i + increase;
+    //        string strMatch = Convert.ToString(i) + "-" + Convert.ToString(temp);
+    //        if (strMatch != selectedValue)
+    //        {
+    //            str.Append("<option value=\"" + i + "-" + temp + "\">" + i + "-" + temp + "</option>");
+    //        }
+    //        else
+    //        {
+    //            str.Append("<option selected=\"selected\" value=\"" + i + "-" + temp + "\">" + i + "-" + temp + "</option>");
+    //        }
+
+    //    }
+    //    return str.ToString();
+    //}
+    //public string strRange(int start, int end, int increase, string type)
+    //{
+    //    StringBuilder str = new StringBuilder();
+    //    if (type == "radioInch")
+    //    {
+    //        str.Append("<option value=\"0\">Select In Inches</option>");
+    //    }
+    //    else if (type == "radioCm")
+    //    {
+    //        str.Append("<option value=\"0\">Select In Cm</option>");
+    //    }
+    //    else
+    //    {
+    //        str.Append("<option value=\"0\">Select In Inches</option>");
+    //    }
+    //    for (int i = start; i < end; i += increase)
+    //    {
+    //        int temp = i + increase;
+    //        str.Append("<option value=\"" + i + "-" + temp + "\">" + i + "-" + temp + "</option>");
+    //    }
+    //    return str.ToString();
+    //}
+    public string updateMeasurementDetails(int LoginMeasurementId, int productId, string type)
+    {
+        //GCommon<MeasurementMaster> objMeasurements = new DataManipulationClass().getMeasurements(productId);
+        //System.Collections.Generic.IEnumerator<MeasurementMaster> ie = objMeasurements.GetEnumerator();
+        StringBuilder strMeasurement = new StringBuilder();
+        //int asc = 65;
+        //while (ie.MoveNext())
+        //{
+        //    LoginMeasurementDetails objLoginMeasurement = new LoginMeasurementDetails();
+        //    objLoginMeasurement =new DataManipulationClass().getLoginMeasurementDetail(LoginMeasurementId, ie.Current.measurementId);
+        //    if (objLoginMeasurement != null)
+        //    {
+        //        strMeasurement.Append("<label class=\"width2\">" + (char)asc + ") " + ie.Current.name + "</label>");
+        //        strMeasurement.Append("<select class=\"selQty2\" name=\"ddlMeasurement" + Convert.ToString(ie.Current.measurementId) + "\" id=\"ddlMeasurement" + Convert.ToString(ie.Current.measurementId) + "\">");
+        //        if (type == "radioInch")
+        //        {
+        //            strMeasurement.Append(strRange(ie.Current.inchStart, ie.Current.inchStop, ie.Current.inchIncrease, type, objLoginMeasurement.measurementValue));
+        //        }
+        //        else if (type == "radioCm")
+        //        {
+        //            strMeasurement.Append(strRange(ie.Current.cmStart, ie.Current.cmStop, ie.Current.cmIncrease, type, objLoginMeasurement.measurementValue));
+        //        }
+        //        strMeasurement.Append("</select><br class=\"clear\" />");
+        //    }
+        //    else
+        //    {
+        //        strMeasurement.Append("<label class=\"width2\">" + (char)asc + ") " + ie.Current.name + "</label>");
+        //        strMeasurement.Append("<select class=\"selQty2\" name=\"ddlMeasurement" + Convert.ToString(ie.Current.measurementId) + "\" id=\"ddlMeasurement" + Convert.ToString(ie.Current.measurementId) + "\">");
+        //        if (type == "radioInch")
+        //        {
+        //            strMeasurement.Append(strRange(ie.Current.inchStart, ie.Current.inchStop, ie.Current.inchIncrease, type));
+        //        }
+        //        else if (type == "radioCm")
+        //        {
+        //            strMeasurement.Append(strRange(ie.Current.cmStart, ie.Current.cmStop, ie.Current.cmIncrease, type));
+        //        }
+
+        //        strMeasurement.Append("</select><br class=\"clear\" />");
+        //    }
+        //    asc++;
+        //}
+        return strMeasurement.ToString();
+    }
+
+
+    #endregion
+}

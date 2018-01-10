@@ -1,0 +1,267 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../../images/background.gif) 0px 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: 11px/13px Verdana, Arial, Helvetica, sans-serif; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+SPAN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+SELECT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.clear {
+	CLEAR: both; FONT-SIZE: 0px; LINE-HEIGHT: 0
+}
+#container {
+	MARGIN: 0px auto; WIDTH: 1003px
+}
+#header {
+	WIDTH: 1003px
+}
+#header IMG.headerlogo {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 22px 6px 5px; BORDER-RIGHT-WIDTH: 0px
+}
+#header IMG.bestcollection {
+	FLOAT: left; MARGIN: 8px 0px 0px
+}
+#header DIV.customar {
+	FLOAT: left; WIDTH: 318px
+}
+#header DIV.customar P {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 52px; PADDING-BOTTOM: 8px; FONT: bold 12px/15px Verdana, Arial, Helvetica, sans-serif; COLOR: #cf3825; PADDING-TOP: 22px; TEXT-ALIGN: center
+}
+#header DIV.customar DIV.login {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 37px; FLOAT: left; PADDING-BOTTOM: 7px; WIDTH: 260px; PADDING-TOP: 5px
+}
+#header DIV.customar DIV.login LABEL {
+	FLOAT: left; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 111px; COLOR: #d4672c
+}
+#header DIV.customar DIV.login .textBox {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FLOAT: left; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; BORDER-LEFT: #999999 1px solid; WIDTH: 110px; COLOR: #999999; BORDER-BOTTOM: #999999 1px solid; HEIGHT: 15px
+}
+#header DIV.customar DIV.login .button {
+	DISPLAY: block; BACKGROUND: #cf3825; FLOAT: left; MARGIN: 0px 0px 0px 3px; FONT: bold 10px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff
+}
+#header DIV.customar UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 4px; PADDING-TOP: 10px
+}
+#header DIV.customar UL LI {
+	FLOAT: left; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #f18a1b
+}
+#header DIV.customar UL LI A {
+	FLOAT: left; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #f18a1b; TEXT-DECORATION: none
+}
+#header DIV.shppingcart {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 60px; BACKGROUND: url(../images/shoppingcart.jpg) no-repeat 0px 18px; FLOAT: left; PADDING-BOTTOM: 10px; WIDTH: 143px; PADDING-TOP: 35px; TEXT-ALIGN: center
+}
+#header DIV.shppingcart P {
+	FONT: bold 13px/15px Verdana, Arial, Helvetica, sans-serif; COLOR: #cf3825
+}
+#header DIV.shppingcart UL.items {
+	FLOAT: left; MARGIN: 0px auto; WIDTH: 143px
+}
+#header DIV.shppingcart UL.items LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #f18a1b; PADDING-TOP: 7px; TEXT-ALIGN: center
+}
+#header DIV.shppingcart UL.viewcart {
+	FLOAT: left; MARGIN: 0px auto; WIDTH: 143px
+}
+#header DIV.shppingcart UL.viewcart LI {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #f18a1b; PADDING-TOP: 10px
+}
+#header DIV.shppingcart UL.viewcart LI A {
+	FLOAT: left; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #f18a1b; TEXT-DECORATION: none
+}
+#header DIV.hednav {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../images/hed-nav_bg.gif) repeat-x 0px 0px; PADDING-BOTTOM: 5px; WIDTH: 1003px; PADDING-TOP: 0px; HEIGHT: 33px
+}
+#header DIV.hednav UL {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 20px; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#header DIV.hednav LI {
+	FLOAT: left; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #cf3825
+}
+#header DIV.hednav LI A {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 20px; BACKGROUND: url(../images/red-bullet.gif) no-repeat 0px 12px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #cf3825; PADDING-TOP: 10px; TEXT-DECORATION: none
+}
+DIV.categoryHead {
+	BACKGROUND: url(../images/hed-bot-category-bg.gif) no-repeat 100% 0px; FLOAT: left; MARGIN: 0px 0px 2px; FONT: bold 13px/30px Verdana, Arial, Helvetica, sans-serif; WIDTH: 168px; COLOR: #fff; TEXT-INDENT: 30px; HEIGHT: 35px
+}
+#leftPanel {
+	BACKGROUND: #fcedd6; FLOAT: left; MARGIN: 4px 0px 0px; WIDTH: 168px
+}
+#leftPanel DIV.leftnav {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; MARGIN: 0px 0px 7px 1px; PADDING-TOP: 1px
+}
+#leftPanel DIV.leftnav H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; BACKGROUND: url(../images/leftnav_bg.gif) no-repeat 0px 0px; PADDING-BOTTOM: 0px; FONT: bold 12px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 158px; COLOR: #fff; PADDING-TOP: 4px; HEIGHT: 23px; TEXT-ALIGN: left
+}
+#leftPanel DIV.leftnav UL {
+	BORDER-RIGHT: #fcd392 1px solid; BORDER-TOP: #fcd392 1px solid; BACKGROUND: #fcfbf4; FLOAT: left; MARGIN: 0px 0px 3px; BORDER-LEFT: #fcd392 1px solid; WIDTH: 157px; BORDER-BOTTOM: #fcd392 1px solid; LIST-STYLE-TYPE: none
+}
+#leftPanel DIV.leftnav UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: none; PADDING-BOTTOM: 2px; PADDING-TOP: 0px
+}
+#leftPanel DIV.leftnav UL LI A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; BACKGROUND: url(../images/red-bullet.gif) no-repeat 4px 3px; PADDING-BOTTOM: 2px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #d1445a; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+#leftPanel DIV.leftnav UL LI A:hover {
+	COLOR: #f18a1b
+}
+#leftnav IMG {
+	FLOAT: left; MARGIN: 2px 0px 4px
+}
+DIV.centerPanel {
+	FLOAT: left; WIDTH: 834px
+}
+DIV.centerPanel SPAN {
+	DISPLAY: block; FONT-SIZE: 0px; BACKGROUND: url(../images/hed-bot-category-bar.gif) repeat-x 0px 0px; FLOAT: left; WIDTH: 100%; LINE-HEIGHT: 0; HEIGHT: 14px
+}
+#bodyarea {
+	FLOAT: left; MARGIN: -20px 0px 0px 4px; WIDTH: 630px
+}
+#bodyarea IMG.comingoccasion {
+	BORDER-RIGHT: #cd3824 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #cd3824 1px solid; PADDING-LEFT: 1px; FLOAT: left; PADDING-BOTTOM: 1px; MARGIN: 0px 3px 0px 0px; BORDER-LEFT: #cd3824 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #cd3824 1px solid
+}
+#bodyarea P.rakhiTxt {
+	BORDER-RIGHT: #cd3824 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #cd3824 1px solid; PADDING-LEFT: 5px; BACKGROUND: #fdfbea; FLOAT: left; PADDING-BOTTOM: 6px; FONT: 11px/13px Verdana, Arial, Helvetica, sans-serif; BORDER-LEFT: #cd3824 1px solid; WIDTH: 260px; COLOR: #cd3824; PADDING-TOP: 6px; BORDER-BOTTOM: #cd3824 1px solid; TEXT-ALIGN: justify
+}
+#bodyarea UL.prodbanner {
+	BORDER-RIGHT: #cd3824 1px solid; BORDER-TOP: #cd3824 1px solid; FLOAT: left; MARGIN: 4px 0px 0px; BORDER-LEFT: #cd3824 1px solid; WIDTH: 624px; BORDER-BOTTOM: #cd3824 1px solid
+}
+#bodyarea UL.prodbanner LI {
+	FLOAT: left; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #de8602; TEXT-ALIGN: right
+}
+#bodyarea UL.prodbanner LI A {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #de8602; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+#bodyarea UL.prodbanner LI SPAN.thumbhed {
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 0px; BACKGROUND: url(../images/prod-banner-bg.gif) no-repeat 0px 2px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 1px; FONT: bold 12px/20px Verdana, Arial, Helvetica, sans-serif; WIDTH: 152px; COLOR: #fff; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#bodyarea UL.prodbanner LI SPAN.thumbimg IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 3px; FLOAT: left; PADDING-BOTTOM: 2px; BORDER-TOP-STYLE: none; PADDING-TOP: 3px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#bodyarea H3.sendGifts {
+	MARGIN: 14px 0px 0px; FONT: bold 17px/19px Verdana, Arial, Helvetica, sans-serif; COLOR: #cc0000
+}
+#bodyarea P.senGiftTxt {
+	FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 624px; COLOR: #333; TEXT-ALIGN: justify
+}
+#bodyarea UL.categorythumb {
+	FLOAT: left; WIDTH: 630px
+}
+#bodyarea UL.categorythumb LI {
+	FLOAT: left; MARGIN: 5px 6px 5px 0px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 120px; COLOR: #999; TEXT-ALIGN: center
+}
+#bodyarea UL.categorythumb LI SPAN.prodname {
+	DISPLAY: block; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 120px; COLOR: #999
+}
+#bodyarea UL.categorythumb LI SPAN.prodname A {
+	FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #999; TEXT-DECORATION: none
+}
+#bodyarea UL.categorythumb LI IMG {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 118px; BORDER-BOTTOM: #ccc 1px solid; HEIGHT: 99px
+}
+#bodyarea DIV.bottompart {
+	BORDER-RIGHT: #fcd3a7 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #fcd3a7 1px solid; PADDING-LEFT: 2px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 5px 0px 0px; BORDER-LEFT: #fcd3a7 1px solid; WIDTH: 620px; PADDING-TOP: 0px; BORDER-BOTTOM: #fcd3a7 1px solid
+}
+#bodyarea DIV.bottompart DIV.orderplaced {
+	FLOAT: left; MARGIN: 3px 4px 0px 0px; WIDTH: 204px
+}
+#bodyarea DIV.bottompart DIV.orderplaced H3 {
+	BACKGROUND: #fdcfc8; FONT: bold 12px/24px Verdana, Arial, Helvetica, sans-serif; COLOR: #cc0000; TEXT-ALIGN: center
+}
+#bodyarea DIV.bottompart DIV.orderplaced UL LI {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 5px; BACKGROUND: url(../images/dot.gif) no-repeat 2px 7px; FLOAT: left; PADDING-BOTTOM: 3px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 95px; COLOR: #cc0000; PADDING-TOP: 0px
+}
+.noMargin1 {
+	MARGIN: 3px 2px 0px 0px
+}
+#rightpannel {
+	BORDER-RIGHT: #fbd9a3 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #fbd9a3 1px solid; PADDING-LEFT: 3px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: -20px 0px 0px; FONT: bold 12px/14px Tahoma, Verdana, Arial, Helvetica, sans-serif; BORDER-LEFT: #fbd9a3 1px solid; WIDTH: 183px; COLOR: #cd3824; PADDING-TOP: 0px; BORDER-BOTTOM: #fbd9a3 1px solid
+}
+#rightpannel H4.populargifts {
+	PADDING-RIGHT: 75px; PADDING-LEFT: 0px; BACKGROUND: url(../images/popular_gifts.jpg) no-repeat 100% 0px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: bold 12px/16px Verdana, Arial, Helvetica, sans-serif; WIDTH: 107px; COLOR: #cd3824; PADDING-TOP: 6px; HEIGHT: 46px
+}
+#rightpannel UL.popularlist {
+	FLOAT: left
+}
+#rightpannel UL.popularlist LI {
+	BORDER-RIGHT: #cd3824 1px solid; BORDER-TOP: #cd3824 1px solid; FLOAT: none; MARGIN: 0px 0px 8px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; OVERFLOW: hidden; BORDER-LEFT: #cd3824 1px solid; WIDTH: 181px; COLOR: #f18a1b; BORDER-BOTTOM: #cd3824 1px solid; TEXT-ALIGN: center
+}
+#rightpannel UL.popularlist LI IMG {
+	FLOAT: left; WIDTH: 82px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 82px; BORDER-BOTTOM-STYLE: none
+}
+#rightpannel UL.popularlist LI SPAN {
+	DISPLAY: block; FLOAT: left; MARGIN: 7px 0px 0px; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 99px; COLOR: #cd3824; TEXT-ALIGN: center
+}
+#rightpannel UL.popularlist LI SPAN A {
+	COLOR: #cd3824; TEXT-DECORATION: none
+}
+#rightpannel UL.popularlist LI A.cart {
+	DISPLAY: block; BACKGROUND: url(../images/index-cart-button.jpg) no-repeat 0px 0px; FLOAT: left; MARGIN: 5px 0px 6px 11px; FONT: bold 11px/20px Tahoma, Verdana, Arial, Helvetica, sans-serif; WIDTH: 76px; COLOR: #fff; HEIGHT: 20px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#rightpannel UL.popularlist LI A.cart:hover {
+	COLOR: #cc3300
+}
+#rightpannel UL.popularlist LI SPAN.loadimg {
+	WIDTH: 16px; HEIGHT: 16px
+}
+#rightpannel UL.popularlist LI SPAN.cartLoad IMG {
+	MARGIN: 0px 0px 0px 20px; WIDTH: 16px; HEIGHT: 16px
+}
+DIV.footer {
+	BORDER-RIGHT: #fbe1ba 1px solid; BORDER-TOP: #fbe1ba 1px solid; BACKGROUND: #fef8ee; MARGIN: 10px 0px; BORDER-LEFT: #fbe1ba 1px solid; WIDTH: 1000px; BORDER-BOTTOM: #fbe1ba 1px solid
+}
+DIV.footer UL {
+	MARGIN: 0px auto; WIDTH: 651px
+}
+DIV.footer UL LI {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #de8602; PADDING-TOP: 5px; TEXT-ALIGN: center
+}
+DIV.footer UL LI A {
+	FLOAT: left; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #de8602; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+DIV.footer P.footerlink {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px auto; WIDTH: 666px; COLOR: #de8602; PADDING-TOP: 20px; TEXT-ALIGN: center
+}
+DIV.footer P.footerlink A {
+	FONT: 11px/16px Verdana, Arial, Helvetica, sans-serif; WIDTH: 648px; COLOR: #de8602; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+DIV.footer P.copyright {
+	BACKGROUND: url(../images/copyright-bg.gif) no-repeat 0px 0px; MARGIN: 6px auto; FONT: 11px/15px Verdana, Arial, Helvetica, sans-serif; WIDTH: 209px; COLOR: #de8602; HEIGHT: 15px; TEXT-ALIGN: center
+}
+.noMargin {
+	MARGIN: 10px 0px 0px
+}

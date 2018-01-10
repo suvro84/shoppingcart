@@ -1,0 +1,318 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="VideoUpload.aspx.cs" Inherits="VideoUpload" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+C# Tutorials and offshore development in India 	
+	Click here
+  	  	Tutorials 	  	Resources 	  	Forum 	  	Communities 	  	Interview 	  	Jobs 	  	Projects 	  	Training 	  	ASP.NET Web Hosting 	  	 
+	Silverlight Games | Mentor | Code Converter | Articles | Code Factory | Computer Jokes | Members | Peer Appraisal | IT Companies | Bookmarks | Polls | Revenue Sharing | 		
+
+
+Prizes & Awards
+My Profile
+
+    * Sign In
+    * Register
+    * AdSense Revenue
+
+
+.NET 3.5 SP1 Hosting – Click Here!
+ASP.NET Web Hosting with .NET 3.5 SP1 Supporting Microsoft Charting Controls. Sign Up Today and Get 3 MONTHS FREE & NO SETUP FEES – Click Here!
+
+Active Members
+Today
+
+    * Ashok Babu ... (207)
+    * Deepika Harida... (125)
+    * Miss Meetu ... (124)
+
+Last 7 Days
+
+    * Ashok Babu ... (3009)
+    * Viji RAJKUMAR (1102)
+    * Deepika Harida... (702)
+
+more...
+
+	
+Play Silverlight Games or Submit your Silverlight applications and earn 90% AdSense revenue.
+	New Feature: Community Sites: Create your own .NET community website and start earning from Google AdSense ! It's Free !
+
+
+
+
+Resources » Code Snippets » C# Syntax »
+
+Upload Videos in a ASP.NET page
+
+Posted Date: 14 May 2008    	Resource Type: Code Snippets    	Category: C# Syntax
+Author: Sadhana Singh	Member Level: Gold    	
+Rating: 	Points: 10	
+
+	
+
+
+The following code sample is a ASP.NET page in .aspx and followed by the code behind c# file, that,altogether, shows a way to enable users to upload videos.
+
+
+ <td style="width: 100px">
+                                        <a href="vediodisplay.aspx?vname=<%#Eval("video_path") %>∩=<%#Eval("caption") %>"><asp:Image ID="Image1" runat="server" Height="100px" Width="100px" ImageUrl='<%# Eval("video_pic") %>' /></a></td>
+                                    <td style="width: 100px">
+                                        <asp:ImageButton ID="ImageButton2" runat="server" Height="20px" ImageUrl="~/images/edit.jpg"
+                                            Width="24px" CommandName="edit"/><br />
+                                        <br />
+                                        <asp:ImageButton ID="ImageButton1" runat="server" OnClientClick="return confirm('are u sure u want to delete')"  CommandName="delete" Height="24px"
+                                            ImageUrl="~/images/delete.jpg" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100px; height: 18px;">
+                                        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small"
+                                            Text='<%# Eval("caption") %>' Width="87px" ForeColor="DarkGreen"></asp:Label></td>
+                                </tr>
+
+
+
+The code behind page follows that manages PageLoad event and has a method videobind that is the core of the entire code.
+
+
+/////////////code behind////////////////
+protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            videobind();
+        }
+    }
+
+    
+    public void videobind()
+    {
+        DataList1.DataSource = vob.getvideos();
+        DataList1.DataBind();
+        //for (int i = 0; i < DataList1.Items.Count; i++)
+        //{
+        //    ImageButton img = (ImageButton)DataList1.Items[i].FindControl("ImageButton1");
+        //    img.Attributes.Add("OnClick", "return confirm('Are you sure want to delete?')");
+
+        //}
+    }
+if (this.FileUpload1.HasFile)
+        {
+            string userflname = ".\\upload" + "\\"; //".\\userfolder\\" + ufdname + "\\";
+
+            string cliptype = System.IO.Path.GetExtension(FileUpload1.PostedFile.FileName);
+            if (cliptype == ".mpeg")
+            {
+                string clipname = FileUpload1.PostedFile.FileName;
+                string name = clipname.Substring(clipname.LastIndexOf(@"\"));
+                string name1 = name.Remove(name.IndexOf(@"."));
+
+                string name2 = name1.Substring(1);
+                string newclipname = (string)Session.SessionID + "_" + name2 + 1;
+                string uploadpath = Request.MapPath(".\\upload\\");
+                FileUpload1.PostedFile.SaveAs(uploadpath + newclipname);
+
+                string apppath = Request.PhysicalApplicationPath;
+                string inputpath = apppath + "upload\\" + newclipname;
+                string ss = apppath + "upload\\" + newclipname;
+                string outputpath = apppath + userflname + newclipname + ".flv";
+
+                string fileargs = " -i \"" + inputpath + "\" \"" + outputpath + "\"";
+
+                System.Diagnostics.Process proc = new System.Diagnostics.Process();
+                proc.StartInfo.FileName = apppath + "ffmpeg\\ffmpeg.exe";
+                proc.StartInfo.Arguments = fileargs;
+                proc.StartInfo.UseShellExecute = false;
+                proc.StartInfo.CreateNoWindow = false;
+                proc.StartInfo.RedirectStandardOutput = false;
+                proc.Start();
+                proc.WaitForExit();
+
+                string inputpath1 = apppath + userflname + newclipname + ".flv";
+                string outputpath1 = apppath + userflname + "%d" + newclipname + ".jpg";
+
+                string fileargs1 = " -i \"" + inputpath1 + "\" -an -ss 00:00:04 -an -r 1 -vframes 1 -y \"" + outputpath1 + "\"";
+                System.Diagnostics.Process proc1 = new System.Diagnostics.Process();
+                proc1.StartInfo.FileName = apppath + "ffmpeg\\ffmpeg.exe";
+                proc1.StartInfo.Arguments = fileargs1;
+                proc1.StartInfo.UseShellExecute = false;
+                proc1.StartInfo.CreateNoWindow = false;
+                proc1.StartInfo.RedirectStandardOutput = false;
+                proc1.Start();
+                proc1.WaitForExit();
+                File.Delete(ss);
+
+                string dt = System.DateTime.Now.ToShortDateString();
+                string movie1 = newclipname + ".flv";
+                string img1 = "1" + newclipname + ".jpg";
+                string s = userflname + movie1;
+                string s1 = userflname + img1;
+
+
+                string str11 = Request.PhysicalApplicationPath;
+                System.IO.FileStream theFLV = System.IO.File.OpenRead(str11 + s);
+
+                string vidpath = userflname + newclipname + ".flv";
+                string vidpic = userflname + img1;
+
+
+                vob.getvideo_path = vidpath;
+                vob.getvideo_pic = vidpic;
+                vob.getcaption = TextBox1.Text;
+                vob.getwhen = DateTime.Now;
+                vob.videoinsert();
+                //cmd = ob.dbcmd("insert_vid_gallery");
+                //cmd.Parameters.Add("@title", SqlDbType.VarChar, 500).Value = TextBox1.Text;
+                //cmd.Parameters.Add("@vid_path", SqlDbType.VarChar, 500).Value = vidpath;
+                //cmd.Parameters.Add("posted_by", SqlDbType.Int).Value = uid;
+                //cmd.Parameters.Add("vid_pic", SqlDbType.VarChar, 500).Value = vidpic;
+                //cmd.ExecuteNonQuery();
+                //Page.RegisterStartupScript("chk", "<script>alert('Successfully uploaded.......')</script>");
+                //TextBox1.Text = "";
+            }
+            else if (cliptype == ".flv" || cliptype == ".swf")
+            {
+                string clipname = FileUpload1.PostedFile.FileName;
+                string name = clipname.Substring(clipname.LastIndexOf(@"\"));
+                string name1 = name.Remove(name.IndexOf(@"."));
+
+                string name2 = name1.Substring(1);
+                string newclipname = (string)Session.SessionID + "_" + name2 + 1;
+                string uploadpath = Request.MapPath(".\\upload\\");
+                FileUpload1.PostedFile.SaveAs(uploadpath + newclipname);
+
+                string apppath = Request.PhysicalApplicationPath;
+                string inputpath = apppath + "upload\\" + newclipname;
+                string ss = apppath + "upload\\" + newclipname;
+                string outputpath = apppath + userflname + newclipname + ".flv";
+
+                string fileargs = " -i \"" + inputpath + "\" \"" + outputpath + "\"";
+
+                System.Diagnostics.Process proc = new System.Diagnostics.Process();
+                proc.StartInfo.FileName = apppath + "ffmpeg\\ffmpeg.exe";
+                proc.StartInfo.Arguments = fileargs;
+                proc.StartInfo.UseShellExecute = false;
+                proc.StartInfo.CreateNoWindow = false;
+                proc.StartInfo.RedirectStandardOutput = false;
+                proc.Start();
+                proc.WaitForExit();
+
+                string inputpath1 = apppath + userflname + newclipname + ".flv";
+                string outputpath1 = apppath + userflname + "%d" + newclipname + ".jpg";
+
+                string fileargs1 = " -i \"" + inputpath1 + "\" -an -ss 00:00:04 -an -r 1 -vframes 1 -y \"" + outputpath1 + "\"";
+                System.Diagnostics.Process proc1 = new System.Diagnostics.Process();
+                proc1.StartInfo.FileName = apppath + "ffmpeg\\ffmpeg.exe";
+                proc1.StartInfo.Arguments = fileargs1;
+                proc1.StartInfo.UseShellExecute = false;
+                proc1.StartInfo.CreateNoWindow = false;
+                proc1.StartInfo.RedirectStandardOutput = false;
+                proc1.Start();
+                proc1.WaitForExit();
+                File.Delete(ss);
+
+                string dt = System.DateTime.Now.ToShortDateString();
+                string movie1 = newclipname + ".flv";
+                string img1 = "1" + newclipname + ".jpg";
+                string s = userflname + movie1;
+                string s1 = userflname + img1;
+
+                string str11 = Request.PhysicalApplicationPath;
+                System.IO.FileStream theFLV =
+                System.IO.File.OpenRead(str11 + s);
+                string vidpath = userflname + newclipname + ".flv";
+                string vidpic = userflname + img1;
+
+                //vob.getuser_id = 18; //sesion
+                vob.getvideo_path = vidpath;
+                vob.getvideo_pic = vidpic;
+                vob.getcaption = TextBox1.Text;
+                vob.getwhen = DateTime.Now;
+                vob.videoinsert();
+                //cmd = ob.dbcmd("insert_vid_gallery");
+                //cmd.Parameters.Add("@title", SqlDbType.VarChar, 500).Value = TextBox1.Text;
+                //cmd.Parameters.Add("@vid_path", SqlDbType.VarChar, 500).Value = vidpath;
+                //cmd.Parameters.Add("posted_by", SqlDbType.Int).Value = uid;
+                //cmd.Parameters.Add("vid_pic", SqlDbType.VarChar, 500).Value = vidpic;
+                //cmd.ExecuteNonQuery();
+                //Page.RegisterStartupScript("chk", "<script>alert('Successfully uploaded.......')</script>");
+                               
+            }
+            TextBox1.Text = "";
+        }
+        else
+        {
+            Page.RegisterStartupScript("vob", "<script>alert('please give an appropriate file type')</script>");
+        }
+        videobind();
+
+
+
+
+
+
+Responses
+Author: jingyeu    07 Dec 2008	Member Level: Bronze   Points : 1
+hi, can you give more details to this video upload code, there are errors showing, also like what is the vob? and what other buttons that we need to create? the 'if' condition is just appear in the middle of the coding, thanks !
+
+
+Author: Abhinav Misra    07 Dec 2008	Member Level: Silver   Points : 1
+very good
+sir
+but it is good if u can ex plane it
+it will good for all
+new and experience programmer
+
+
+Feedbacks      
+Popular Tags 	  	What are tags ? 	  	Search Tags 	  	
+Sign In to add tags.
+Uploading Videos using ASP.NET  .  Uploading Videos  .  Upload Videos using ASP.NET  .  Upload Videos in ASP.NET  .  Upload Videos  .  
+
+Post Feedback
+
+ComponentArt 	
+This is a strictly moderated forum. Only approved messages will appear in the site. Please use 'Spell Check' in Google toolbar before you submit.
+You must Sign In to post a response.
+	Next Resource: Check if the user is Administrator
+	Previous Resource: Logout - Back Problem
+	Return to Discussion Resource Index
+	Post New Resource
+	Category: C# Syntax
+
+
+Post resources and earn money! 	  	
+Related Resources
+
+    * Check if the user is Administrator
+
+    * Gridview row color change and opening a page against the click on the row
+
+    * Example of using item command in datalist
+
+    * code for downloading folders in grid view in asp.net
+
+    * code for searching in grid view
+
+    * How to create a progressbar in asp.net
+
+
+
+Professional ASP.NET MVC 1.0
+Pre-order the book written by the authors of the new ASP.NET MVC Framework. PreOrder Now 	Clean Code by "Uncle Bob" Martin
+A must for any developer with an interest in producing better code. Read Reviews or Buy Now 	dotNet Slackers
+
+About Us    Contact Us    Privacy Policy    Terms Of Use   
+
+    </div>
+    </form>
+</body>
+</html>

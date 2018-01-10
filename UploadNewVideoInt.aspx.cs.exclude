@@ -1,0 +1,509 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using BytesRoad.Net.Ftp;
+using System.IO;
+
+
+public partial class UploadNewVideoInt : System.Web.UI.Page
+{
+
+    public string CID;
+    public string uid;
+    public string ProcedureName, filename, Encode_Video_Name;
+    public string[] InputName = new string[15];
+    public string[] InputValue = new string[15];
+    public string[] InputType = new string[15];
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        txtserverfile.Style["display"] = "none"; // To store the filename after server upload//// 
+
+        if (Request.QueryString["Uid"] != null)
+        {
+            uid = Request.QueryString["Uid"];
+        }
+
+        if (Session["selcnt"] != null)
+        {
+            CID = Session["selcnt"].ToString();
+        }
+        else
+        {
+            //CID = SQLProcedures.SelectProcedure("GetAllCountryName", "all_name", "RowCount", "I", "I", "1").Rows[0]["CountryId"].ToString();
+        }
+
+        if (!Page.IsPostBack)
+        {
+            populate_Time(ddlHH, "Hour");
+            populate_Time(ddlMIN, "Min");
+            populate_dropdown(dMon, "Month");
+            populate_dropdown(dDay, "Day");
+            populate_dropdown(dYear, "Year");
+            populate_artist(CID);
+            if (Request.QueryString["Int"] != null)
+            {
+                editdata(Request.QueryString["Int"]);
+            }
+        }
+
+    }
+
+
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        string intdate = dMon.SelectedItem.Value + "/" + dDay.SelectedItem.Value + "/" + dYear.SelectedItem.Value;
+
+        string intlen = ddlHH.SelectedItem.Value + ":" + ddlMIN.SelectedItem.Value;
+
+
+        if (Request.QueryString["Int"] != null)
+        {
+
+            ProcedureName = "UpdateVideoInterview";
+
+            InputName[0] = "InterviewId";
+            InputName[1] = "ArtistId";
+            InputName[2] = "InterviewTitle";
+            InputName[3] = "InterViewFile";
+            InputName[4] = "InterViewLength";
+            InputName[5] = "InterviewDate";
+            InputName[6] = "InterviewDes";
+            InputName[7] = "InterviewStatus";
+            InputName[8] = "interviewer";
+            InputName[9] = "DatePosted";
+            InputName[10] = "MainFile";
+
+            InputType[0] = "I";
+            InputType[1] = "I";
+            InputType[2] = "V";
+            InputType[3] = "V";
+            InputType[4] = "V";
+            InputType[5] = "D";
+            InputType[6] = "V";
+            InputType[7] = "I";
+            InputType[8] = "V";
+            InputType[9] = "D";
+            InputType[10] = "V";
+
+
+            InputValue[0] = Request.QueryString["Int"].ToString();
+            InputValue[1] = ddlArtist.SelectedItem.Value;
+            InputValue[2] = txtTitle.Text.ToString().Trim();
+            InputValue[3] = txtserverfile.Text.ToString();
+            InputValue[4] = intlen.ToString();
+            InputValue[5] = intdate.ToString();
+            InputValue[6] = txtDesc.Text.ToString().Trim();
+            InputValue[7] = "0";
+            InputValue[8] = txtInterviewer.Text.ToString().Trim();
+            InputValue[9] = DateTime.Today.ToShortDateString();
+            InputValue[10] = hdval.Value;
+
+
+          //  SQLProcedures.SelectProcedureArr(ProcedureName, InputName, "RowCount", InputType, "I", InputValue);
+            Response.Redirect("VideoInterview.aspx?Uid=" + uid);
+
+        }
+        else
+        {
+
+            //filename = Guid.NewGuid().ToString().Substring(0, 10) + "" + fUpload.PostedFile.FileName.Remove(0, fUpload.PostedFile.FileName.LastIndexOf("."));
+
+
+            ProcedureName = "InsertVideoInterview";
+
+
+            InputName[0] = "ArtistId";
+            InputName[1] = "InterviewTitle";
+            InputName[2] = "InterViewFile";
+            InputName[3] = "InterViewLength";
+            InputName[4] = "InterviewDate";
+            InputName[5] = "InterviewDes";
+            InputName[6] = "InterviewStatus";
+            InputName[7] = "interviewer";
+            InputName[8] = "DatePosted";
+            InputName[9] = "MainFile";
+
+
+
+            InputType[0] = "I";
+            InputType[1] = "V";
+            InputType[2] = "V";
+            InputType[3] = "V";
+            InputType[4] = "D";
+            InputType[5] = "V";
+            InputType[6] = "I";
+            InputType[7] = "V";
+            InputType[8] = "D";
+            InputType[9] = "V";
+
+
+            InputValue[0] = ddlArtist.SelectedItem.Value;
+            InputValue[1] = txtTitle.Text.ToString().Trim();
+            InputValue[2] = txtserverfile.Text.ToString();
+            InputValue[3] = intlen.ToString();
+            InputValue[4] = intdate.ToString();
+            InputValue[5] = txtDesc.Text.ToString().Trim();
+            InputValue[6] = "0";
+            InputValue[7] = txtInterviewer.Text.ToString().Trim();
+            InputValue[8] = DateTime.Today.ToShortDateString();
+            InputValue[9] = hdval.Value;
+
+        //    SQLProcedures.SelectProcedureArr(ProcedureName, InputName, "RowCount", InputType, "I", InputValue);
+            Response.Redirect("VideoInterview.aspx?Uid=" + uid);
+        }
+    }
+
+    protected void btnUploadfile_Click(object sender, EventArgs e)
+    {
+
+        string StrFileName, LocalFilePath;
+        if (Request.Files[0] != null)
+        {
+            /* Converter start*/
+
+                Media_handler _mediahandler = new Media_handler();
+            //(Request.ApplicationPath)
+            string rootpath = Server.MapPath(ConfigurationSettings.AppSettings["Admin_MusicPathInfo"]);
+            string inputpath = rootpath + "\\video_interview";
+            string outputpath = rootpath + "\\video_interview";
+            string thumbpath = rootpath + "\\video_interview";
+            // SET FFMPEG Path
+            string _ffmpegpath = HttpContext.Current.Server.MapPath("~\\ffmpeg\\ffmpeg.exe");
+            // Generate Random FileName in order to avoid dublicate video names
+            filename = Guid.NewGuid().ToString().Substring(0, 10) + "" + fUpload.PostedFile.FileName.Remove(0, fUpload.PostedFile.FileName.LastIndexOf("."));
+            hdval.Value = filename.ToString();
+            // Save Original Video to Default Folder
+            fUpload.PostedFile.SaveAs(inputpath + "\\" + filename);
+            //Encode Original Video in order to display on web
+            // Free version generate only 5 second video
+            //METHOD NO 1:
+            string fullstring = _mediahandler.Convert_Media(filename, _ffmpegpath, inputpath, outputpath, 320, 240, 360, 25, 32, 22050, true);
+            //METHOD NO 2:
+            // string fullstring = _mediahandler.Convert_Media(filename, _ffmpegpath, InputPath, OutputPath, "320x240", 360, 25, 32, 22050,true);
+            //METHOD NO 3:
+            // string fullstring = _mediahandler.Convert_Media(filename, _ffmpegpath, InputPath, OutputPath, "320x240", 32, 44100, true);
+            //METHOD NO 4:
+            // string fullstring = _mediahandler.Convert_Media(filename, _ffmpegpath, InputPath, OutputPath, 32, 44100, true);
+            //METHOD NO 5:
+            // string fullstring = _mediahandler.Convert_Media(filename, _ffmpegpath, InputPath, OutputPath, 360, 32, 22050, true);
+            if (fullstring == "100" || fullstring == "101" || fullstring == "102" || fullstring == "103" || fullstring == "104" || fullstring == "105" || fullstring == "106" || fullstring == "107")
+            {
+                Response.Write("Video Processing Failed");
+                return;
+            }
+            string[] _arrstr;
+            _arrstr = fullstring.ToString().Split(char.Parse(","));
+            // Get FLV FileName from string in order to grab thumbnail from it.
+            string Encode_Video_Name = _arrstr[0].Remove(0, _arrstr[0].LastIndexOf(":") + 1);
+            string Duration = _arrstr[1].Remove(0, _arrstr[1].IndexOf(":") + 1);
+            // Get FLV FileName from string in order to grab thumbnail from it.
+            // Grab Thumbnails from Encode Video, Note , you can specify the path of flv video file not actual video file //'
+            // Free version generate only 50x50 width thumbnail.
+            string image_name = _mediahandler.Grab_Image(Encode_Video_Name, _ffmpegpath, outputpath, thumbpath, "00:00:03", "jpg");
+
+            //lbl_success.Text = "Video uploaded successfully<br />Encoded Video Name:" + Encode_Video_Name + "<br />Duration: " + Duration + "";
+
+            /* Converter End*/
+            //Request.Files[0].FileName.Substring(Request.Files[0].FileName.LastIndexOf("\\") + 1);
+
+            StrFileName = Encode_Video_Name;
+            LocalFilePath = inputpath + "\\" + filename;
+            //Request.Files[0].FileName;
+            FtpClient client = new FtpClient();
+            client.PassiveMode = true;
+            client.Connect(Convert.ToInt32(ConfigurationManager.AppSettings["FtpTimeOut"]), ConfigurationManager.AppSettings["FtpServer"].ToString(), 21);
+            client.Login(Convert.ToInt32(ConfigurationManager.AppSettings["FtpTimeOut"]), ConfigurationManager.AppSettings["FtpUserId"].ToString(), ConfigurationManager.AppSettings["FtpPassword"].ToString());
+            string target = Path.Combine(ConfigurationManager.AppSettings["RemotePath"].ToString() + "INT\\", StrFileName).Replace("\\", "/");
+            client.PutFile(Convert.ToInt32(ConfigurationManager.AppSettings["FtpTimeOut"]), target, LocalFilePath);
+
+            //sFileName = StrFileName; 
+
+            // string[] a = new string[3];
+            // a = StrFileName.Split('.');
+            // Request.Files[0].SaveAs(Server.MapPath(ConfigurationSettings.AppSettings["Admin_MusicPathInfo"] + "video_interview\\" + StrFileName));
+            //Response.Write(Server.MapPath(ConfigurationSettings.AppSettings["Admin_MusicPathInfo"] + "video_interview\\" + StrFileName));
+            //Request.Files[0].SaveAs(ConfigurationSettings.AppSettings["Admin_MusicVidTest"] + "video\\" + StrFileName);
+            txtserverfile.Text = StrFileName;
+            string fileNameFolder = Path.Combine(Server.MapPath("~/Voices_Music/video_interview"), StrFileName);
+            if (File.Exists(fileNameFolder))
+            {
+                File.Delete(fileNameFolder);
+            }
+        }
+        else
+        {
+            StrFileName = txtserverfile.Text;
+        }
+
+    }
+
+    /// <summary>
+    /// Populate the time dropdown
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="type"></param>
+
+    public void populate_Time(DropDownList id, string type)
+    {
+        ///code for hour//
+        if (type.Equals("Hour"))
+        {
+            //ddl1Hour
+            for (int i = 0; i <= 23; i++)
+            {
+                ListItem li = new ListItem();
+                if (i <= 9)
+                {
+                    li.Value = "0" + i;
+                }
+                else
+                {
+                    li.Value = i.ToString();
+                }
+                if (i <= 9)
+                {
+                    li.Text = "0" + i;
+                }
+                else
+                {
+                    li.Text = i.ToString();
+                }
+                id.Items.Add(li);
+            }
+        }
+        //code for hours//
+
+        ///code for minute//
+        ///
+        if (type.Equals("Min"))
+        {
+            //ddl1Hour
+
+            for (int i = 0; i <= 60; )
+            {
+                ListItem li = new ListItem();
+                if (i <= 9)
+                {
+                    li.Value = "0" + i;
+                }
+                else
+                {
+                    li.Value = i.ToString();
+                }
+                if (i <= 9)
+                {
+                    li.Text = "0" + i;
+                }
+                else
+                {
+                    li.Text = i.ToString();
+                }
+                id.Items.Add(li);
+                i = i + 5;
+            }
+        }
+        //code for minute//
+
+
+
+    }
+    public void populate_dropdown(DropDownList id, string type)
+    {
+        string[] strMonth = new string[12] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+
+
+        /// Code for Month//
+        if (type.Equals("Month"))
+        {
+            for (int i = 0; i < 12; i++)
+            {
+                ListItem li = new ListItem();
+
+
+                li.Value = (i + 1).ToString();
+
+                li.Text = strMonth[i];
+                id.Items.Add(li);
+            }
+
+        }
+        //code for day//
+
+        if (type.Equals("Day"))
+        {
+
+            for (int i = 1; i <= 31; i++)
+            {
+                ListItem li = new ListItem();
+
+                li.Value = i.ToString();
+
+                if (i <= 9)
+                {
+                    li.Text = "0" + i;
+                }
+                else
+                {
+                    li.Text = i.ToString();
+                }
+                id.Items.Add(li);
+            }
+
+
+        }
+        /// code for year //
+        if (type.Equals("Year"))
+        {
+            for (int i = 2007; i <= 2010; i++)
+            {
+                ListItem li = new ListItem();
+                li.Value = i.ToString();
+                li.Text = i.ToString();
+                id.Items.Add(li);
+            }
+        }
+        /// code for year //
+        /// 
+
+        ///code for hour//
+        if (type.Equals("Hour"))
+        {
+            //ddl1Hour
+
+            for (int i = 0; i <= 12; i++)
+            {
+                ListItem li = new ListItem();
+                if (i <= 9)
+                {
+                    li.Value = "0" + i;
+                }
+                else
+                {
+                    li.Value = i.ToString();
+                }
+                if (i <= 9)
+                {
+                    li.Text = "0" + i;
+                }
+                else
+                {
+                    li.Text = i.ToString();
+                }
+                id.Items.Add(li);
+            }
+        }
+        //code for hours//
+
+        ///code for minute//
+        ///
+        if (type.Equals("Min"))
+        {
+            //ddl1Hour
+
+            for (int i = 0; i <= 60; )
+            {
+                ListItem li = new ListItem();
+                if (i <= 9)
+                {
+                    li.Value = "0" + i;
+                }
+                else
+                {
+                    li.Value = i.ToString();
+                }
+                if (i <= 9)
+                {
+                    li.Text = "0" + i;
+                }
+                else
+                {
+                    li.Text = i.ToString();
+                }
+                id.Items.Add(li);
+                i = i + 5;
+            }
+        }
+        //code for minute//
+        //code for zone//
+
+        if (type.Equals("Zone"))
+        {
+            //ddl1Hour
+
+            id.Items.Add("AM");
+            id.Items.Add("PM");
+        }
+        //code for zone//
+
+
+    }
+
+    ////method to display the editable data//
+
+    public void editdata(string id)
+    {
+        DataTable dt = new DataTable();
+
+        string[] interviewdate = new string[8];
+        string[] date1 = new string[3];
+        string[] interviewlength = new string[8];
+        if (SQLProcedures.SelectProcedure("GetArtistVideoInterviewById", "InterviewId", "RowCount", "I", "I", id).Rows.Count > 0)
+        {
+            dt = SQLProcedures.SelectProcedure("GetArtistVideoInterviewById", "InterviewId", "RowCount", "I", "I", id);
+            txtTitle.Text = dt.Rows[0]["InterviewTitle"].ToString();
+            txtInterviewer.Text = dt.Rows[0]["Interviewer"].ToString();
+            txtDesc.Text = dt.Rows[0]["InterviewDes"].ToString();
+            txtserverfile.Text = dt.Rows[0]["InterviewFile"].ToString();
+            hdval.Value = dt.Rows[0]["MainFile"].ToString();
+            ddlArtist.SelectedValue = dt.Rows[0]["ArtistId"].ToString();
+            //dMon.SelectedValue
+            //interview date//
+            interviewdate = dt.Rows[0]["InterviewDate"].ToString().Split(' ');
+            date1 = interviewdate[0].ToString().Split('/');
+            dMon.SelectedValue = date1[0].ToString();
+            dDay.SelectedValue = date1[1].ToString();
+            dYear.SelectedValue = date1[2].ToString();
+
+            //interview length//
+            interviewlength = dt.Rows[0]["InterviewLength"].ToString().Split(':');
+            ddlHH.SelectedValue = interviewlength[0].ToString();
+            ddlMIN.SelectedValue = interviewlength[1].ToString();
+
+            ddlStat.SelectedValue = dt.Rows[0]["InterviewStatus"].ToString();
+
+        }
+    }
+
+    /// <summary>
+    /// /method to populate artist dropdown
+    /// </summary>
+    /// <param name="cid"></param>
+    public void populate_artist(string cid)
+    {
+        DataTable dtArt = new DataTable();
+        if (SQLProcedures.SelectProcedure("GetAllArtistFromCountry", "CountryId", "RowCount", "I", "I", cid).Rows.Count > 0)
+        {
+            dtArt = SQLProcedures.SelectProcedure("GetAllArtistFromCountry", "CountryId", "RowCount", "I", "I", cid);
+            ddlArtist.DataValueField = "ArtistId";
+            ddlArtist.DataTextField = "ArtistName";
+            ddlArtist.DataSource = dtArt;
+            ddlArtist.DataBind();
+
+        }
+
+    }
+
+
+}
+

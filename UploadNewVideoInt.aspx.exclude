@@ -1,0 +1,328 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UploadNewVideoInt.aspx.cs" Inherits="UploadNewVideoInt" %>
+<%--<%@ Register Src="../includes/UscTopBanner.ascx" TagName="UscTopBanner" TagPrefix="uc5" %>
+--%>
+<%--<%@ Register Src="../includes/UscSidePanel.ascx" TagName="UscSidePanel" TagPrefix="uc6" %>
+--%>
+<%--<%@ Register Src="../includes/UscFooter.ascx" TagName="Footer" TagPrefix="uc4" %>
+--%><%--<%@ Register Src="includes/UscuserInfo.ascx" TagName="control123" TagPrefix="uc1" %>
+--%>
+<%--<%@ Register Src="includes/UscTopNavigation.ascx" TagName="TOPNAV" TagPrefix="uc2" %>
+--%><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Carifuna Admin Control Panel</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link REL="SHORTCUT ICON" HREF="images_adminpanel/favicon.ico"/>
+
+<link href="css/admin_panel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function openpreview()
+{
+var link;
+link=document.getElementById("fUpload").value;
+window.open("prevVideo.aspx?link="+link ,'Newwin','height=400,width=400, toolbar=no, menubar=no, resizable=yes, status=no' );
+
+return false;
+}
+
+function validate()
+{
+if(document.getElementById("txtTitle").value=="")
+{
+alert("Type interview title");
+document.getElementById("txtTitle").focus();
+return false;
+}
+
+
+if(document.getElementById("txtInterviewer").value=="")
+{
+alert("Type interviewer's name");
+document.getElementById("txtInterviewer").focus();
+return false;
+}
+
+
+if(document.getElementById("txtDesc").value=="")
+{
+alert("Type interview description");
+document.getElementById("txtDesc").focus();
+return false;
+}
+
+
+if(document.getElementById("txtDate").value=="")
+{
+alert("Type interview date");
+document.getElementById("txtDate").focus();
+return false;
+}
+if(document.getElementById("txtLength").value=="")
+{
+alert("Type interview Length");
+document.getElementById("txtLength").focus();
+return false;
+}
+return true;
+}
+</script>
+</head>
+
+
+
+<body bgcolor="#ffffff">
+<form id="Form1" runat="server" >
+<center>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td align="left" valign="top" background="images_adminpanel/admin_header_bg.jpg">
+<%--<uc5:UscTopBanner ID="TopBan" runat="server" /></td>
+--%></tr>
+<tr>
+<td align="left" valign="top" bgcolor="#666600"><img src="images_adminpanel/spacer.gif" width="100%" height="5" /></td>
+</tr>
+
+<tr>
+
+<td align="left" valign="top" bgcolor="#666600"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+
+<td width="5" align="center" valign="top"><img src="images_adminpanel/spacer.gif" width="5" height="5" /></td>
+
+<td width="210" align="center" valign="top" bgcolor="#333300">
+<%--<uc6:UscSidePanel ID="UscSidePanel1" runat="server" />
+--%></td>
+
+<td width="5" align="center" valign="top"><img src="images_adminpanel/spacer.gif" width="5" height="5" /></td>
+
+<td align="left" valign="top" bgcolor="#CCCCCC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<%--<uc2:TopNav ID="TopNav" runat="server" />--%><tr>
+
+<td align="left" valign="top" bgcolor="#FFFFCC"><table width="100%" border="0" cellspacing="5" cellpadding="0">
+
+<tr>
+
+<td valign="top" class="body_text_black_02">Voices - Music</td>
+
+</tr>
+
+<tr>
+
+<td valign="top"><span class="body_text_black_01">VOICES &gt; Music &gt; Artiste Manager &gt; <a href="AdminMusicIndex.aspx" class="body_text_black_01">Artiste Roster</a> &gt;&nbsp;<a href="VideoInterview.aspx?Uid=<%=uid%>" class="body_text_black_01"> Video Interviews </a>&gt; <a href="#" class="body_text_black_01">Add Video Interview </a></span></td>
+
+</tr>
+
+
+
+</table></td>
+
+</tr>
+<tr>
+
+<td align="left" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="5" cellpadding="0">
+
+
+
+<tr>
+
+<td align="left" valign="top" >
+<%--<uc1:control123 ID="Control" runat="server" />
+--%></td>
+
+</tr>
+
+<tr>
+
+<td align="left" valign="top" bgcolor="#000000"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+
+<tr>
+
+<td height="20" align="left" valign="middle" bgcolor="#990000" class="title_white">VIDEO INTERVIEWS &gt; Upload new video interview </td>
+
+</tr>
+
+<tr>
+
+<td align="left" valign="top" bgcolor="#999999"><table border="0" cellspacing="5" cellpadding="0" width="100%">
+
+<tr>
+
+<td align="right" valign="top" class="body_text_black_01" style="width: 113px">Interview Title : </td>
+
+<td align="left" valign="top" style="width: 421px"><label>
+
+
+<asp:TextBox ID="txtTitle" runat="server" CssClass="title_darkred" Width="328px"></asp:TextBox>
+</label></td>
+
+<td align="left" valign="top" class="body_text_black_01b" style="width: 5px">&nbsp;</td>
+
+</tr>
+
+<tr>
+
+<td align="right" valign="top" class="body_text_black_01" style="width: 113px">Interviewer : </td>
+
+<td align="left" valign="top" style="width: 421px">
+<asp:TextBox ID="txtInterviewer" runat="server" CssClass="title_darkred" Width="327px"></asp:TextBox></td>
+
+<td align="left" valign="bottom" class="body_text_black_01b" style="width: 5px">&nbsp;</td>
+
+</tr>
+<tr>
+<td align="right" class="body_text_black_01" valign="top" style="width: 113px">
+Artist&nbsp; :</td>
+<td align="left" style="width: 421px" valign="top">
+<asp:DropDownList ID="ddlArtist" runat="server" CssClass="title_darkred">
+</asp:DropDownList></td>
+<td align="left" class="body_text_black_01b" valign="bottom" style="width: 5px">
+</td>
+</tr>
+<tr>
+<td align="right" class="body_text_black_01" valign="top" style="width: 113px">
+Description : </td>
+<td align="left" valign="top" style="width: 421px">
+<asp:TextBox ID="txtDesc" runat="server" Rows="5" TextMode="MultiLine" CssClass="title_darkred" Width="310px"></asp:TextBox></td>
+<td align="left" class="body_text_black_01b" valign="bottom" style="width: 5px">
+</td>
+</tr>
+
+
+<tr>
+
+<td align="right" valign="top" class="body_text_black_01" style="width: 117px">Interview Date : </td>
+
+<td align="left" valign="top" style="width: 421px"> 
+<asp:DropDownList ID="dMon" runat="server" CssClass="title_darkred"> </asp:DropDownList>&nbsp;
+<asp:DropDownList ID="dDay" runat="server" CssClass="title_darkred"> </asp:DropDownList>&nbsp;
+<asp:DropDownList ID="dYear" runat="server" CssClass="title_darkred"></asp:DropDownList>(mm/dd/yyyy)
+
+</td>
+
+<td align="left" valign="bottom" class="body_text_black_01b" style="width: 5px">&nbsp;</td>
+
+</tr>
+<tr>
+<td align="right" class="body_text_black_01" valign="top" style="width: 117px">
+Interview&nbsp; Length :</td>
+<td align="left" valign="top">
+<asp:DropDownList ID="ddlHH" runat="server" CssClass="title_darkred">
+</asp:DropDownList>&nbsp;:&nbsp;<asp:DropDownList ID="ddlMIN" runat="server" CssClass="title_darkred">
+</asp:DropDownList>&nbsp; (HH:MM)</td>
+</tr>
+
+
+<tr>
+
+<td align="right" valign="top" class="body_text_black_01" style="width: 113px">File : </td>
+
+<td align="left" valign="top" style="width: 421px">
+<asp:FileUpload ID="fUpload" runat="server" Width="420px" CssClass="title_darkred" /></td>
+
+<td align="left" valign="bottom" class="body_text_black_01b" style="width: 5px"></td>
+
+</tr>
+
+<tr>
+
+<td align="right" valign="top" class="body_text_black_01" style="width: 113px">&nbsp;</td>
+
+<td align="left" valign="top" style="width: 421px"><span class="body_text_black_01b">
+<asp:Button ID="btnUploadfile" runat="server" CssClass="body_text_black_03" Text="upload" OnClick="btnUploadfile_Click" />&nbsp;
+<input id="btnPreview" class="body_text_black_03" type="button" value="preview interview" onclick="javascript:openpreview()" /></span></td>
+
+<td align="left" valign="bottom" class="body_text_black_01b" style="width: 5px">&nbsp;</td>
+
+</tr>
+<tr>
+<td align="right" class="body_text_black_01" style="width: 117px" valign="top">
+Interview Status :</td>
+<td align="left" style="width: 421px" valign="top">
+<asp:DropDownList ID="ddlStat" runat="server" CssClass="title_darkred">
+<asp:ListItem Value="1">Yes</asp:ListItem>
+<asp:ListItem Value="0" Selected="True">No</asp:ListItem>
+</asp:DropDownList></td>
+<td align="left" class="body_text_black_01b" style="width: 5px" valign="bottom">
+</td>
+</tr>
+
+<tr>
+
+<td align="right" valign="top" class="body_text_black_01" style="width: 113px">&nbsp;</td>
+
+<td align="left" valign="top" style="width: 421px">
+&nbsp;<asp:Button ID="btnSave" runat="server" CssClass="body_text_black_03" OnClick="btnSave_Click" OnClientClick="return validate()" Text="save change" />
+<asp:TextBox ID="txtserverfile" runat="server"></asp:TextBox>
+<input type="hidden" runat="server" id="hdval" />
+
+</td>
+
+<td align="left" valign="bottom" class="body_text_black_01b" style="width: 5px">&nbsp;</td>
+
+</tr>
+
+
+
+</table></td>
+
+</tr>
+
+
+
+
+
+
+
+</table></td>
+
+</tr>
+
+
+
+</table></td>
+
+</tr>
+
+
+
+
+
+
+
+
+
+</table></td>
+
+<td width="5" align="left" valign="top"><img src="images_adminpanel/spacer.gif" width="5" height="5" /></td>
+
+</tr>
+
+</table></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align="center" valign="middle" bgcolor="#666600" class="footer"><img src="images_adminpanel/spacer.gif" width="100%" height="5" /></td>
+
+</tr>
+
+<%--<uc4:Footer ID="Footer" runat="server" /></table>
+--%>
+</center>
+</form>
+</body>
+
+</html>
+

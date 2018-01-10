@@ -1,0 +1,339 @@
+#centerPart2 {
+	BORDER-RIGHT: #fbe1ba 1px solid; BORDER-TOP: #fbe1ba 1px solid; FLOAT: left; MARGIN: 10px 0px 0px 5px; BORDER-LEFT: #fbe1ba 1px solid; WIDTH: 628px; BORDER-BOTTOM: #fbe1ba 1px solid; POSITION: relative
+}
+#centerPart2 UL.breadCrumb {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 10px; OVERFLOW: hidden; COLOR: #f18a1b; PADDING-TOP: 0px; HEIGHT: 21px; BACKGROUND-COLOR: #fbe3be
+}
+#centerPart2 UL.breadCrumb LI {
+	FLOAT: left; MARGIN: 0px 5px 0px 0px; FONT: 11px/21px Tahoma, Arial, Helvetica, sans-serif; COLOR: #f18a1b
+}
+#centerPart2 UL.breadCrumb LI A {
+	FONT: 11px/21px Tahoma, Arial, Helvetica, sans-serif; COLOR: #cd3824; TEXT-DECORATION: none
+}
+#centerPart2 UL.breadCrumb LI A:hover {
+	COLOR: #f18a1b; TEXT-DECORATION: underline
+}
+#centerPart2 DIV.catInside {
+	WIDTH: 624px
+}
+#centerPart2 DIV.catInside H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 4px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 5px; FONT: bold 12px/14px Arial, Helvetica, sans-serif; COLOR: #cd3824; PADDING-TOP: 0px; BACKGROUND-COLOR: #fff; TEXT-DECORATION: underline
+}
+#centerPart2 DIV.catInside P {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 25px; FONT: 11px/13px Verdana, Arial, Helvetica, sans-serif; COLOR: #8f8e8d; PADDING-TOP: 0px; TEXT-ALIGN: justify
+}
+#centerPart2 DIV.catInside DIV.catagory {
+	WIDTH: 594px
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 16px; FLOAT: left; PADDING-BOTTOM: 20px; MARGIN: 0px 0px 25px; WIDTH: 594px; PADDING-TOP: 0px
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI {
+	FLOAT: left; MARGIN: 0px 6px 10px; WIDTH: 135px; TEXT-ALIGN: center
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI SPAN.catName {
+	DISPLAY: block; FONT: 11px/13px Tahoma, Arial, Helvetica, sans-serif; WIDTH: 135px; COLOR: #ce3c28; HEIGHT: 28px; BACKGROUND-COLOR: #fff
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI IMG {
+	BORDER-RIGHT: #fa8dad 1px solid; BORDER-TOP: #fa8dad 1px solid; BORDER-LEFT: #fa8dad 1px solid; WIDTH: 130px; BORDER-BOTTOM: #fa8dad 1px solid; HEIGHT: 130px
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI A {
+	FONT: 11px/13px Tahoma, Arial, Helvetica, sans-serif; COLOR: #ce3c28; BACKGROUND-COLOR: #fff; TEXT-DECORATION: none
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI A:hover {
+	COLOR: #e68317; BACKGROUND-COLOR: #fff; TEXT-DECORATION: underline
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI SPAN.catPrice {
+	FONT: 11px/19px Tahoma, Arial, Helvetica, sans-serif; COLOR: #8f8e8d; TEXT-ALIGN: center
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI A.addCart {
+	FONT: 11px/21px Tahoma, Arial, Helvetica, sans-serif; COLOR: #d43e68; TEXT-DECORATION: none
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI A.addCart:hover {
+	COLOR: #e68317; TEXT-DECORATION: none
+}
+#centerPart2 DIV.catInside DIV.catagory UL.catlist LI SPAN.cartLoad IMG {
+	MARGIN: 0px 0px 0px 20px; WIDTH: 16px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 16px; BORDER-BOTTOM-STYLE: none
+}
+.lineHeight {
+	FONT-SIZE: 11px! important; LINE-HEIGHT: 15px! important
+}
+#centerPart2 DIV.catInside UL.browse {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 2px; PADDING-BOTTOM: 0px; WIDTH: 624px; COLOR: #d5769c; PADDING-TOP: 0px; HEIGHT: 22px; BACKGROUND-COLOR: #fbe3be
+}
+#centerPart2 DIV.catInside UL.browse LI {
+	FLOAT: left; MARGIN: 0px 6px 0px 0px; FONT: 12px/22px Tahoma, Arial, Helvetica, sans-serif; COLOR: #f18a1b
+}
+#centerPart2 DIV.catInside UL.browse LI A {
+	DISPLAY: block; FONT: 12px/22px Tahoma, Arial, Helvetica, sans-serif; WIDTH: 20px; COLOR: #cd3824; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#centerPart2 DIV.catInside UL.browse LI A:hover {
+	COLOR: #f18a1b
+}
+#centerPart2 DIV.catInside UL.browse LI SPAN {
+	FONT: bold 12px/22px Tahoma, Arial, Helvetica, sans-serif; COLOR: #cd3824
+}
+#centerPart2 DIV.catInside UL.browse LI SPAN.next A {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; MARGIN: 0px 10px 0px 0px; WIDTH: 50px; TEXT-DECORATION: none
+}
+#centerPart2 DIV.catInside UL.browse LI SPAN.next A:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%; TEXT-DECORATION: underline
+}
+#centerPart2 DIV.catInside UL.browse LI SPAN.prev A {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; MARGIN: 0px; WIDTH: 50px; TEXT-DECORATION: none
+}
+#centerPart2 DIV.catInside UL.browse LI SPAN.prev A:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%; TEXT-DECORATION: underline
+}
+#centerPart2 DIV.items {
+	FLOAT: left; WIDTH: 624px; POSITION: relative
+}
+#centerPart2 DIV.items IMG.big1 {
+	BORDER-RIGHT: #f4b36c 1px solid; BORDER-TOP: #f4b36c 1px solid; FLOAT: left; MARGIN: 0px 22px 15px 10px; BORDER-LEFT: #f4b36c 1px solid; WIDTH: 250px; BORDER-BOTTOM: #f4b36c 1px solid; HEIGHT: 250px
+}
+#centerPart2 DIV.items P {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; PADDING-BOTTOM: 5px; FONT: 11px/13px Verdana, Arial, Helvetica, sans-serif; COLOR: #cd3824; PADDING-TOP: 0px
+}
+#centerPart2 DIV.items DIV.itemsright {
+	DISPLAY: block; FLOAT: right; WIDTH: 280px
+}
+#centerPart2 DIV.items DIV.itemsright H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; FONT: bold 14px/16px Verdana, Arial, Helvetica, sans-serif; COLOR: #cd3824; PADDING-TOP: 15px
+}
+#centerPart2 DIV.items DIV.itemsright SPAN.leftTxt {
+	PADDING-RIGHT: 83px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: bold 11px/13px Verdana, Arial, Helvetica, sans-serif; COLOR: #cd3824; PADDING-TOP: 10px
+}
+#centerPart2 DIV.items DIV.itemsright SPAN.rightTxt {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: 11px/13px Verdana, Arial, Helvetica, sans-serif; COLOR: #999; PADDING-TOP: 10px; TEXT-ALIGN: left
+}
+#centerPart2 DIV.items DIV.itemsright LABEL {
+	FLOAT: left; MARGIN: 10px 0px 0px; FONT: bold 11px/13px Verdana, Arial, Helvetica, sans-serif; WIDTH: 140px; COLOR: #cd3824
+}
+#centerPart2 DIV.items DIV.itemsright .selextbox {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; FLOAT: left; MARGIN: 5px 0px 0px; FONT: 11px/13px Verdana, Arial, Helvetica, sans-serif; BORDER-LEFT: #ccc 1px solid; WIDTH: 110px; COLOR: #999; BORDER-BOTTOM: #ccc 1px solid
+}
+#centerPart2 DIV.items DIV.itemsright IMG.stockImg {
+	FLOAT: left; MARGIN: 3px 0px 0px 5px; WIDTH: 126px; HEIGHT: 29px
+}
+#centerPart2 DIV.watermark {
+	DISPLAY: block; BACKGROUND: url(../images/watermark.png) no-repeat 0px 0px; LEFT: 25px; WIDTH: 220px; POSITION: absolute; TOP: 50px; HEIGHT: 215px
+}
+.cartimg {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 0px; BACKGROUND: url(../images/cart-btn.gif) no-repeat 0px 0px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: -32px 8px 0px 0px; FONT: bold 10px/34px Verdana, Arial, Helvetica, sans-serif; WIDTH: 113px; CURSOR: pointer; COLOR: #fff; BORDER-TOP-STYLE: none; PADDING-TOP: 5px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 34px; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: none
+}
+#centerPart2 DIV.items DIV.itemsright SPAN.cartLoad IMG {
+	MARGIN: -18px 0px 0px 170px; WIDTH: 16px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 16px; BORDER-BOTTOM-STYLE: none
+}
+#centerPart2 DIV.morecat H3 {
+	BACKGROUND: #cd3824; MARGIN: 15px 0px; FONT: bold 12px/18px Verdana, Arial, Helvetica, sans-serif; WIDTH: 627px; COLOR: #fff; TEXT-ALIGN: center
+}
+#centerPart2 DIV.morecat UL {
+	FLOAT: left; WIDTH: 628px
+}
+#centerPart2 DIV.morecat UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 5px; FONT: 11px/13px Verdana, Arial, Helvetica, sans-serif; WIDTH: 155px; COLOR: #cd3824; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#centerPart2 DIV.morecat UL LI SPAN.catnames A {
+	DISPLAY: block; FONT: 11px/13px Verdana, Arial, Helvetica, sans-serif; WIDTH: 155px; COLOR: #cd3824; HEIGHT: 26px; TEXT-DECORATION: none
+}
+#centerPart2 DIV.morecat UL LI SPAN.catnames A:hover {
+	TEXT-DECORATION: underline
+}
+#centerPart2 DIV.morecat UL LI IMG {
+	WIDTH: 130px; HEIGHT: 130px
+}
+#cartcontain {
+	BORDER-RIGHT: #f4b36c 1px solid; BORDER-TOP: #f4b36c 1px solid; FLOAT: left; MARGIN: 10px 0px 0px 5px; BORDER-LEFT: #f4b36c 1px solid; WIDTH: 624px; BORDER-BOTTOM: #f4b36c 1px solid
+}
+#cartcontain H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: bold 14px/16px Verdana, Arial, Helvetica, sans-serif; COLOR: #f4b36c; PADDING-TOP: 7px
+}
+#cartcontain IMG.cartImg {
+	FLOAT: left; MARGIN: 0px 0px 0px 15px
+}
+#cartcontain DIV.cart {
+	FLOAT: left; MARGIN: 2px 1px 0px; WIDTH: 620px
+}
+#cartcontain DIV.cart UL.topname {
+	MARGIN: 0px 0px 0px 4px; COLOR: #cd3824; HEIGHT: 22px; BACKGROUND-COLOR: #f4b36c
+}
+#cartcontain DIV.cart UL.topname LI {
+	FLOAT: left; FONT: bold 11px/22px Verdana, Arial, Helvetica, sans-serif; WIDTH: 45px; COLOR: #cd3824; TEXT-ALIGN: center
+}
+#cartcontain DIV.cart UL.topname LI IMG {
+	FLOAT: right; MARGIN: 4px 0px 0px 50px; WIDTH: 94px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 13px; BORDER-BOTTOM-STYLE: none
+}
+#cartcontain DIV.cart UL.topname LI IMG A:hover {
+	BACKGROUND: url(../images/removeall-btn_on.gif) no-repeat 0px 0px
+}
+.width1 {
+	WIDTH: 350px! important
+}
+.width2 {
+	WIDTH: 200px! important
+}
+.width3 {
+	WIDTH: 500px! important; COLOR: #e74171! important; LINE-HEIGHT: 14px! important
+}
+.width4 {
+	WIDTH: 33px! important
+}
+.width5 {
+	WIDTH: 117px! important; TEXT-ALIGN: center! important
+}
+.width6 {
+	WIDTH: 138px! important
+}
+#cartcontain DIV.cart UL.prodescription {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 10px; PADDING-TOP: 5px
+}
+#cartcontain DIV.cart UL.prodescription LI {
+	FLOAT: left; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 45px; COLOR: #cd3824; TEXT-ALIGN: center
+}
+#cartcontain DIV.cart UL.prodescription LI IMG {
+	FLOAT: left; WIDTH: 50px; HEIGHT: 45px
+}
+#cartcontain DIV.cart UL.prodescription LI.txt {
+	WIDTH: 350px! important; COLOR: #000! important
+}
+#cartcontain DIV.cart UL.prodescription LI IMG.trash {
+	FLOAT: left; MARGIN: 0px 0px 0px 40px; WIDTH: 20px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 20px; BORDER-BOTTOM-STYLE: none
+}
+#cartcontain DIV.cart UL.prodetails {
+	FLOAT: right; MARGIN: 0px 0px 5px; WIDTH: 467px; COLOR: #cd3824; HEIGHT: 20px; BACKGROUND-COLOR: #f4b36c
+}
+#cartcontain DIV.cart UL.prodetails LI {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 15px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: 11px/20px Verdana, Arial, Helvetica, sans-serif; WIDTH: 135px; COLOR: #cd3824; PADDING-TOP: 0px
+}
+#cartcontain DIV.cart UL.proquantity {
+	FLOAT: right; MARGIN: 0px 0px 5px; WIDTH: 467px
+}
+#cartcontain DIV.cart UL.proquantity LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #cd3824; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#cartcontain DIV.cart UL.proquantity LI.txtbox {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; BORDER-LEFT: #ccc 1px solid; WIDTH: 30px; COLOR: #999; BORDER-BOTTOM: #ccc 1px solid
+}
+#cartcontain DIV.cart UL.proquantity LI.price {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 210px; COLOR: #cd3824; PADDING-TOP: 0px
+}
+#cartcontain DIV.cart UL.proquantity LI INPUT {
+	BORDER-RIGHT: #da9fb0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #da9fb0 1px solid; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: bold 11px/19px Tahoma, Arial, Helvetica, sans-serif; BORDER-LEFT: #da9fb0 1px solid; WIDTH: 33px; COLOR: #f4b36c; PADDING-TOP: 0px; BORDER-BOTTOM: #da9fb0 1px solid; HEIGHT: 17px; BACKGROUND-COLOR: #fff; TEXT-ALIGN: center
+}
+#cartcontain DIV.cart UL.subTotal {
+	PADDING-RIGHT: 10px; BORDER-TOP: #f4b36c 1px solid; DISPLAY: block; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 10px; MARGIN: 20px 15px 0px 0px; OVERFLOW: hidden; WIDTH: 265px; PADDING-TOP: 0px
+}
+#cartcontain DIV.cart UL.subTotal LI {
+	FLOAT: left; FONT: 11px/20px Tahoma, Arial, Helvetica, sans-serif; WIDTH: 90px; COLOR: #cd3824; TEXT-ALIGN: left
+}
+#cartcontain DIV.cart UL.subTotal LI INPUT {
+	BORDER-RIGHT: #da9fb0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #da9fb0 1px solid; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: bold 11px/19px Tahoma, Arial, Helvetica, sans-serif; BORDER-LEFT: #da9fb0 1px solid; WIDTH: 33px; COLOR: #f4b36c; PADDING-TOP: 0px; BORDER-BOTTOM: #da9fb0 1px solid; HEIGHT: 17px; BACKGROUND-COLOR: #fff
+}
+#cartcontain DIV.cart UL.subTotal LI IMG {
+	FLOAT: left; MARGIN: 1px 0px 0px 17px; WIDTH: 64px; HEIGHT: 19px
+}
+#cartcontain DIV.cart UL.btn {
+	FLOAT: right; MARGIN: 10px 0px; WIDTH: 430px
+}
+#cartcontain DIV.cart UL.btn LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 30px; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#cartcontain DIV.cart UL.btn LI IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#testimonials {
+	FLOAT: left; MARGIN: 10px 0px 0px 5px; WIDTH: 628px
+}
+#testimonials UL.breadcrum {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 10px; OVERFLOW: hidden; COLOR: #f18a1b; PADDING-TOP: 0px; HEIGHT: 21px; BACKGROUND-COLOR: #fbe3be
+}
+#testimonials UL.breadcrum LI {
+	FLOAT: left; MARGIN: 0px 5px 0px 0px; FONT: 11px/21px Tahoma, Arial, Helvetica, sans-serif; COLOR: #f18a1b
+}
+#testimonials UL.breadcrum LI A {
+	FONT: 11px/21px Tahoma, Arial, Helvetica, sans-serif; COLOR: #cd3824; TEXT-DECORATION: none
+}
+#testimonials UL.breadcrum LI A:hover {
+	COLOR: #f18a1b; TEXT-DECORATION: underline
+}
+#testimonials P.txt {
+	MARGIN: 5px 0px 0px 8px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 610px; COLOR: #cd3824; TEXT-ALIGN: left
+}
+#testimonials P.txt A {
+	FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #cd3824; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+#testimonials P.txt A:hover {
+	COLOR: #999
+}
+#testimonials P.txt SPAN {
+	MARGIN: 15px 0px 0px; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #cd3824; TEXT-ALIGN: left
+}
+#testimonials .custview {
+	FLOAT: left; MARGIN: 10px 0px 5px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 610px; COLOR: #f18a1b; BORDER-BOTTOM: #cd3824 1px solid; TEXT-ALIGN: left
+}
+#testimonials .custview H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; FONT: bold 12px/18px Verdana, Arial, Helvetica, sans-serif; WIDTH: 330px; COLOR: #cd3824; PADDING-TOP: 0px; BACKGROUND-COLOR: #f2f0f0
+}
+#testimonials .custview P.viewDesc {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #f18a1b; PADDING-TOP: 6px
+}
+#testimonials .custview UL {
+	FLOAT: left; WIDTH: 580px
+}
+#testimonials .custview UL LI {
+	MARGIN: 8px 0px 0px 8px; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #cd3824
+}
+#testimonials .custview UL LI P.imgDetail {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 30px; FLOAT: left; PADDING-BOTTOM: 0px; FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; WIDTH: 400px; COLOR: #cd3824; PADDING-TOP: 40px
+}
+#testimonials .custview UL LI IMG {
+	FLOAT: left; WIDTH: 105px; HEIGHT: 105px
+}
+#righttest {
+	FLOAT: right; MARGIN: 3px 4px 0px 0px; WIDTH: 175px
+}
+#righttest DIV.viewtestimonial {
+	BORDER-RIGHT: #fbd9a3 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #fbd9a3 1px solid; PADDING-LEFT: 1px; FLOAT: left; PADDING-BOTTOM: 1px; MARGIN: 0px 0px 5px; BORDER-LEFT: #fbd9a3 1px solid; WIDTH: 175px; PADDING-TOP: 1px; BORDER-BOTTOM: #fbd9a3 1px solid
+}
+#righttest DIV.viewtestimonial H2 {
+	BORDER-RIGHT: #f991a6 1px solid; BORDER-TOP: #f991a6 1px solid; BACKGROUND: url(../images/leftnav_bg.gif) #fff repeat-x 0px 0px; MARGIN: 0px 0px 2px; FONT: bold 12px/22px Tahoma, Arial, Helvetica, sans-serif; BORDER-LEFT: #f991a6 1px solid; COLOR: #fff; BORDER-BOTTOM: #f991a6 1px solid; TEXT-ALIGN: center
+}
+#righttest DIV.viewtestimonial UL {
+	MARGIN: 0px auto; WIDTH: 150px
+}
+#righttest DIV.viewtestimonial UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 12px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #777; PADDING-TOP: 8px; BORDER-BOTTOM: #777 1px solid; BACKGROUND-COLOR: #fff; TEXT-ALIGN: justify
+}
+#righttest DIV.viewtestimonial UL LI SPAN.listArrow {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 12px; BACKGROUND: url(../images/square_bullet.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 6px; COLOR: #a31616; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#righttest DIV.moretest {
+	BORDER-RIGHT: #fbd9a3 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #fbd9a3 1px solid; PADDING-LEFT: 1px; FLOAT: left; PADDING-BOTTOM: 1px; MARGIN: 4px 0px 5px; BORDER-LEFT: #fbd9a3 1px solid; WIDTH: 175px; PADDING-TOP: 1px; BORDER-BOTTOM: #fbd9a3 1px solid
+}
+#righttest DIV.moretest H2 {
+	BORDER-RIGHT: #f991a6 1px solid; BORDER-TOP: #f991a6 1px solid; BACKGROUND: url(../images/leftnav_bg.gif) #fff repeat-x 0px 0px; MARGIN: 0px 0px 2px; FONT: bold 12px/22px Tahoma, Arial, Helvetica, sans-serif; BORDER-LEFT: #f991a6 1px solid; COLOR: #fff; BORDER-BOTTOM: #f991a6 1px solid; TEXT-ALIGN: center
+}
+#righttest DIV.moretest P {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 12px; FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #777; PADDING-TOP: 8px; BACKGROUND-COLOR: #fff; TEXT-ALIGN: justify
+}
+#righttest DIV.moretest UL.hiddenList {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 10px; PADDING-TOP: 0px
+}
+#righttest DIV.moretest UL.hiddenList LI {
+	FLOAT: none; MARGIN: 0px 0px 4px
+}
+#righttest DIV.moretest UL.hiddenList LI A {
+	FONT: bold 11px/14px Verdana, Arial, Helvetica, sans-serif; COLOR: #cd3824; BACKGROUND-COLOR: #fff; TEXT-DECORATION: none
+}
+#righttest DIV.moretest UL.hiddenList LI UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#righttest DIV.moretest UL.hiddenList LI UL LI {
+	FLOAT: none; MARGIN: 0px 0px 2px
+}
+#righttest DIV.moretest UL.hiddenList LI UL LI A {
+	FONT: 11px/14px Verdana, Arial, Helvetica, sans-serif
+}
+#righttest DIV.moretest UL.hiddenList LI UL LI A:hover {
+	TEXT-DECORATION: underline
+}

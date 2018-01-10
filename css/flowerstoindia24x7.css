@@ -1,0 +1,266 @@
+/* CSS Document */
+
+body{
+	margin:0; padding:0;
+	font:normal 12px/14px Tahoma, Arial, Helvetica, sans-serif;
+	color:#818181;}
+div, p, img, a, form, input, select, h1, h2, h3, h4{
+	margin:0; padding:0;}
+ul, li, dl, dt, dd{
+	margin:0; padding:0; list-style:none;}
+a{
+	outline:none;}
+strong{
+	font-weight:bold;}
+.clear{
+	font-size:0; line-height:0; clear:both;}
+
+
+/*---------------------Header Start-----------------*/
+
+#container{
+	width:1003px; margin:0 auto;}
+#header{
+	background:url(../images/ftind24x7_header_bg.jpg) no-repeat 0 0;
+	width:1003px; height:131px; margin:0 auto; padding:17px 0 0 0; position:relative;}
+#header a.logo{
+	background:url(../images/ftind24x7_logo.gif) no-repeat 0 0;
+	margin:27px 0 0 10px; float:left; width:304px; height:31px;}
+#header h1{
+	/*background:url(../images/gbhejoindia_punch_line.gif) no-repeat 0 0;*/
+	position:absolute; left:339px; top:63px;
+	width:394px; height:13px;}
+#header p.customer1{
+	background:url(../images/ftind24x7_customer_info2.gif) no-repeat 0 0;
+ 	position:absolute; left:500px; top:8px;
+	width:396px; height:60px;}
+#header p.customer2{
+	background:url(../images/ftind24x7_payment_method2.gif) no-repeat 0 0;
+ 	position:absolute; left:500px; top:8px;
+	width:396px; height:60px;}
+#header p.customer3{
+	background:url(../images/ftind24x7_confirmation2.gif) no-repeat 0 0;
+ 	position:absolute; left:500px; top:8px;
+	width:396px; height:60px;}
+	
+/*------------------Header End---------------*/
+
+/*-------------Payment Option Style Start----------*/
+
+#rightPanel{
+	width:975px; margin:0 auto; padding:0 0 50px 0;}
+#rightPanel div.payOpt{
+	border:1px dashed #BFBFBF; overflow:hidden; width:945px;
+	padding:15px 14px 30px 14px; margin:-15px 0 0 0; float:left; }
+#rightPanel div.payOpt h2{
+	background:url(../images/gth24x7_select_bg.gif) repeat-y 0 0 #FFF;
+	font:bold 11px/25px Tahoma, Arial, Helvetica, sans-serif;
+	color:#8A3648; margin:0 0 11px 0; padding:0 0 0 8px;}
+#rightPanel div.payOpt p.selectTxt{
+	font:normal 11px/14px Tahoma, Arial, Helvetica, sans-serif;
+	color:#616161; background-color:#FFF; padding:0 0 30px 0;}
+.rightBg{
+	background:url(../images/dotted_line3.gif) repeat-y 100% 0;
+	padding:0 21px 0 0;}
+.middlePadd{
+	background:url(../images/dotted_line3.gif) repeat-y 100% 0;
+	padding:0 20px;}
+.rightBgPadd{
+	padding:0 0 0 21px;}
+.imgMarg{
+	margin:0 0 32px 0;}
+#rightPanel div.payOpt div.topBg{
+	background:url(../images/top_border.gif) repeat-x 0 0;
+	height:11px; display:block;}
+#rightPanel div.payOpt div.topBg span.leftCurve{
+	background:url(../images/curve_1.gif) no-repeat 0 0;
+	width:10px; height:11px; display:block; float:left;
+	font-size:0; line-height:0;}
+#rightPanel div.payOpt div.topBg span.rightCurve{
+	background:url(../images/curve_2.gif) no-repeat 0 0;
+	width:10px; height:11px; display:block; float:right;
+	font-size:0; line-height:0;}
+#rightPanel div.payOpt div.botmBg{
+	background:url(../images/bottom_border.gif) repeat-x 0 100%;
+	height:11px; display:block;}
+#rightPanel div.payOpt div.botmBg span.leftCurve2{
+	background:url(../images/curve_3.gif) no-repeat 0 0;
+	width:10px; height:11px; display:block; float:left;
+	font-size:0; line-height:0;}
+#rightPanel div.payOpt div.botmBg span.rightCurve2{
+	background:url(../images/curve_4.gif) no-repeat 0 0;
+	width:10px; height:11px; display:block; float:right;
+	font-size:0; line-height:0;}
+.greyBorder{
+	border-left:2px solid #D1D0D0;
+	border-right:2px solid #D1D0D0;
+	padding:10px 20px; color:#8F8D8B; background-color:#FFF;
+	font:bold 13px/15px Arial, Helvetica, sans-serif;
+	height:330px;}
+.saveBtn{
+	background:url(../images/save_btn.gif) no-repeat 0 0;
+	margin:35px 0 25px  30px; width:159px; height:26px;
+	display:block; border:none;}
+.greyBorder h3{
+	background:url(../images/ftind24x7_benefits_bg.gif) repeat-y 0 0 #fff;
+	color:#fff; margin:24px 0 0 0; padding:0 0 0 5px;}
+.greyBorder h3 span{
+	background:url(../images/arrow_3.gif) no-repeat 1px 2px;
+	font:bold 12px/22px Arial, Helvetica, sans-serif;
+	padding:0 0 0 18px; text-transform:uppercase;}
+.greyBorder ul{
+	padding:14px 0 0 18px;}
+.greyBorder ul li{
+	background:url(../images/arrow_2.gif) no-repeat 0 5px #FFF;
+	font:normal 12px/14px Arial, Helvetica, sans-serif;
+	color:#9C0236; margin:0 0 15px 0; padding:0 0 0 14px;}
+.txtPadd{
+	padding:0 0 15px 0;}
+	
+/*-------------Payment Option Style End----------*/
+
+/*-------------Payment Style Start----------*/
+
+#rightPanel{
+	width:975px; margin:0 auto; padding:0 0 50px 0;}
+#rightPanel div.payment{
+	border:1px dashed #BFBFBF; overflow:hidden; width:963px;
+	padding:6px 6px 30px 6px; margin:0 0 0 0; float:left; }
+#rightPanel div.payment h4{
+	font:bold 12px/15px Tahoma, Arial, Helvetica, sans-serif;
+	color:#9C0236; background-color:#FFF; margin:0 auto;
+	padding:5px 0 10px 0; text-align:center; text-decoration:underline;}
+#rightPanel div.payment p.orderTxt{
+	font:bold 11px/14px Tahoma, Arial, Helvetica, sans-serif;
+	color:#616161; background:#FFF; float:left; width:963px;}
+.paymentBtn{
+	background:url(../images/make_payment.gif) no-repeat 0 0;
+	margin:15px 0 20px 400px; width:147px; height:32px; border:none;
+	display:block; cursor:pointer;}
+#rightPanel div.payment div.billDetail{
+	background-color:#FCEBF4; color:#C05005; overflow:hidden;
+	margin:0 0 10px 0; padding:8px 22px;}
+#rightPanel div.payment div.billDetail dl.leftTxt{
+	width:458px; float:left;}
+#rightPanel div.payment dl.leftTxt dt{
+	font:bold 12px/15px Arial, Helvetica, sans-serif;
+	color:#9C0236; background:inherit; padding:0 0 7px 0;
+	float:left; width:458px;}
+#rightPanel div.payment dl.leftTxt dd{
+	float:left; font:normal 12px/15px Arial, Helvetica, sans-serif;}
+#rightPanel div.payment div.billDetail ul{
+	background:url(../images/dotted_line3.gif) repeat-y 0 0;
+	float:left; padding:0 0 0 22px;}
+#rightPanel div.payment div.billDetail ul li{
+	font:normal 12px/15px Arial, Helvetica, sans-serif;
+	color:#706C69; background-color:#FCEBF4; float:none; margin:0 0 5px 0;}
+#rightPanel div.payment div.billDetail ul li span{
+	font-weight:bold; color:#9C0236; background:inherit;
+	padding:0 4px 0 0;}
+#rightPanel div.payment ul.topName{
+	background-color:#c82a7e; color:#FFF; margin:0 0 0 0; 
+	overflow:hidden; height:22px;}
+#rightPanel div.payment ul.topName li{
+	font:bold 12px/22px Tahoma, Arial, Helvetica, sans-serif;
+	color:#FFF; float:left; width:30px; text-align:center; background:inherit;}
+#rightPanel div.payment ul.topName li img.removeBtn{
+	float:left; width:24px; height:23px;}
+#rightPanel div.payment ul.prodList{
+	background:url(../images/dotted_line.gif) repeat-x 0 100% #FBFBFB;
+	color:#FFF; margin:10px 0 0 0; padding:0 0 1px 0; overflow:hidden; width:770px;}
+#rightPanel div.payment ul.prodList li{
+	font:normal 11px/14px Tahoma, Arial, Helvetica, sans-serif;
+	color:#616161; float:left; width:130px; text-align:center;
+	padding:5px 0 5px 0; background-color:#FFF;}
+#rightPanel div.payment ul.prodList li img.itemImg{
+	float:left; margin:-5px 0 0 10px; width:40px; height:32px;}
+#rightPanel div.payment ul.totalList{
+	padding:7px 0 0 60px; overflow:hidden;}
+#rightPanel div.payment ul.totalList li{
+	font:normal 11px/14px Tahoma, Arial, Helvetica, sans-serif;
+	color:#616161; float:left; width:150px; text-align:left;
+	background-color:#FFF;}
+.shipDetail{
+	font:normal 11px/14px Tahoma, Arial, Helvetica, sans-serif;
+	color:#616161; background-color:#FFF; padding:5px 15px 20px 10px;}
+.shipDetail span{
+	font-weight:bold; color:#9C0236; background-color:#FFF;
+	text-decoration:underline;}
+.msgDetail{
+	font:normal 11px/14px Tahoma, Arial, Helvetica, sans-serif;
+	color:#441B02; background-color:#FCEBF4; border-right:10px solid #FFF;
+	margin:0 10px 0 0; padding:5px 10px 20px 10px;}
+.msgDetailTxt{
+	padding:0 0 10px 0;}
+.msgDetail span.msg{
+	background:url(../images/msg_img.gif) no-repeat 0 0 #FCEBF4;
+	font:bold 11px/14px Arial, Helvetica, sans-serif;
+	color:#9C0236; cursor:pointer; width:53px; display:block;
+	padding:2px 0 0 25px; height:14px;}
+.msgDetail span.ins{
+	background:url(../images/instruction_img.gif) no-repeat 0 0 #FCEBF4;
+	font:bold 11px/14px Arial, Helvetica, sans-serif;
+	color:#9C0236; cursor:pointer; width:109px; display:block;
+	margin:-8px 0 0 0; padding:2px 0 0 25px; height:14px;}
+#rightPanel div.payment ul.subTotal{
+	border-top:1px solid #9C0236; border-bottom:1px solid #9C0236;
+	width:250px; float:right; margin:0 50px 0 0; _margin:0 25px 0 0; 
+	padding:0 5px 0 5px; overflow:hidden; display:block;}
+#rightPanel div.payment ul.subTotal li{
+	font:bold 11px/22px Tahoma, Arial, Helvetica, sans-serif;
+	color:#393838; text-align:left; float:left; width:100px;
+	background:inherit;}
+#rightPanel div.payment ul.subTotal li span{
+	color:#9C0236; background-color:#FFF;}
+	
+.width1{
+	width:190px !important;}
+.width2{
+	width:60px !important;}
+.width3{
+	width:333px !important;}
+.width4{
+	width:140px !important;}
+.width5{
+	width:160px !important; text-align:left !important;}
+.width6{
+	width:150px !important; text-align:right !important;}
+.width7{
+	width:140px !important; text-align:right !important;
+	margin:0 0 0 125px !important;}
+.width8{
+	width:140px !important;	padding:0 0 0 390px !important;}
+width9{
+	width:200px !important;	padding:0 0 0 390px !important;}
+
+/*-------------Payment Style End----------*/
+
+/*-------------Cancel Style Start----------*/
+
+.style8 {
+	font:bold 12px/15px Verdana, Arial, Helvetica, sans-serif;
+	color:#c32411;}
+.big_red {
+	font:normal 12px/15px Verdana, Arial, Helvetica, sans-serif;
+	color:#c32411;}
+.cancelBtn{
+ 	background:url(../images/btnGoto24x7.jpg) no-repeat 0 0;
+ 	width:97px; height:21px; border:none; cursor:pointer;}
+
+ /*-------------Cancel Style End----------*/
+ 
+  /*-------------Footer Style Start----------*/
+ 
+  .footerBg{
+  background:url(../images/ftind24x7_copyright.gif) no-repeat 50% 0 #FFF;
+  font:normal 11px/20px Verdana, Arial, Helvetica, sans-serif;
+  color:#1A666B; height:23px;}
+ 
+  /*-------------Footer Style End----------*/
+/*-------------Top 24x7 Payment Message starts ----------*/
+#topMsg{
+	font:bold 12px/14px Tahoma, Arial, Helvetica, sans-serif;
+	color:#000;	padding:5px 25px; display:block; width:950px;
+	padding:0 5px; text-align:center; margin:0 auto 20px auto }
+	
+/*-------------Top 24x7 Payment Message ends ----------*/
